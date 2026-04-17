@@ -28,18 +28,13 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--cream);ove
 .hero-body{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px;padding:60px 40px;}
 .eyebrow{font-family:'Barlow',sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;color:var(--ac);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
 .eyebrow::before{content:'';width:24px;height:1px;background:var(--ac);}
-h1.hname{font-family:'Blinker',sans-serif;font-size:clamp(64px,10vw,130px);font-weight:900;line-height:0.88;color:var(--white);letter-spacing:-2px;margin-bottom:6px;}
+h1.hname{font-family:'Blinker',sans-serif;font-size:clamp(52px,8vw,110px);font-weight:900;line-height:0.88;color:var(--white);letter-spacing:-2px;margin-bottom:6px;}
 h1.hname span{color:var(--ac);}
-.hbiz{font-family:'Blinker',sans-serif;font-size:clamp(16px,2.2vw,28px);font-weight:600;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:28px;}
+.hbiz{font-family:'Blinker',sans-serif;font-size:clamp(14px,2vw,22px);font-weight:600;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:28px;}
 .htagline{font-family:'Barlow',sans-serif;font-size:17px;font-weight:300;font-style:italic;line-height:1.55;color:var(--cream2);max-width:520px;border-left:3px solid var(--ac);padding-left:18px;margin-bottom:40px;}
 .hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
 .stat-v{font-family:'Blinker',sans-serif;font-size:36px;font-weight:800;color:var(--ac);line-height:1;}
 .stat-l{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:2px;}
-.photo-frame{width:240px;height:300px;position:relative;overflow:hidden;border:1px solid;}
-.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;}
-.photo-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(244,81,30,0.28) 0%,transparent 50%);}
-.photo-badge{position:absolute;bottom:0;left:0;right:0;padding:8px 14px;font-family:'Blinker',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;color:white;text-transform:uppercase;text-align:center;}
-.photo-corner{position:absolute;top:10px;right:10px;background:rgba(15,13,11,0.65);border:1px solid;font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;}
 .hero-foot{position:relative;z-index:2;padding:18px 40px;border-top:1px solid rgba(244,81,30,0.1);display:flex;justify-content:space-between;}
 .hfoot-txt{font-family:'Barlow',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;color:var(--muted);text-transform:uppercase;opacity:0.5;}
 .wrap{max-width:1080px;margin:0 auto;}
@@ -49,13 +44,15 @@ h1.hname span{color:var(--ac);}
 h2.stitle{font-family:'Blinker',sans-serif;font-size:clamp(28px,4.5vw,52px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.5px;margin-bottom:22px;}
 h2.stitle em{font-style:normal;color:var(--ac);}
 .pos-block{background:var(--bg2);border:1px solid rgba(244,81,30,0.13);padding:30px;position:relative;overflow:hidden;margin-bottom:18px;}
-.pos-block::before{content:'"'  ;font-family:'Blinker',sans-serif;font-size:220px;font-weight:900;color:rgba(244,81,30,0.04);position:absolute;top:-55px;right:12px;line-height:1;pointer-events:none;}
+.pos-block::before{content:'"';font-family:'Blinker',sans-serif;font-size:220px;font-weight:900;color:rgba(244,81,30,0.04);position:absolute;top:-55px;right:12px;line-height:1;pointer-events:none;}
 .pos-text{font-family:'Barlow',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:var(--cream);max-width:800px;position:relative;z-index:1;}
 .pos-text strong{color:var(--ac);font-weight:500;}
 .cred-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:rgba(244,81,30,0.08);border:1px solid rgba(244,81,30,0.08);margin-top:18px;}
 .cred-item{background:var(--bg2);padding:14px 16px;}
 .cred-l{font-family:'Barlow',sans-serif;font-size:8px;font-weight:600;letter-spacing:2px;color:var(--ac);text-transform:uppercase;margin-bottom:3px;}
 .cred-v{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:var(--cream2);line-height:1.4;}
+.cred-v a{color:var(--ac);text-decoration:none;}
+.cred-v a:hover{text-decoration:underline;}
 .deco-img{margin:24px 0;width:100%;max-height:220px;overflow:hidden;}
 .deco-img img{width:100%;height:220px;object-fit:cover;object-position:center;opacity:0.6;filter:saturate(0.7);}
 .pain-list{display:flex;flex-direction:column;gap:10px;}
@@ -64,6 +61,7 @@ h2.stitle em{font-style:normal;color:var(--ac);}
 .pain-text{font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream2);line-height:1.55;}
 .svc-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
 .svc{background:var(--bg2);border:1px solid rgba(244,81,30,0.08);padding:20px;}
+.svc-title{font-family:'Blinker',sans-serif;font-size:15px;font-weight:700;color:var(--ac);margin-bottom:6px;}
 .svc-body{font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream2);line-height:1.55;}
 .t-list{display:flex;flex-direction:column;gap:10px;}
 .t-item{display:flex;gap:12px;background:var(--bg2);border:1px solid rgba(244,81,30,0.12);padding:18px 20px;font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream);line-height:1.5;}
@@ -168,8 +166,7 @@ footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
 @media(max-width:900px){
   .topnav,.hero-body,.sec,.edit-inner,.cta-inner,.foot-nav{padding-left:20px;padding-right:20px;}
   .hero-body{grid-template-columns:1fr;}
-  .hero-photo,.hero-grid{display:none;}
-  h1.hname{font-size:64px;}
+  h1.hname{font-size:58px;}
   .pitches,.arch-grid,.phases,.living-grid,.lever-wrap,.cta-inner,.edit-form{grid-template-columns:1fr;}
   .lever-wrap{grid-template-columns:1fr 1fr;}
   .edit-hdr{grid-template-columns:1fr;}
@@ -198,19 +195,18 @@ footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
   <div class="hero-body">
     <div>
       <div class="eyebrow">NET_SYNC.02 // Member · One Tree Point, Northland, New Zealand</div>
-      <h1 class="hname">DI<br>CRAWFORD-ERRINGTON</h1>
-      <div class="hbiz">Small Business Training Hub (SBTH) / Ontrack Group</div>
-      <p class="htagline">NZ's Payroll Whisperer — turning payroll complexity into business confidence since 2003.</p>
+      <h1 class="hname">DI<br><span>CRAWFORD</span>-<br>ERRINGTON</h1>
+      <div class="hbiz">Small Business Training Hub (SBTH)</div>
+      <p class="htagline">NZ's Payroll Training Authority — turning 20 years of payroll expertise into business confidence, one course at a time.</p>
       <div class="hero-stats">
         <div><div class="stat-v">5</div><div class="stat-l">Priority Intros</div></div>
         <div><div class="stat-v">90</div><div class="stat-l">Day Activation</div></div>
         <div><div class="stat-v">↻</div><div class="stat-l">Living Document</div></div>
       </div>
     </div>
-    
   </div>
   <div class="hero-foot">
-    <div class="hfoot-txt">Generated 17 Apr 2026 · NEXUS MKII · nowgroup.co.nz</div>
+    <div class="hfoot-txt">Generated 18 Apr 2026 · NEXUS MKII · nowgroup.co.nz</div>
     <div class="hfoot-txt">↓ Scroll to explore your plan</div>
   </div>
 </section>
@@ -218,48 +214,85 @@ footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
 <div class="divider"></div>
 <div class="wrap">
 
+<!-- ─── 01 POSITIONING ─────────────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">01 · Positioning</div>
   <h2 class="stitle">Your Commercial <em>Identity</em></h2>
   <div class="pos-block">
-    <p class="pos-text">I'm Di Crawford-Errington, and I've been solving New Zealand's payroll headaches for over 20 years. I help small business owners and bookkeepers master NZ payroll compliance through online training, direct services, and strategic advice. My clients get payroll confidence without the overwhelm — they can do it themselves, but they don't have to do it alone. I built the Small Business Training Hub because every Kiwi business deserves payroll that works, not payroll that breaks them.</p>
+    <p class="pos-text">I'm Di Crawford-Errington, and I've spent 20+ years becoming New Zealand's most trusted name in payroll training. My business, <strong>Small Business Training Hub (SBTH)</strong>, exists because NZ payroll legislation is genuinely one of the most complex payroll systems in the world — and most small business owners are trying to navigate it blind. At SBTH, we give employers, bookkeepers, and payroll practitioners the knowledge and confidence to get payroll right: accurate calculations, full compliance, and no more 3am anxiety about whether the Holidays Act is being applied correctly. Our flagship NZ Payroll Essentials Training Program is registered with the Regional Business Partner Network — meaning eligible businesses can access government-funded vouchers to cover their training. We're not a software company. We're not a generic bookkeeping firm. We are the payroll training specialist for Kiwi business — and the NOW ecosystem is exactly the referral infrastructure that puts SBTH in front of the business owners, advisors, and coaches who see the payroll problem before their clients do.</p>
   </div>
   <div class="cred-row">
-    <div class="cred-item"><div class="cred-l">Business</div><div class="cred-v">Small Business Training Hub (SBTH) / Ontrack Group</div></div>
-    <div class="cred-item"><div class="cred-l">Location</div><div class="cred-v">One Tree Point, Northland, New Zealand</div></div>
-    <div class="cred-item"><div class="cred-l">Status</div><div class="cred-v">Member</div></div>
-    <div class="cred-item"><div class="cred-l">Website</div><div class="cred-v">ontrackbookkeeping.co.nz</div></div>
+    <div class="cred-item"><div class="cred-l">Business</div><div class="cred-v">Small Business Training Hub (SBTH)</div></div>
+    <div class="cred-item"><div class="cred-l">Location</div><div class="cred-v">One Tree Point, Northland, NZ</div></div>
+    <div class="cred-item"><div class="cred-l">Status</div><div class="cred-v">Member · NOW Prime</div></div>
+    <div class="cred-item"><div class="cred-l">Website</div><div class="cred-v"><a href="https://www.sbth.co.nz" target="_blank">sbth.co.nz</a></div></div>
+    <div class="cred-item"><div class="cred-l">Credential</div><div class="cred-v">Certified Payroll Leader · ICNZB President · Top 50 Women in Accounting 2020 &amp; 2021</div></div>
+    <div class="cred-item"><div class="cred-l">Funding</div><div class="cred-v">RBPN Registered — clients may access government-funded training vouchers</div></div>
   </div>
 </div>
 
 <div class="deco-img"><img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157048525/settings_images/641071-d620-5fd5-c02b-03d1de300c5d_NET_PArtners_IMG-2.webp" alt="NOW Group" onerror="this.parentElement.style.display='none'"></div>
 
+<!-- ─── 02 ICP ─────────────────────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">02 · Ideal Client Profile</div>
   <h2 class="stitle">Who You <em>Serve</em></h2>
-  <p style="font-family:'Barlow',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:var(--cream);max-width:800px;">Small to medium New Zealand businesses with 5-50 employees who struggle with payroll complexity and compliance. Perfect fit: growing trades businesses, professional services firms, and bookkeepers serving multiple clients. These owners are typically time-poor, compliance-anxious, and looking for practical solutions that don't require a finance degree to understand.</p>
+  <p style="font-family:'Barlow',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:var(--cream);max-width:800px;">SBTH's perfect-fit clients are NZ small business owners and bookkeepers who process payroll but don't fully understand the legislation behind it. Typically 5–50 employees, across trades, professional services, retail, and hospitality. They're compliant enough to have not been caught yet — but anxious enough to know they're on borrowed time. Bookkeepers and accounting practices are a second powerful ICP: those who want to upskill or offer payroll expertise as a service to their own SME clients. Both ICPs are eligible for RBPN-funded vouchers — making the barrier to enrolment exceptionally low when the referral is made at the right moment.</p>
 </div>
 
+<!-- ─── 03 PAIN POINTS ──────────────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">03 · Client Pain Points</div>
   <h2 class="stitle">What They're <em>Actually Saying</em></h2>
-  <div class="pain-list"><div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">Payroll compliance keeps me awake at night — what if I get it wrong?</div></div><div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">Every payroll change feels like walking through a minefield</div></div><div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">I'm spending too much time on admin when I should be growing my business</div></div><div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">My bookkeeper doesn't understand NZ payroll rules either</div></div></div>
+  <div class="pain-list">
+    <div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">"Payroll keeps me up at night — I just copy what we did last time and hope it's right"</div></div>
+    <div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">"The Holidays Act is a nightmare. I don't actually know if we're calculating leave correctly"</div></div>
+    <div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">"My bookkeeper handles payroll but I don't think she really understands NZ legislation either"</div></div>
+    <div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">"We just hired our fifth employee and payroll suddenly feels completely out of control"</div></div>
+    <div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">"I'm worried about an IRD audit — I wouldn't know where to start defending our payroll records"</div></div>
+  </div>
 </div>
 
+<!-- ─── 04 SERVICE DELIVERY ────────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">04 · Service Delivery</div>
-  <h2 class="stitle">What Di <em>Delivers</em></h2>
-  <div class="svc-wrap"><div class="svc"><div class="svc-body">NZ Payroll Essentials online training that turns confusion into confidence</div></div><div class="svc"><div class="svc-body">Done-for-you payroll services for SMEs who want it off their plate</div></div><div class="svc"><div class="svc-body">Bookkeeping services with payroll expertise built in</div></div><div class="svc"><div class="svc-body">Financial fitness advisory to keep businesses healthy and compliant</div></div></div>
+  <h2 class="stitle">What SBTH <em>Delivers</em></h2>
+  <div class="svc-wrap">
+    <div class="svc">
+      <div class="svc-title">NZ Payroll Essentials Program</div>
+      <div class="svc-body">3-course bundle — Fundamentals, Payroll in Practice, and Holidays Act Demystified. 50+ topics. 6 months evergreen access with fortnightly live Q&amp;A mentoring. Certificate on completion. RBPN-registered for voucher funding.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-title">Specialist Payroll Courses</div>
+      <div class="svc-body">Targeted courses covering leave calculations, KiwiSaver, IRD compliance, employment records, and payroll software integration. Perfect for bookkeepers adding payroll to their service offering.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-title">Live Mentoring & Community</div>
+      <div class="svc-body">Fortnightly drop-in Q&amp;A sessions where Di answers real payroll questions from enrolled students. Backed by an active NZ community of payroll practitioners. Knowledge stays current as legislation changes.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-title">RBPN Funding Pathway</div>
+      <div class="svc-body">SBTH is registered with the Management Capability Development Voucher Fund. Di's partners can refer eligible clients who may receive government-funded vouchers — dramatically lowering the enrolment barrier and making the referral conversion almost automatic.</div>
+    </div>
+  </div>
 </div>
 
 <div class="deco-img"><img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157048525/settings_images/80637a6-dab3-51b-55ca-8c3a250e01_Slider_collages_HOME.webp" alt="NOW Group" onerror="this.parentElement.style.display='none'"></div>
 
+<!-- ─── 05 REFERRAL TRIGGERS ───────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">05 · Referral Triggers</div>
   <h2 class="stitle">Lines Partners Can <em>Use Right Now</em></h2>
-  <div class="t-list"><div class="t-item"><span>→</span><span>Know any small business owners pulling their hair out over payroll?</span></div><div class="t-item"><span>→</span><span>Got clients asking about NZ employment law compliance?</span></div><div class="t-item"><span>→</span><span>Working with tradies who need payroll sorted but hate admin?</span></div><div class="t-item"><span>→</span><span>Know bookkeepers who want to upskill in NZ payroll?</span></div><div class="t-item"><span>→</span><span>Meet business owners who mention payroll stress or compliance worries?</span></div></div>
+  <div class="t-list">
+    <div class="t-item"><span>→</span><span>Know any business owner who's just hired their first few employees and is winging payroll? Di's SBTH course will save them from a future IRD audit — and it may even be government-funded.</span></div>
+    <div class="t-item"><span>→</span><span>Got a client whose bookkeeper handles payroll but you're not confident they actually understand the Holidays Act? Di Crawford-Errington at SBTH has the course for exactly that.</span></div>
+    <div class="t-item"><span>→</span><span>Working with tradies who are growing their teams and panicking about payroll compliance? SBTH's payroll training is practical, NZ-specific, and available with RBPN voucher funding.</span></div>
+    <div class="t-item"><span>→</span><span>Know a bookkeeper who wants to add payroll expertise to their service offering? sbth.co.nz — Di's built the most comprehensive NZ payroll training available.</span></div>
+    <div class="t-item"><span>→</span><span>Any client mentioning payroll stress, leave calculations, or KiwiSaver confusion? That's a warm referral to Di. She turns payroll anxiety into payroll confidence.</span></div>
+  </div>
 </div>
 
+<!-- ─── 06 PITCH OPTIONS ───────────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">06 · Pitch Options</div>
   <h2 class="stitle">Two Pitch <em>Options</em></h2>
@@ -267,160 +300,245 @@ footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
     <div class="pitch-1">
       <div class="p-label">Pitch 1 — Friction Point · Group Settings</div>
       <div class="p-ttl">The Room Pitch</div>
-      <p class="p-body">Most small business owners I meet are terrified of getting payroll wrong. They're spending hours trying to figure out holiday pay, sick leave, and KiwiSaver — time they should be spending on growing their business. I take that complexity off their plate with either training that gives them confidence or services that handle it completely. Twenty years of NZ payroll experience means they sleep better at night.</p>
+      <p class="p-body">New Zealand has one of the most complex payroll systems in the world. Most small business owners are running payroll by copying what they did last month and crossing their fingers. I built Small Business Training Hub to change that. At SBTH, we give business owners and bookkeepers the actual knowledge to process payroll correctly — the Holidays Act, leave calculations, KiwiSaver, IRD compliance. Our courses are evergreen, NZ-specific, and many clients can access government voucher funding through the Regional Business Partner Network. We don't just tell you what to do. We make sure you understand why — so you sleep at night instead of hoping nobody checks.</p>
     </div>
     <div class="pitch-2">
       <div class="p-label">Pitch 2 — Partner-Targeted · 1:1 Settings</div>
       <div class="p-ttl">The Partner Handshake</div>
-      <p class="p-body">I help professional service providers add massive value to their SME clients through payroll expertise. Whether it's training their bookkeepers, handling overflow payroll work, or being the go-to expert when complex situations arise, I make you the hero who solves their biggest compliance headache. Your clients stay with you longer when payroll stress disappears.</p>
+      <p class="p-body">If you work with small business owners or bookkeepers, payroll compliance is almost certainly one of the things keeping your clients anxious. SBTH gives you a clean referral that solves a real problem and makes you look good. Our courses are RBPN-registered — so when you refer a client to SBTH, they may qualify for government funding to cover the cost. That makes the conversion almost instant. In return, when my students need a business coach, advisor, or specialist, you're the person I recommend. We both serve the same kind of NZ business owner. The referral loop is natural.</p>
     </div>
   </div>
 </div>
 
+<!-- ─── 07 PRIORITY INTRODUCTIONS ─────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">07 · Priority Introductions</div>
   <h2 class="stitle">NET_SYNC Completion Set — <em>5 Strategic Connections</em></h2>
   <table class="conn-table">
     <tr><th>Partner</th><th>Status</th><th>Why This Connection Matters</th><th>Next Step</th></tr>
-    
-        <tr>
-          <td><span class="conn-name">Irene Bennetts</span>
-              <span class="conn-biz">Admin Army</span></td>
-          <td><span class="tag-pill">Member</span></td>
-          <td>Perfect complementary services — she handles general admin, I handle payroll complexity. Her SME clients always need payroll help.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When her clients mention payroll stress, compliance worries, or need bookkeeper upskilling</small></td>
-          <td><span class="n-step">Reach out to discuss referral partnership and how we can support each other's clients</span></td>
-        </tr>
-        <tr>
-          <td><span class="conn-name">Jayson Conceicao</span>
-              <span class="conn-biz">TradieTally Academy</span></td>
-          <td><span class="tag-pill">Member</span></td>
-          <td>Tradies are perfect payroll training clients — growing teams, complex rates, desperate for simple solutions<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When his tradies mention employee management, payroll confusion, or compliance fears</small></td>
-          <td><span class="n-step">Connect to explore partnership opportunities for his academy members</span></td>
-        </tr>
-        <tr>
-          <td><span class="conn-name">Zoltan Mark</span>
-              <span class="conn-biz">Marksmen IT</span></td>
-          <td><span class="tag-pill">Member</span></td>
-          <td>His SME IT clients need payroll systems and compliance support — natural referral flow both ways<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When clients need payroll software setup, compliance training, or bookkeeping integration</small></td>
-          <td><span class="n-step">Schedule coffee to discuss how we can add value to each other's client base</span></td>
-        </tr>
-        <tr>
-          <td><span class="conn-name">Keath Seto</span>
-              <span class="conn-biz">Trusted Advisor Network</span></td>
-          <td><span class="tag-pill">Member</span></td>
-          <td>His network of professional advisors need payroll expertise for their SME clients — perfect referral source<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When his advisors encounter client payroll issues or need specialist backup</small></td>
-          <td><span class="n-step">Connect to explore how I can support his advisor network with payroll expertise</span></td>
-        </tr>
-        <tr>
-          <td><span class="conn-name">Peter White</span>
-              <span class="conn-biz">White & Son Systems</span></td>
-          <td><span class="tag-pill">Member</span></td>
-          <td>Tech development meets payroll training — potential collaboration on digital solutions for SMEs<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When discussing payroll technology, training platforms, or SME digital solutions</small></td>
-          <td><span class="n-step">Explore potential tech collaboration and mutual referral opportunities</span></td>
-        </tr>
+    <tr>
+      <td>
+        <span class="conn-name">Alessandro Borghi</span>
+        <span class="conn-biz">Hive Block Strategy</span>
+        <div style="margin-top:5px;display:inline-block;background:rgba(244,81,30,0.18);border:1px solid rgba(244,81,30,0.4);color:#F4511E;font-family:'Barlow',sans-serif;font-size:8px;font-weight:700;letter-spacing:1.5px;padding:2px 8px;text-transform:uppercase;">⚡ Director's Wild Card</div>
+      </td>
+      <td><span class="tag-pill">Member</span></td>
+      <td>Alessandro is a Director's Wild Card introduction — flagged directly by NOW Group as a high-value non-obvious connection. He serves entrepreneurs and business owners navigating digital asset strategy and crypto portfolio structuring. His clients are exactly the kind of sophisticated, growth-focused business owners who also run payroll — and whose bookkeepers or internal staff are almost certainly underprepared for the compliance side of a growing operation. Di brings SBTH into Alessandro's world as the payroll confidence layer his clients' businesses need under the hood. Alessandro brings Di into a room of high-net-worth entrepreneurs she wouldn't naturally reach.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Alessandro's clients mention they're scaling their business operations or have staff they're paying — the payroll compliance gap is almost certainly present → SBTH is the referral</small></td>
+      <td><span class="n-step">Director's Wild Card — NOW Group will broker this introduction directly. Di to be briefed by Chris before outreach. This is a deliberate cross-sector play, not a natural referral — handle with care and curiosity</span></td>
+    </tr>
+    <tr>
+      <td><span class="conn-name">Irene Bennetts</span><span class="conn-biz">Admin Army</span></td>
+      <td><span class="tag-pill">Member</span></td>
+      <td>Admin Army handles finance operations for SMEs — and frequently encounters clients whose payroll is a disaster before the books can even be cleaned up. Di's SBTH training is what those clients need alongside Irene's services: one fixes the knowledge gap, the other fixes the operational gap. The referral flows both ways — Irene's clients enrol in SBTH; Di's SBTH graduates often need broader bookkeeping and admin support.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Irene's SME clients have payroll they can't trust, or when their internal staff need training → refer to SBTH</small></td>
+      <td><span class="n-step">Book an Eye-2-Eye with Irene to formalise the referral exchange — both businesses serve the same SME owner at different stages of the same problem</span></td>
+    </tr>
+    <tr>
+      <td><span class="conn-name">Keath Seto</span><span class="conn-biz">Trusted Advisor Network</span></td>
+      <td><span class="tag-pill">Member</span></td>
+      <td>Keath's network of professional advisors works with SME owners across NZ. Payroll complexity surfaces constantly in advisory conversations — and Keath's advisors need a specialist they trust to refer clients to without risk. SBTH is that specialist: credentialed, RBPN-registered, NZ-specific. Keath becomes the advisor who always has the right referral.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Keath's advisors encounter client payroll anxiety, compliance gaps, or staff who lack payroll knowledge → SBTH is the referral</small></td>
+      <td><span class="n-step">Connect with Keath to position SBTH as the default payroll training referral across his entire advisor network</span></td>
+    </tr>
+    <tr>
+      <td><span class="conn-name">Abhi Shrikhande</span><span class="conn-biz">Nexus Accounting</span></td>
+      <td><span class="tag-pill">Member</span></td>
+      <td>Abhi's accounting practice is built on SME clients across NZ — exactly the businesses SBTH trains. Accountants regularly encounter payroll problems they can't solve themselves and need to refer out. Di's SBTH is the cleanest referral in that scenario: expert, credentialed, NZ-legislation-specific. In return, Di's SBTH students frequently need accounting support as their business grows.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Abhi's clients mention payroll confusion, incorrect leave calculations, or IRD compliance anxiety → direct them to SBTH before the problem compounds</small></td>
+      <td><span class="n-step">Reach out via NOW to establish a warm referral pathway — Di's SBTH students regularly need accountants, and Abhi's clients regularly need payroll training</span></td>
+    </tr>
+    <tr>
+      <td><span class="conn-name">Dan Lewis</span><span class="conn-biz">FWG — Financial Wellness Group</span></td>
+      <td><span class="tag-pill">Member</span></td>
+      <td>Dan works with Kiwi business owners and individuals on financial wellness — budgeting, wealth building, financial advice and planning. His clients are exactly the NZ SME owner who's making reasonable money but hasn't sorted the fundamentals under the business: payroll included. When Dan's clients are building financial confidence, the discovery that payroll has been running incorrectly is a common and painful surprise. SBTH closes that gap before it becomes a liability. In return, Di's SBTH graduates — business owners who've just gotten their payroll under control — are often ready to have their first serious financial planning conversation.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Dan's clients reveal they're not confident about their payroll or have never had their leave calculations checked → warm referral to Di at SBTH</small></td>
+      <td><span class="n-step">Connect with Dan via NOW — introduce SBTH as the payroll confidence referral that complements his financial wellness work. The referral loop runs cleanly both ways</span></td>
+    </tr>
   </table>
-  <p class="note">+ 2 more priority introductions available in your full NET_SYNC activation session →</p>
+  <p class="note">+ 2 more priority introductions in your full activation session — including Aaron Kemp (Tradies Mentoring Tradies) →</p>
 </div>
 
+<!-- ─── 08 PARTNER ARCHETYPES ─────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">08 · Partner Archetypes</div>
   <h2 class="stitle">Who Shares Your <em>ICP</em></h2>
   <div class="arch-grid">
-        <div class="arch">
-          <div class="arch-ttl">Business Coaches & Advisors</div>
-          <p class="arch-why">They see growing businesses hit payroll complexity walls and need specialist backup</p>
-          <div class="arch-sees"><strong>Sees early:</strong> When clients start hiring employees and struggle with compliance requirements</div>
-          <div class="arch-recip"><strong>Reciprocity:</strong> I refer clients needing strategic business guidance, they send payroll-stressed clients</div>
-        </div>
-        <div class="arch">
-          <div class="arch-ttl">IT Service Providers</div>
-          <p class="arch-why">Their SME clients need payroll systems integrated and compliance sorted</p>
-          <div class="arch-sees"><strong>Sees early:</strong> During software implementations when payroll integration becomes critical</div>
-          <div class="arch-recip"><strong>Reciprocity:</strong> I refer clients needing IT upgrades, they send clients needing payroll training</div>
-        </div>
-        <div class="arch">
-          <div class="arch-ttl">Trade Industry Specialists</div>
-          <p class="arch-why">Tradies have complex payroll needs and hate admin — perfect training audience</p>
-          <div class="arch-sees"><strong>Sees early:</strong> When trade businesses hire their first employees and panic about compliance</div>
-          <div class="arch-recip"><strong>Reciprocity:</strong> I refer clients needing trade expertise, they send growing tradies needing payroll help</div>
-        </div>
-        <div class="arch">
-          <div class="arch-ttl">Professional Services Firms</div>
-          <p class="arch-why">Law firms, accounting practices, consultancies — all need payroll expertise for client service</p>
-          <div class="arch-sees"><strong>Sees early:</strong> When their clients ask employment law or compliance questions they can't answer</div>
-          <div class="arch-recip"><strong>Reciprocity:</strong> I refer clients needing legal/accounting services, they send payroll-complexity clients</div>
-        </div>
-        <div class="arch">
-          <div class="arch-ttl">Virtual Admin Providers</div>
-          <p class="arch-why">They handle general admin but often lack NZ payroll expertise — perfect complementary service</p>
-          <div class="arch-sees"><strong>Sees early:</strong> When clients need bookkeeping but specifically struggle with payroll components</div>
-          <div class="arch-recip"><strong>Reciprocity:</strong> I refer payroll clients needing general admin support, they send admin clients needing payroll expertise</div>
-        </div></div>
+    <div class="arch">
+      <div class="arch-ttl">Business Coaches &amp; Advisors</div>
+      <p class="arch-why">They mentor growing businesses and hear payroll anxiety before SBTH does — early in the growth conversation when teams are being built</p>
+      <div class="arch-sees"><strong>Sees early:</strong> When their client just hired staff and compliance suddenly feels real</div>
+      <div class="arch-recip"><strong>Reciprocity:</strong> I refer SBTH graduates who need strategic guidance; they refer clients whose first payroll crisis exposes a training gap</div>
+    </div>
+    <div class="arch">
+      <div class="arch-ttl">Accountants &amp; Bookkeepers</div>
+      <p class="arch-why">They handle SME financials and see payroll errors before IRD does — but most aren't payroll specialists and need a credentialed referral</p>
+      <div class="arch-sees"><strong>Sees early:</strong> When client payroll records are wrong and they can't fix it themselves</div>
+      <div class="arch-recip"><strong>Reciprocity:</strong> I refer SBTH students who need accounting support; they refer payroll-anxious clients to SBTH and upskill their own teams through our bookkeeper pathway</div>
+    </div>
+    <div class="arch">
+      <div class="arch-ttl">HR &amp; Employment Specialists</div>
+      <p class="arch-why">HR consultants handle employment agreements and people strategy — but payroll calculation expertise (Holidays Act, leave, KiwiSaver) is SBTH's domain</p>
+      <div class="arch-sees"><strong>Sees early:</strong> When a client signs an employment agreement but has no idea how to process what they've just committed to</div>
+      <div class="arch-recip"><strong>Reciprocity:</strong> Natural complementary split — HR owns the relationship, SBTH owns the payroll calculation knowledge</div>
+    </div>
+    <div class="arch">
+      <div class="arch-ttl">Trade Industry Mentors &amp; Associations</div>
+      <p class="arch-why">Tradies are SBTH's highest-pain audience — growing teams, complex pay rates, minimal admin knowledge, RBPN-eligible</p>
+      <div class="arch-sees"><strong>Sees early:</strong> When a tradie hires apprentices and suddenly has Holidays Act obligations they don't understand</div>
+      <div class="arch-recip"><strong>Reciprocity:</strong> I refer SBTH graduates needing trade mentoring; they refer payroll-confused tradies to SBTH's courses — often funded by RBPN vouchers</div>
+    </div>
+    <div class="arch">
+      <div class="arch-ttl">Digital Marketing &amp; SEO Specialists</div>
+      <p class="arch-why">SBTH's growth lever is digital enrolment — search-intent campaigns targeting NZ business owners and bookkeepers looking for payroll training</p>
+      <div class="arch-sees"><strong>Sees early:</strong> Clients in the education or training space with a clear NZ audience and funded product — SBTH ticks every box</div>
+      <div class="arch-recip"><strong>Reciprocity:</strong> SBTH is a strong case study client; digital partners grow the enrolment pipeline; Di promotes their expertise to the SBTH community</div>
+    </div>
+    <div class="arch">
+      <div class="arch-ttl">Financial Planners &amp; Mortgage Advisors</div>
+      <p class="arch-why">They work with business owner clients whose compliance posture matters — payroll errors create IRD liability that affects personal financial planning</p>
+      <div class="arch-sees"><strong>Sees early:</strong> When a business owner's financial plan is complicated by unresolved payroll compliance risk</div>
+      <div class="arch-recip"><strong>Reciprocity:</strong> I refer SBTH students who need financial advice; they refer clients whose payroll gaps are creating compliance risk</div>
+    </div>
+  </div>
 </div>
 
 <div class="deco-img"><img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157048525/settings_images/d4da512-b038-3ce-adb-3d64a3e1ddc_Strat_Growth_IMG-2.webp" alt="NOW Group" onerror="this.parentElement.style.display='none'"></div>
 
+<!-- ─── 09 ACTIVATION SEQUENCE ────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">09 · Activation Sequence</div>
   <h2 class="stitle">Eye-2-Eye <em>Guide</em></h2>
-  <div class="pos-block"><p class="pos-text">Meeting objective: Establish mutual referral partnership and identify specific trigger points. Suggested agenda: Understand their client pain points, explain my referral opportunities, identify overlap areas, agree on referral process. Key questions: What payroll challenges do your clients mention? When do they typically need specialist help? How do you prefer to handle referrals? Listen for: Client stories involving payroll stress, compliance fears, or admin overwhelm. Close with: Specific next steps, referral trigger agreement, and follow-up timeline.</p></div>
-  <div style="margin-top:20px"><p class="pos-text" style="font-size:14px">1. Connect with Irene Bennetts to establish admin-payroll partnership framework. 2. Reach out to Jayson about tradie training opportunities and referral structure. 3. Schedule coffee with Zoltan to explore tech-payroll collaboration. 4. Connect with Keath about supporting his advisor network with payroll expertise. 5. Follow up with all connections within 2 weeks to establish referral triggers. 6. Create simple referral guide for partners explaining when to refer. 7. Schedule monthly check-ins with top 3 referral partners to maintain momentum.</p></div>
+  <div class="pos-block"><p class="pos-text"><strong>Meeting objective:</strong> Establish clear referral triggers around payroll pain — so partners can spot the moment and send the client to SBTH. <strong>Suggested agenda:</strong> Share the RBPN funding angle first (it changes the conversation), walk through typical client scenarios, agree on the exact language to use when they make a referral, set a follow-up process. <strong>Key questions to ask partners:</strong> When do your clients mention payroll? What's the most common payroll story you hear? Do your clients know about RBPN voucher funding? How do you prefer to handle warm referrals? <strong>Listen for:</strong> Any mention of Holidays Act confusion, leave calculation anxiety, IRD risk, new hires, growing teams. <strong>Close with:</strong> One specific referral trigger documented, RBPN funding fact sheet shared, follow-up booked within 30 days.</p></div>
+  <div style="margin-top:20px">
+    <ul class="actions-list">
+      <li><strong>Director's Wild Card:</strong> Await briefing from Chris (NOW Group) before approaching Alessandro Borghi — this is a facilitated introduction, not a cold reach. NOW will broker the opening</li>
+      <li>Connect with Dan Lewis (FWG) via NOW — introduce SBTH as the payroll confidence referral that pairs with his financial wellness work. Simple, clean, bilateral loop</li>
+      <li>Book Eye-2-Eye with Irene Bennetts to formalise the Admin Army ↔ SBTH referral exchange — same SME client, different problem, natural handoff both ways</li>
+      <li>Reach out to Keath Seto to introduce SBTH to his advisor network — share the RBPN funding fact sheet for his advisors to use with clients</li>
+      <li>Connect with Abhi Shrikhande to establish SBTH as the payroll training referral for his accounting clients</li>
+      <li>Create a one-page SBTH referral card: what SBTH is, who it's for, RBPN funding angle, and direct enrolment link at sbth.co.nz — share with all active partners</li>
+      <li>Aaron Kemp (Tradies Mentoring Tradies) — held in reserve as a top-tier referral partner. Activate in Phase 2 once core referral loops are established</li>
+    </ul>
+  </div>
 </div>
 
+<!-- ─── 10 90-DAY PLAN ─────────────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">10 · 90-Day Execution Plan</div>
   <h2 class="stitle">90-Day <em>Activation</em></h2>
   <div class="phases">
-    <div class="phase"><div class="phase-ttl">Phase 1</div><div class="phase-sub">Weeks 1–2 · Relationships</div><ul class="phase-list"><li>Reach out to Irene Bennetts to discuss admin-payroll partnership opportunities</li><li>Connect with Jayson about tradie training collaboration and referral structure</li><li>Schedule coffee meeting with Zoltan Mark about tech-payroll synergies</li><li>Contact Keath Seto about supporting his advisor network with payroll expertise</li><li>Create one-page referral guide explaining when partners should think of me</li></ul></div>
-    <div class="phase"><div class="phase-ttl">Phase 2</div><div class="phase-sub">Weeks 3–6 · Activation</div><ul class="phase-list"><li>Activate partner referral loops with clear handoff processes</li><li>Create co-branded referral assets and intro scripts</li><li>Begin weekly touchpoint rhythm with active partners</li><li>Track and optimise first referral conversions</li></ul></div>
-    <div class="phase"><div class="phase-ttl">Phase 3</div><div class="phase-sub">Weeks 7–12 · Scale</div><ul class="phase-list"><li>Document first case study from priority introduction set</li><li>Identify highest-yield referral channel and double down</li><li>Expand Tinderbox presence — contribute to two discussions</li><li>Quarterly review — refine targeting, plan next 90 days</li></ul></div>
+    <div class="phase">
+      <div class="phase-ttl">Phase 1</div>
+      <div class="phase-sub">Weeks 1–2 · Relationships</div>
+      <ul class="phase-list">
+        <li>Await NOW briefing on Alessandro Borghi (Director's Wild Card) — Chris brokers the opening</li>
+        <li>Connect with Dan Lewis (FWG) via NOW — introduce SBTH as the payroll referral that pairs with financial wellness</li>
+        <li>Book Eye-2-Eye with Irene Bennetts through NOW platform</li>
+        <li>Send Keath Seto SBTH overview and RBPN funding briefing for his advisor network</li>
+        <li>Reach out to Abhi Shrikhande about the accountant ↔ SBTH referral exchange</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-ttl">Phase 2</div>
+      <div class="phase-sub">Weeks 3–6 · Activation</div>
+      <ul class="phase-list">
+        <li>Activate Alessandro Borghi introduction (via NOW Director's Wild Card pathway)</li>
+        <li>Create SBTH partner referral card with RBPN funding angle — distribute to all active partners</li>
+        <li>Activate referral loop with Irene Bennetts — agree exact handoff process and trigger language</li>
+        <li>Connect with Aaron Kemp (Tradies Mentoring Tradies) — establish tradie-to-SBTH referral standing arrangement</li>
+        <li>Track first enrolment referrals from each partnership lane</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-ttl">Phase 3</div>
+      <div class="phase-sub">Weeks 7–12 · Scale</div>
+      <ul class="phase-list">
+        <li>Document first SBTH enrolment case study from a referral partner — use as social proof</li>
+        <li>Identify highest-yield referral lane (likely Irene or Aaron) and deepen</li>
+        <li>Expand SBTH's presence in NOW Tinderbox — contribute payroll expertise to two ecosystem discussions</li>
+        <li>Quarterly review — refine RBPN funding messaging, audit referral triggers, plan next 90 days</li>
+      </ul>
+    </div>
   </div>
 </div>
 
+<!-- ─── 11 LIVING DOCUMENT ────────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">11 · Living Document Protocol</div>
   <h2 class="stitle">Your NET_SYNC <em>Stays Current</em></h2>
   <p style="font-family:'Barlow',sans-serif;font-size:15px;font-weight:300;font-style:italic;color:var(--cream2);margin-bottom:18px;max-width:680px;line-height:1.6;">Most networking tools produce a static snapshot. Your NET_SYNC stays current because three forces keep it alive:</p>
   <div class="living-grid">
-    <div class="living-col"><div class="living-ttl">Member-Triggered</div><div class="living-sub">Submit updates via the form below or via Zoom check-in.</div><ul class="living-list"><li>New referral partner activated</li><li>ICP or IPP has shifted</li><li>New service or product launched</li><li>Key relationship changed</li></ul></div>
-    <div class="living-col"><div class="living-ttl">Facilitator-Triggered</div><div class="living-sub">Chris and NOW push updates without you needing to ask.</div><ul class="living-list"><li>High-value new member joins ecosystem</li><li>Strong referral match identified</li><li>Member milestone flagged</li><li>Introduction being prepared</li></ul></div>
-    <div class="living-col"><div class="living-ttl">Quarterly Scheduled</div><div class="living-sub">Every 90 days, NEXUS reviews and refreshes your full connection set.</div><ul class="living-list"><li>Partner status reviewed</li><li>Ecosystem additions scored</li><li>Referral activity logged vs expected</li><li>Priority introduction audit</li></ul></div>
+    <div class="living-col">
+      <div class="living-ttl">Member-Triggered</div>
+      <div class="living-sub">Submit updates via the form below or via Zoom check-in.</div>
+      <ul class="living-list">
+        <li>New referral partner activated</li>
+        <li>New SBTH course or product launched</li>
+        <li>RBPN funding status or scope changes</li>
+        <li>Key relationship changed</li>
+      </ul>
+    </div>
+    <div class="living-col">
+      <div class="living-ttl">Facilitator-Triggered</div>
+      <div class="living-sub">Chris and NOW push updates without you needing to ask.</div>
+      <ul class="living-list">
+        <li>High-value new member joins ecosystem</li>
+        <li>Strong referral match identified</li>
+        <li>Member milestone flagged</li>
+        <li>Introduction being prepared</li>
+      </ul>
+    </div>
+    <div class="living-col">
+      <div class="living-ttl">Quarterly Scheduled</div>
+      <div class="living-sub">Every 90 days, NEXUS reviews and refreshes your full connection set.</div>
+      <ul class="living-list">
+        <li>Partner status reviewed</li>
+        <li>Ecosystem additions scored</li>
+        <li>Referral activity logged vs expected</li>
+        <li>Priority introduction audit</li>
+      </ul>
+    </div>
   </div>
 </div>
 
+<!-- ─── 12 LEVER ───────────────────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">12 · NOW's LEVER Framework</div>
   <h2 class="stitle">Partnership Engineering in <em>Five Stages</em></h2>
   <div class="lever-wrap">
     <div class="lever"><div class="lever-num">01</div><div class="lever-ttl">Learn</div><p class="lever-body">Deep discovery of each partner's ICP, referral criteria, and where client pain emerges. Document overlap and mutual triggers.</p></div>
     <div class="lever"><div class="lever-num">02</div><div class="lever-ttl">Equilibrium</div><p class="lever-body">Balanced give-and-take from day one. Make the first introduction where possible. Set clear referral terms.</p></div>
-    <div class="lever"><div class="lever-num">03</div><div class="lever-ttl">Vision & Values</div><p class="lever-body">Align on shared principles: no fluff, client-first, transparency. Both parties understand the reciprocity expectation.</p></div>
-    <div class="lever"><div class="lever-num">04</div><div class="lever-ttl">Engage & Engineer</div><p class="lever-body">Build the systems: referral handoff process, shared tracking, intro scripts. Engineer repeatable pathways for mutual value.</p></div>
+    <div class="lever"><div class="lever-num">03</div><div class="lever-ttl">Vision &amp; Values</div><p class="lever-body">Align on shared principles: no fluff, client-first, transparency. Both parties understand the reciprocity expectation.</p></div>
+    <div class="lever"><div class="lever-num">04</div><div class="lever-ttl">Engage &amp; Engineer</div><p class="lever-body">Build the systems: referral handoff process, shared tracking, intro scripts. Engineer repeatable pathways for mutual value.</p></div>
     <div class="lever"><div class="lever-num">05</div><div class="lever-ttl">Roadmap</div><p class="lever-body">Map the 12-month partnership journey — quarterly milestones, joint content, case study capture, and scaling what works.</p></div>
   </div>
 </div>
 
+<!-- ─── 13 RISKS & WATCHOUTS ───────────────────────────────────────── -->
 <div class="sec">
-  <div class="sec-label">13 · Risks & Watchouts</div>
+  <div class="sec-label">13 · Risks &amp; Watchouts</div>
   <h2 class="stitle">Weak Fits to <em>Know</em></h2>
-  <div class="pos-block"><p class="pos-text">Partners outside New Zealand won't understand local compliance needs. Avoid partners focused only on large enterprises — different payroll complexity level. Watch for coaches who promise to handle everything themselves rather than refer specialists. Geographic risk is low since I work virtually, but prefer partners with NZ SME focus.</p></div>
+  <div class="wo-stack">
+    <div class="wo"><div class="wo-bar"></div><div class="wo-body"><div class="wo-ttl">Non-NZ Partners</div><p class="wo-txt">SBTH's content is built entirely around NZ payroll legislation. Partners focused on Australian or international SME clients won't generate meaningful referrals — the course is not relevant to their audience.</p></div></div>
+    <div class="wo"><div class="wo-bar"></div><div class="wo-body"><div class="wo-ttl">Large Enterprise Focus</div><p class="wo-txt">SBTH's sweet spot is 5–50 employees. Partners whose clients are enterprise-scale businesses with dedicated payroll departments are not a fit — different complexity, different solution.</p></div></div>
+    <div class="wo"><div class="wo-bar"></div><div class="wo-body"><div class="wo-ttl">Payroll Software Vendors</div><p class="wo-txt">Software companies often position themselves as the full payroll solution. Some are resistant to acknowledging that their software doesn't solve the legislation knowledge gap — and therefore won't refer to SBTH. Qualify the partnership intent early.</p></div></div>
+    <div class="wo"><div class="wo-bar"></div><div class="wo-body"><div class="wo-ttl">Partners Who Solve Everything In-House</div><p class="wo-txt">Coaches or advisors who pride themselves on having an answer for everything may not refer specialists. A partner who says "I handle payroll with my clients myself" is unlikely to generate SBTH enrolments.</p></div></div>
+  </div>
 </div>
 
+<!-- ─── 14 RECIPROCITY ENGINE ─────────────────────────────────────── -->
 <div class="sec">
   <div class="sec-label">14 · Reciprocity Engine</div>
   <h2 class="stitle">How the <em>Engine Works</em></h2>
-  <div class="pos-block"><p class="pos-text">I receive referrals from partners when their clients hit payroll complexity or compliance walls. I give referrals for business coaching, IT services, legal advice, and general admin support. Trust compounds when I solve their clients' problems quickly and professionally. Repeat triggers happen every time small businesses grow and hit new payroll complexity thresholds.</p></div>
+  <div class="pos-block"><p class="pos-text">SBTH receives referrals when partners identify the payroll knowledge gap before the client does — in business coaching sessions, accounting reviews, bookkeeper onboarding, HR consultations, or IT implementations. The RBPN funding angle makes every referral frictionless: "it may even be government-funded" removes the cost objection instantly. SBTH gives referrals when graduates are ready for the next layer of business support: accounting, coaching, HR, digital marketing, finance, and legal. The reciprocity loop is especially clean with bookkeepers (SBTH trains them, they send their own SME clients back) and business coaches (they send payroll-anxious clients to SBTH, SBTH sends newly-confident graduates back for growth strategy). Trust compounds every time a client enrols through a referral and reports back to the partner that the course delivered. Repeat triggers happen every time a business hires another employee, changes pay structures, or faces an IRD review.</p></div>
 </div>
 
 </div><!-- /wrap -->
 
+<!-- ─── DELTA FORCE FORM ───────────────────────────────────────────── -->
 <section class="edit-section">
   <div class="edit-inner">
     <div class="edit-hdr">
       <div>
         <div class="sec-label" style="margin-bottom:8px;">NET_SYNC Delta Force</div>
         <div class="edit-ttl">Update Your NET_SYNC</div>
-        <p class="edit-sub">Something changed? New partner activated, ICP refined, geography shift? Submit below — your NET_SYNC will be updated in the next rebuild cycle. Usually within 48 hours.</p>
+        <p class="edit-sub">Something changed? New partner activated, new SBTH course launched, ICP refined? Submit below — your NET_SYNC will be updated in the next rebuild cycle. Usually within 48 hours.</p>
       </div>
       <div class="edit-badge">
         <div class="edit-badge-l">Member ID</div>
@@ -441,7 +559,11 @@ footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
         <label class="flabel">What's Changed?</label>
         <select class="fselect" name="entry.1047851132">
           <option value="">Select update type...</option>
-          <option value="New Referral partner Activated (Advocate)">New Referral partner Activated (Advocate)</option><option value="ICP or IPP Shift">ICP or IPP Shift</option><option value="New Service or Product Launch">New Service or Product Launch</option><option value="Geography / Market expansion">Geography / Market expansion</option><option value="Key Relationship change (Retired)">Key Relationship change (Retired)</option>
+          <option value="New Referral partner Activated (Advocate)">New Referral partner Activated (Advocate)</option>
+          <option value="ICP or IPP Shift">ICP or IPP Shift</option>
+          <option value="New Service or Product Launch">New Service or Product Launch</option>
+          <option value="Geography / Market expansion">Geography / Market expansion</option>
+          <option value="Key Relationship change (Retired)">Key Relationship change (Retired)</option>
         </select>
       </div>
       <div class="fg">
@@ -453,7 +575,7 @@ footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
       </div>
       <div class="fg full">
         <label class="flabel">Details of the Update</label>
-        <textarea class="ftextarea" name="entry.1894679138" placeholder="Describe what's changed — names, companies, trigger language, new ICP details, etc."></textarea>
+        <textarea class="ftextarea" name="entry.1894679138" placeholder="Describe what's changed — names, companies, trigger language, new SBTH course details, ICP shifts, etc."></textarea>
       </div>
       <button type="submit" class="fsubmit">→ Submit NET_SYNC Delta Request</button>
       <p class="fnote">Updates are processed by NOW NEXUS and reflected in your next NET_SYNC rebuild. You'll receive confirmation when the update is live.</p>
@@ -461,6 +583,7 @@ footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
   </div>
 </section>
 
+<!-- ─── CTA ───────────────────────────────────────────────────────── -->
 <section class="cta-section">
   <div class="cta-inner">
     <div>
@@ -491,7 +614,7 @@ footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
       <a href="https://www.nowgroup.co.nz/now-partners" target="_blank">Partner Hub</a>
     </div>
   </div>
-  <div class="foot-meta">Di Crawford-Errington — NET_SYNC.02 Strategic Connection Plan · NEXUS MKII · Generated 17 Apr 2026 · nowgroup.co.nz</div>
+  <div class="foot-meta">Di Crawford-Errington — NET_SYNC.02 Strategic Connection Plan · NEXUS MKII · Generated 18 Apr 2026 · nowgroup.co.nz</div>
 </footer>
 
 </body>
