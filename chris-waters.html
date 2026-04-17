@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chris Waters — NET_SYNC Strategic Connection Plan · NOW Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ac:#F4511E;--ac-dark:#C23B0A;--ac-dim:rgba(244,81,30,0.1);
+  --bg:#0F0D0B;--bg2:#1A1714;--bg3:#252018;--mid:#3D3428;
+  --muted:#8C7B6B;--cream:#F5F0E8;--cream2:#EDE5D8;--white:#FDFAF6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;}
+.topnav{position:sticky;top:0;z-index:100;background:rgba(15,13,11,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(244,81,30,0.15);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:54px;}
+.tnav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.tnav-logo img{height:30px;width:auto;}
+.tnav-logo-txt{font-family:'Blinker',sans-serif;font-size:15px;font-weight:700;letter-spacing:3px;color:var(--ac);text-transform:uppercase;}
+.tnav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;}
+.tnav-links a{font-family:'Barlow',sans-serif;font-size:10px;font-weight:500;letter-spacing:1px;color:var(--muted);text-decoration:none;padding:5px 10px;text-transform:uppercase;transition:color 0.15s;}
+.tnav-links a:hover{color:var(--ac);}
+.tnav-cta{background:var(--ac)!important;color:white!important;font-weight:600!important;margin-left:6px;}
+.hero{min-height:calc(100vh - 54px);display:grid;grid-template-rows:1fr auto;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 40%,rgba(244,81,30,0.13) 0%,transparent 65%),radial-gradient(ellipse 40% 40% at 15% 80%,rgba(244,81,30,0.06) 0%,transparent 55%);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(244,81,30,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(244,81,30,0.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 65% 35%,black 20%,transparent 65%);}
+.hero-body{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px;padding:60px 40px;}
+.eyebrow{font-family:'Barlow',sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;color:var(--ac);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--ac);}
+h1.hname{font-family:'Blinker',sans-serif;font-size:clamp(64px,10vw,130px);font-weight:900;line-height:0.88;color:var(--white);letter-spacing:-2px;margin-bottom:6px;}
+h1.hname span{color:var(--ac);}
+.hbiz{font-family:'Blinker',sans-serif;font-size:clamp(16px,2.2vw,28px);font-weight:600;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:28px;}
+.htagline{font-family:'Barlow',sans-serif;font-size:17px;font-weight:300;font-style:italic;line-height:1.55;color:var(--cream2);max-width:520px;border-left:3px solid var(--ac);padding-left:18px;margin-bottom:40px;}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
+.stat-v{font-family:'Blinker',sans-serif;font-size:36px;font-weight:800;color:var(--ac);line-height:1;}
+.stat-l{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+.photo-frame{width:240px;height:300px;position:relative;overflow:hidden;border:1px solid;}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.photo-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(244,81,30,0.28) 0%,transparent 50%);}
+.photo-badge{position:absolute;bottom:0;left:0;right:0;padding:8px 14px;font-family:'Blinker',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;color:white;text-transform:uppercase;text-align:center;}
+.photo-corner{position:absolute;top:10px;right:10px;background:rgba(15,13,11,0.65);border:1px solid;font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;}
+.hero-foot{position:relative;z-index:2;padding:18px 40px;border-top:1px solid rgba(244,81,30,0.1);display:flex;justify-content:space-between;}
+.hfoot-txt{font-family:'Barlow',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;color:var(--muted);text-transform:uppercase;opacity:0.5;}
+.wrap{max-width:1080px;margin:0 auto;}
+.sec{padding:60px 40px;border-bottom:1px solid rgba(244,81,30,0.07);}
+.sec-label{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--ac);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+.sec-label::after{content:'';flex:1;height:1px;background:rgba(244,81,30,0.15);max-width:160px;}
+h2.stitle{font-family:'Blinker',sans-serif;font-size:clamp(28px,4.5vw,52px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.5px;margin-bottom:22px;}
+h2.stitle em{font-style:normal;color:var(--ac);}
+.pos-block{background:var(--bg2);border:1px solid rgba(244,81,30,0.13);padding:30px;position:relative;overflow:hidden;margin-bottom:18px;}
+.pos-block::before{content:'"'  ;font-family:'Blinker',sans-serif;font-size:220px;font-weight:900;color:rgba(244,81,30,0.04);position:absolute;top:-55px;right:12px;line-height:1;pointer-events:none;}
+.pos-text{font-family:'Barlow',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:var(--cream);max-width:800px;position:relative;z-index:1;}
+.pos-text strong{color:var(--ac);font-weight:500;}
+.cred-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:rgba(244,81,30,0.08);border:1px solid rgba(244,81,30,0.08);margin-top:18px;}
+.cred-item{background:var(--bg2);padding:14px 16px;}
+.cred-l{font-family:'Barlow',sans-serif;font-size:8px;font-weight:600;letter-spacing:2px;color:var(--ac);text-transform:uppercase;margin-bottom:3px;}
+.cred-v{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:var(--cream2);line-height:1.4;}
+.deco-img{margin:24px 0;width:100%;max-height:220px;overflow:hidden;}
+.deco-img img{width:100%;height:220px;object-fit:cover;object-position:center;opacity:0.6;filter:saturate(0.7);}
+.pain-list{display:flex;flex-direction:column;gap:10px;}
+.pain-item{display:flex;gap:14px;background:var(--bg2);border-left:3px solid var(--ac);padding:16px 18px;align-items:flex-start;}
+.pain-arrow{color:var(--ac);font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px;}
+.pain-text{font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream2);line-height:1.55;}
+.svc-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+.svc{background:var(--bg2);border:1px solid rgba(244,81,30,0.08);padding:20px;}
+.svc-body{font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream2);line-height:1.55;}
+.t-list{display:flex;flex-direction:column;gap:10px;}
+.t-item{display:flex;gap:12px;background:var(--bg2);border:1px solid rgba(244,81,30,0.12);padding:18px 20px;font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream);line-height:1.5;}
+.t-item span:first-child{color:var(--ac);font-weight:700;flex-shrink:0;}
+.pitches{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.pitch-1{background:linear-gradient(135deg,var(--ac-dark),var(--ac));padding:24px;}
+.pitch-2{background:var(--bg2);border:1px solid rgba(244,81,30,0.18);padding:24px;}
+.p-label{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;opacity:0.75;}
+.p-ttl{font-family:'Blinker',sans-serif;font-size:20px;font-weight:800;margin-bottom:10px;}
+.pitch-1 .p-label,.pitch-1 .p-ttl{color:white;}
+.pitch-2 .p-label{color:var(--ac);}
+.pitch-2 .p-ttl{color:var(--white);}
+.p-body{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;line-height:1.65;}
+.pitch-1 .p-body{color:rgba(255,255,255,0.9);}
+.pitch-2 .p-body{color:var(--cream2);}
+.conn-table{width:100%;border-collapse:collapse;margin-bottom:12px;}
+.conn-table th{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--ac);background:var(--bg2);padding:10px 14px;text-align:left;border:1px solid rgba(244,81,30,0.1);}
+.conn-table td{font-family:'Barlow',sans-serif;font-size:12px;font-weight:300;color:var(--cream2);background:var(--bg2);padding:12px 14px;border:1px solid rgba(244,81,30,0.07);vertical-align:top;line-height:1.5;}
+.conn-table tr:hover td{background:var(--bg3);}
+.conn-name{font-family:'Blinker',sans-serif;font-size:15px;font-weight:700;color:var(--white);display:block;margin-bottom:1px;}
+.conn-biz{font-family:'Barlow',sans-serif;font-size:10px;font-weight:500;color:var(--ac);text-transform:uppercase;letter-spacing:0.5px;}
+.tag-pill{display:inline-block;background:rgba(244,81,30,0.1);border:1px solid rgba(244,81,30,0.22);color:var(--ac);font-family:'Barlow',sans-serif;font-size:8px;font-weight:600;letter-spacing:1.5px;padding:2px 8px;text-transform:uppercase;}
+.n-step{font-family:'Barlow',sans-serif;font-size:11px;font-weight:500;color:var(--ac);}
+.arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.arch{background:var(--bg2);border:1px solid rgba(244,81,30,0.08);padding:18px;}
+.arch-ttl{font-family:'Blinker',sans-serif;font-size:16px;font-weight:700;color:var(--ac);margin-bottom:4px;}
+.arch-why{font-family:'Barlow',sans-serif;font-size:12px;color:var(--cream);margin-bottom:6px;line-height:1.4;}
+.arch-sees,.arch-recip{font-family:'Barlow',sans-serif;font-size:11px;font-weight:300;color:var(--muted);margin-top:4px;line-height:1.4;}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(244,81,30,0.08);}
+.phase{padding:22px 18px;}
+.phase:nth-child(1){background:var(--bg2);}
+.phase:nth-child(2){background:var(--bg3);}
+.phase:nth-child(3){background:var(--mid);}
+.phase-ttl{font-family:'Blinker',sans-serif;font-size:17px;font-weight:700;color:var(--ac);margin-bottom:3px;}
+.phase-sub{font-family:'Barlow',sans-serif;font-size:10px;font-weight:500;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
+.phase-list{list-style:none;}
+.phase-list li{font-family:'Barlow',sans-serif;font-size:12px;font-weight:300;color:var(--cream2);padding:3px 0 3px 14px;position:relative;line-height:1.4;}
+.phase-list li::before{content:'→';position:absolute;left:0;color:var(--ac);font-size:10px;}
+.living-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(244,81,30,0.08);}
+.living-col{padding:22px 18px;}
+.living-col:nth-child(1){background:var(--bg2);}
+.living-col:nth-child(2){background:var(--bg3);}
+.living-col:nth-child(3){background:var(--mid);}
+.living-ttl{font-family:'Blinker',sans-serif;font-size:17px;font-weight:700;color:var(--ac);margin-bottom:4px;}
+.living-sub{font-family:'Barlow',sans-serif;font-size:11px;font-weight:300;color:var(--muted);margin-bottom:10px;line-height:1.4;}
+.living-list{list-style:none;}
+.living-list li{font-family:'Barlow',sans-serif;font-size:12px;font-weight:300;color:var(--cream2);padding:3px 0 3px 12px;position:relative;line-height:1.4;}
+.living-list li::before{content:'→';position:absolute;left:0;color:var(--ac);font-size:10px;}
+.lever-wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(244,81,30,0.08);}
+.lever{background:var(--bg2);padding:18px 14px;}
+.lever-num{font-family:'Blinker',sans-serif;font-size:34px;font-weight:900;color:rgba(244,81,30,0.12);line-height:1;margin-bottom:3px;}
+.lever-ttl{font-family:'Blinker',sans-serif;font-size:14px;font-weight:700;color:var(--ac);margin-bottom:5px;text-transform:uppercase;}
+.lever-body{font-family:'Barlow',sans-serif;font-size:12px;font-weight:300;color:var(--cream2);line-height:1.5;}
+.wo-stack{display:flex;flex-direction:column;gap:10px;}
+.wo{display:grid;grid-template-columns:3px 1fr;gap:12px;}
+.wo-bar{background:var(--ac);opacity:0.4;border-radius:2px;}
+.wo-body{background:var(--bg2);padding:14px 18px;}
+.wo-ttl{font-family:'Blinker',sans-serif;font-size:14px;font-weight:700;color:var(--ac);text-transform:uppercase;margin-bottom:3px;}
+.wo-txt{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:var(--cream2);line-height:1.55;}
+.actions-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.actions-list li{font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream2);padding:12px 16px 12px 40px;background:var(--bg2);border-left:3px solid var(--ac);position:relative;line-height:1.5;}
+.actions-list li::before{content:'→';position:absolute;left:14px;color:var(--ac);font-weight:700;}
+.edit-section{background:var(--bg2);border-top:1px solid rgba(244,81,30,0.15);}
+.edit-inner{max-width:1080px;margin:0 auto;padding:60px 40px;}
+.edit-hdr{display:grid;grid-template-columns:1fr auto;gap:40px;margin-bottom:30px;align-items:start;}
+.edit-ttl{font-family:'Blinker',sans-serif;font-size:clamp(24px,4vw,44px);font-weight:800;color:var(--white);line-height:1;margin-bottom:6px;}
+.edit-sub{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:var(--muted);line-height:1.55;max-width:480px;}
+.edit-badge{background:rgba(244,81,30,0.08);border:1px solid rgba(244,81,30,0.2);padding:12px 18px;text-align:center;flex-shrink:0;}
+.edit-badge-l{font-family:'Barlow',sans-serif;font-size:8px;font-weight:600;letter-spacing:2px;color:var(--ac);text-transform:uppercase;margin-bottom:3px;}
+.edit-badge-v{font-family:'Blinker',sans-serif;font-size:16px;font-weight:700;color:var(--white);}
+.edit-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{display:flex;flex-direction:column;gap:5px;}
+.fg.full{grid-column:1/-1;}
+.flabel{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--ac);text-transform:uppercase;}
+.finput,.ftextarea,.fselect{background:var(--bg3);border:1px solid rgba(244,81,30,0.15);color:var(--cream);font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;padding:11px 14px;outline:none;transition:border-color 0.15s;width:100%;}
+.finput:focus,.ftextarea:focus,.fselect:focus{border-color:rgba(244,81,30,0.45);}
+.ftextarea{min-height:90px;resize:vertical;}
+.fselect option{background:var(--bg3);}
+.fsubmit{grid-column:1/-1;background:var(--ac);color:white;font-family:'Blinker',sans-serif;font-size:18px;font-weight:700;letter-spacing:2px;padding:14px;border:none;cursor:pointer;text-transform:uppercase;transition:background 0.15s;width:100%;}
+.fsubmit:hover{background:var(--ac-dark);}
+.fnote{grid-column:1/-1;font-family:'Barlow',sans-serif;font-size:11px;font-weight:300;color:var(--muted);font-style:italic;opacity:0.7;}
+.cta-section{background:linear-gradient(135deg,var(--ac-dark),var(--ac));padding:60px 40px;position:relative;overflow:hidden;}
+.cta-section::before{content:'NET_SYNC';font-family:'Blinker',sans-serif;font-size:150px;font-weight:900;color:rgba(0,0,0,0.1);position:absolute;right:-10px;top:50%;transform:translateY(-50%);letter-spacing:-4px;white-space:nowrap;pointer-events:none;}
+.cta-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1;}
+.cta-label{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:3px;color:rgba(255,255,255,0.7);text-transform:uppercase;margin-bottom:10px;}
+h2.cta-ttl{font-family:'Blinker',sans-serif;font-size:clamp(30px,5vw,60px);font-weight:900;color:white;line-height:0.9;letter-spacing:-1px;margin-bottom:14px;}
+.cta-inc{font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:8px;}
+.cta-inc strong{font-weight:600;color:white;}
+.cta-sub{font-family:'Barlow',sans-serif;font-size:12px;font-style:italic;color:rgba(255,255,255,0.65);margin-bottom:22px;}
+.cta-link{display:inline-block;background:rgba(0,0,0,0.2);color:white;font-family:'Barlow',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;padding:12px 22px;text-decoration:none;border:1px solid rgba(255,255,255,0.3);text-transform:uppercase;}
+.cta-feats{display:flex;flex-direction:column;gap:10px;}
+.cta-feat{display:flex;gap:12px;background:rgba(0,0,0,0.12);padding:12px 14px;font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:rgba(255,255,255,0.9);line-height:1.4;}
+footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
+.foot-nav{max-width:1080px;margin:0 auto;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.foot-logo{font-family:'Blinker',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;color:var(--muted);text-transform:uppercase;opacity:0.45;}
+.foot-links{display:flex;gap:2px;flex-wrap:wrap;}
+.foot-links a{font-family:'Barlow',sans-serif;font-size:10px;font-weight:500;letter-spacing:1px;color:var(--muted);text-decoration:none;padding:4px 10px;text-transform:uppercase;opacity:0.45;transition:opacity 0.15s;}
+.foot-links a:hover{opacity:1;color:var(--ac);}
+.foot-meta{max-width:1080px;margin:0 auto;padding:8px 40px 18px;font-family:'Barlow',sans-serif;font-size:10px;color:var(--muted);opacity:0.3;text-align:center;}
+.note{font-family:'Barlow',sans-serif;font-size:10px;font-weight:500;color:var(--muted);margin-top:10px;}
+.divider{width:100%;height:1px;background:linear-gradient(90deg,var(--ac),transparent);opacity:0.2;}
+@media(max-width:900px){
+  .topnav,.hero-body,.sec,.edit-inner,.cta-inner,.foot-nav{padding-left:20px;padding-right:20px;}
+  .hero-body{grid-template-columns:1fr;}
+  .hero-photo,.hero-grid{display:none;}
+  h1.hname{font-size:64px;}
+  .pitches,.arch-grid,.phases,.living-grid,.lever-wrap,.cta-inner,.edit-form{grid-template-columns:1fr;}
+  .lever-wrap{grid-template-columns:1fr 1fr;}
+  .edit-hdr{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="https://www.nowgroup.co.nz" class="tnav-logo" target="_blank">
+    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157048525/settings_images/77c4ffb-680-da2c-7576-b50632d8ad46_VID_LINK_LOGO.webp" alt="NOW Group" onerror="this.style.display='none'">
+    <span class="tnav-logo-txt">NOW GROUP</span>
+  </a>
+  <div class="tnav-links">
+    <a href="https://www.nowgroup.co.nz/now-tracking-HQ" target="_blank">Tracking HQ</a>
+    <a href="https://www.nowgroup.co.nz/now-nav-hub" target="_blank">Nav Hub</a>
+    <a href="https://www.nowgroup.co.nz/genius-library" target="_blank">Genius Library</a>
+    <a href="https://now-group-eco.mykajabi.com/products/communities/nowgroup/meetups" target="_blank">Community</a>
+    <a href="https://www.nowgroup.co.nz/now-partners" target="_blank" class="tnav-cta">Partner Hub</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-body">
+    <div>
+      <div class="eyebrow">NET_SYNC.02 // Member · New Zealand</div>
+      <h1 class="hname">CHRIS<br>WATERS</h1>
+      <div class="hbiz">Watershed Brand (WBL)</div>
+      <p class="htagline">The brand architect who transforms industrial businesses from invisible to inevitable in their sector.</p>
+      <div class="hero-stats">
+        <div><div class="stat-v">5</div><div class="stat-l">Priority Intros</div></div>
+        <div><div class="stat-v">90</div><div class="stat-l">Day Activation</div></div>
+        <div><div class="stat-v">↻</div><div class="stat-l">Living Document</div></div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="hero-foot">
+    <div class="hfoot-txt">Generated 17 Apr 2026 · NEXUS MKII · nowgroup.co.nz</div>
+    <div class="hfoot-txt">↓ Scroll to explore your plan</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+<div class="wrap">
+
+<div class="sec">
+  <div class="sec-label">01 · Positioning</div>
+  <h2 class="stitle">Your Commercial <em>Identity</em></h2>
+  <div class="pos-block">
+    <p class="pos-text">I'm Chris Waters, founder of Watershed Brand — the go-to brand specialist for engineering, construction, and manufacturing companies across New Zealand. These businesses often have incredible technical capability but struggle to communicate their value clearly, losing tenders to competitors with better storytelling. I create cohesive brand identities that help industrial leaders stand out in crowded markets, win larger contracts, and charge premium rates. My clients typically see immediate improvements in tender success rates because their brand finally matches their ambition.</p>
+  </div>
+  <div class="cred-row">
+    <div class="cred-item"><div class="cred-l">Business</div><div class="cred-v">Watershed Brand (WBL)</div></div>
+    <div class="cred-item"><div class="cred-l">Location</div><div class="cred-v">New Zealand</div></div>
+    <div class="cred-item"><div class="cred-l">Status</div><div class="cred-v">Member</div></div>
+    <div class="cred-item"><div class="cred-l">Website</div><div class="cred-v">https://watershedbrand.co.nz</div></div>
+  </div>
+</div>
+
+<div class="deco-img"><img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157048525/settings_images/80637a6-dab3-51b-55ca-8c3a250e01_Slider_collages_HOME.webp" alt="NOW Group" onerror="this.parentElement.style.display='none'"></div>
+
+<div class="sec">
+  <div class="sec-label">02 · Ideal Client Profile</div>
+  <h2 class="stitle">Who You <em>Serve</em></h2>
+  <p style="font-family:'Barlow',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:var(--cream);max-width:800px;">Engineering consultancies, construction companies, architectural firms, and manufacturing businesses across New Zealand with $2-20M revenue. These are established operators who've outgrown their original branding, struggling with inconsistent messaging across proposals, websites, and marketing materials. Decision-makers are typically founders or senior partners who attend industry events, belong to professional associations, and network through chambers of commerce.</p>
+</div>
+
+<div class="sec">
+  <div class="sec-label">03 · Client Pain Points</div>
+  <h2 class="stitle">What They're <em>Actually Saying</em></h2>
+  <div class="pain-list"><div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">Our brand looks amateur compared to our actual capabilities</div></div><div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">We're losing tenders to competitors who present better, not work better</div></div><div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">Our marketing materials are inconsistent and don't tell a coherent story</div></div><div class="pain-item"><div class="pain-arrow">→</div><div class="pain-text">Potential clients can't quickly understand what makes us different</div></div></div>
+</div>
+
+<div class="sec">
+  <div class="sec-label">04 · Service Delivery</div>
+  <h2 class="stitle">What Chris <em>Delivers</em></h2>
+  <div class="svc-wrap"><div class="svc"><div class="svc-body">Complete brand identity systems that position industrial businesses as premium market leaders</div></div><div class="svc"><div class="svc-body">Cohesive marketing communications that win more tenders and higher-value contracts</div></div><div class="svc"><div class="svc-body">Ongoing graphic design support that maintains brand consistency across all touchpoints</div></div><div class="svc"><div class="svc-body">Strategic brand positioning that helps technical businesses communicate complex value simply</div></div></div>
+</div>
+
+<div class="deco-img"><img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157048525/settings_images/641071-d620-5fd5-c02b-03d1de300c5d_NET_PArtners_IMG-2.webp" alt="NOW Group" onerror="this.parentElement.style.display='none'"></div>
+
+<div class="sec">
+  <div class="sec-label">05 · Referral Triggers</div>
+  <h2 class="stitle">Lines Partners Can <em>Use Right Now</em></h2>
+  <div class="t-list"><div class="t-item"><span>→</span><span>Know an engineering firm that keeps losing tenders despite doing great work?</span></div><div class="t-item"><span>→</span><span>Working with a construction company whose brand doesn't match their project quality?</span></div><div class="t-item"><span>→</span><span>See a manufacturing business with outdated marketing that doesn't reflect their innovation?</span></div><div class="t-item"><span>→</span><span>Connected to an architectural firm struggling to differentiate in competitive pitches?</span></div><div class="t-item"><span>→</span><span>Know any industrial business owners frustrated that their expertise isn't coming through in their marketing?</span></div></div>
+</div>
+
+<div class="sec">
+  <div class="sec-label">06 · Pitch Options</div>
+  <h2 class="stitle">Two Pitch <em>Options</em></h2>
+  <div class="pitches">
+    <div class="pitch-1">
+      <div class="p-label">Pitch 1 — Friction Point · Group Settings</div>
+      <div class="p-ttl">The Room Pitch</div>
+      <p class="p-body">Most engineering and construction companies I meet have the same problem — they do brilliant technical work but their brand makes them look like every other player in the market. They're losing tenders not because they can't deliver, but because they can't communicate why they're the obvious choice. I help these businesses transform from invisible to inevitable by creating brand identities that match their actual capabilities and win them the contracts they deserve.</p>
+    </div>
+    <div class="pitch-2">
+      <div class="p-label">Pitch 2 — Partner-Targeted · 1:1 Settings</div>
+      <div class="p-ttl">The Partner Handshake</div>
+      <p class="p-body">I specialize in rebranding industrial businesses — engineering firms, construction companies, manufacturers — who've outgrown their original identity. These companies typically have strong technical reputations but struggle with consistent messaging across proposals and marketing. My brand systems help them win more tenders and charge premium rates. Perfect for any partner working with established industrial businesses ready to invest in their market positioning.</p>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-label">07 · Priority Introductions</div>
+  <h2 class="stitle">NET_SYNC Completion Set — <em>5 Strategic Connections</em></h2>
+  <table class="conn-table">
+    <tr><th>Partner</th><th>Status</th><th>Why This Connection Matters</th><th>Next Step</th></tr>
+    
+        <tr>
+          <td><span class="conn-name">Alex Greig</span>
+              <span class="conn-biz">Supernova Search</span></td>
+          <td><span class="tag-pill">Partner</span></td>
+          <td>Perfect reciprocal partner — Alex places senior talent in construction and engineering firms who are exactly Chris's target market. Companies hiring senior roles are often simultaneously evaluating their brand positioning.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Alex places someone at a firm with outdated branding or inconsistent marketing materials</small></td>
+          <td><span class="n-step">Connect via LinkedIn explaining the mutual referral opportunity in industrial sector</span></td>
+        </tr>
+        <tr>
+          <td><span class="conn-name">Karl Tercel</span>
+              <span class="conn-biz">Kudo Digital</span></td>
+          <td><span class="tag-pill">Member</span></td>
+          <td>Natural collaboration partner — Karl handles digital implementation while Chris handles brand strategy. Many industrial businesses need both services simultaneously.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When either encounters a client needing both brand refresh and digital presence overhaul</small></td>
+          <td><span class="n-step">Propose joint meeting to discuss complementary service offering for industrial clients</span></td>
+        </tr>
+        <tr>
+          <td><span class="conn-name">Nicole Rose</span>
+              <span class="conn-biz">Nicole Rose Business Operations</span></td>
+          <td><span class="tag-pill">Member</span></td>
+          <td>Nicole works with scaling businesses on operational systems — perfect time for brand refresh. Growing companies often need both operational efficiency and professional brand presence.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Nicole identifies clients whose operations are scaling but brand presentation is lagging behind</small></td>
+          <td><span class="n-step">Schedule coffee to explore how brand consistency fits into operational systemization</span></td>
+        </tr>
+        <tr>
+          <td><span class="conn-name">Farhad Malegam</span>
+              <span class="conn-biz">ZARI AI</span></td>
+          <td><span class="tag-pill">Member</span></td>
+          <td>AI automation for small businesses creates efficiency — successful implementations often trigger investment in professional branding. Farhad sees businesses optimizing operations who then need brand upgrades.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Farhad's AI implementations free up budget and headspace for brand investment</small></td>
+          <td><span class="n-step">Connect to understand how brand positioning supports business automation initiatives</span></td>
+        </tr>
+        <tr>
+          <td><span class="conn-name">Duncan Standley</span>
+              <span class="conn-biz">Next Wave Marketing & IT</span></td>
+          <td><span class="tag-pill">Prospect</span></td>
+          <td>Duncan serves similar business segment with marketing and IT services. Clear opportunity for referral partnership — Chris handles brand strategy, Duncan handles ongoing marketing execution.<br><small style="color:#F4511E;font-weight:500;margin-top:4px;display:block">When Duncan encounters clients needing foundational brand work before marketing campaigns</small></td>
+          <td><span class="n-step">Reach out via LinkedIn to explore complementary services for shared target market</span></td>
+        </tr>
+  </table>
+  <p class="note">+ 2 more priority introductions available in your full NET_SYNC activation session →</p>
+</div>
+
+<div class="sec">
+  <div class="sec-label">08 · Partner Archetypes</div>
+  <h2 class="stitle">Who Shares Your <em>ICP</em></h2>
+  <div class="arch-grid">
+        <div class="arch">
+          <div class="arch-ttl">Industrial Business Advisors</div>
+          <p class="arch-why">Accountants, lawyers, and consultants serving engineering/construction already have trust with Chris's ideal clients</p>
+          <div class="arch-sees"><strong>Sees early:</strong> Financial growth phases, business expansion plans, competitive pressures requiring brand investment</div>
+          <div class="arch-recip"><strong>Reciprocity:</strong> Regular referral flow as their clients hit growth phases requiring brand investment</div>
+        </div>
+        <div class="arch">
+          <div class="arch-ttl">Recruitment Specialists</div>
+          <p class="arch-why">Companies hiring senior talent often simultaneously evaluate their brand positioning and market presence</p>
+          <div class="arch-sees"><strong>Sees early:</strong> Growth phases, new management teams, companies preparing for expansion</div>
+          <div class="arch-recip"><strong>Reciprocity:</strong> Natural timing alignment — hiring phases coincide with brand investment decisions</div>
+        </div>
+        <div class="arch">
+          <div class="arch-ttl">Digital Implementation Partners</div>
+          <p class="arch-why">Web developers, digital marketers, and IT consultants need brand foundations before executing digital strategies</p>
+          <div class="arch-sees"><strong>Sees early:</strong> Digital transformation projects, website rebuilds, marketing automation needs</div>
+          <div class="arch-recip"><strong>Reciprocity:</strong> Sequential service delivery — brand first, then digital implementation</div>
+        </div>
+        <div class="arch">
+          <div class="arch-ttl">Business Growth Consultants</div>
+          <p class="arch-why">Operations consultants, sales trainers, and business coaches work with companies ready to invest in professional presentation</p>
+          <div class="arch-sees"><strong>Sees early:</strong> Scaling challenges, operational improvements, sales process refinements</div>
+          <div class="arch-recip"><strong>Reciprocity:</strong> Growth investments often include brand upgrades as companies professionalize</div>
+        </div>
+        <div class="arch">
+          <div class="arch-ttl">Industry Association Leaders</div>
+          <p class="arch-why">Chamber of commerce executives, industry association managers know multiple businesses in Chris's target sectors</p>
+          <div class="arch-sees"><strong>Sees early:</strong> Membership growth, industry changes, competitive pressures affecting multiple businesses</div>
+          <div class="arch-recip"><strong>Reciprocity:</strong> Ongoing relationship cultivation leads to multiple referrals from single source</div>
+        </div></div>
+</div>
+
+<div class="deco-img"><img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157511448/settings_images/236f24-c65-2626-2d82-2d627318c4_CyvLCUA7ksuLU2_PRX-e9.jpg" alt="NOW Group" onerror="this.parentElement.style.display='none'"></div>
+
+<div class="sec">
+  <div class="sec-label">09 · Activation Sequence</div>
+  <h2 class="stitle">Eye-2-Eye <em>Guide</em></h2>
+  <div class="pos-block"><p class="pos-text">Meeting objective: Establish mutual referral understanding and identify immediate opportunities. Agenda: Share ideal client profiles (10 min), discuss current client challenges (15 min), identify overlap opportunities (10 min), agree on referral triggers and process (10 min), plan follow-up (5 min). Key questions: What challenges do your industrial clients face with brand presentation? When do your clients typically invest in professional branding? How do you currently handle clients needing brand work? Listen for: Timing of referrals, decision-making process, budget indicators, existing relationships. Close: Exchange ideal client checklists and agree on monthly check-in cadence.</p></div>
+  <div style="margin-top:20px"><p class="pos-text" style="font-size:14px">1. Connect with Alex Greig via LinkedIn — highest reciprocal value partner in exact target market. 2. Schedule joint meeting with Karl Tercel to create complementary service package. 3. Coffee with Nicole Rose to explore brand/operations integration opportunities. 4. Reach out to Duncan Standley to establish referral partnership. 5. Connect with Farhad to understand AI/brand positioning synergies. 6. Update LinkedIn profile with clear industrial focus and referral triggers. 7. Create simple referral guide for partners explaining ideal client profile and timing.</p></div>
+</div>
+
+<div class="sec">
+  <div class="sec-label">10 · 90-Day Execution Plan</div>
+  <h2 class="stitle">90-Day <em>Activation</em></h2>
+  <div class="phases">
+    <div class="phase"><div class="phase-ttl">Phase 1</div><div class="phase-sub">Weeks 1–2 · Relationships</div><ul class="phase-list"><li>Connect with Alex Greig on LinkedIn with specific industrial sector referral proposal</li><li>Schedule joint meeting with Karl Tercel to create integrated brand/digital service offering</li><li>Coffee meeting with Nicole Rose to discuss brand/operations integration opportunities</li><li>Update LinkedIn profile with clear industrial specialization and referral triggers</li><li>Create one-page partner referral guide with ideal client profile and project indicators</li></ul></div>
+    <div class="phase"><div class="phase-ttl">Phase 2</div><div class="phase-sub">Weeks 3–6 · Activation</div><ul class="phase-list"><li>Activate partner referral loops with clear handoff processes</li><li>Create co-branded referral assets and intro scripts</li><li>Begin weekly touchpoint rhythm with active partners</li><li>Track and optimise first referral conversions</li></ul></div>
+    <div class="phase"><div class="phase-ttl">Phase 3</div><div class="phase-sub">Weeks 7–12 · Scale</div><ul class="phase-list"><li>Document first case study from priority introduction set</li><li>Identify highest-yield referral channel and double down</li><li>Expand Tinderbox presence — contribute to two discussions</li><li>Quarterly review — refine targeting, plan next 90 days</li></ul></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-label">11 · Living Document Protocol</div>
+  <h2 class="stitle">Your NET_SYNC <em>Stays Current</em></h2>
+  <p style="font-family:'Barlow',sans-serif;font-size:15px;font-weight:300;font-style:italic;color:var(--cream2);margin-bottom:18px;max-width:680px;line-height:1.6;">Most networking tools produce a static snapshot. Your NET_SYNC stays current because three forces keep it alive:</p>
+  <div class="living-grid">
+    <div class="living-col"><div class="living-ttl">Member-Triggered</div><div class="living-sub">Submit updates via the form below or via Zoom check-in.</div><ul class="living-list"><li>New referral partner activated</li><li>ICP or IPP has shifted</li><li>New service or product launched</li><li>Key relationship changed</li></ul></div>
+    <div class="living-col"><div class="living-ttl">Facilitator-Triggered</div><div class="living-sub">Chris and NOW push updates without you needing to ask.</div><ul class="living-list"><li>High-value new member joins ecosystem</li><li>Strong referral match identified</li><li>Member milestone flagged</li><li>Introduction being prepared</li></ul></div>
+    <div class="living-col"><div class="living-ttl">Quarterly Scheduled</div><div class="living-sub">Every 90 days, NEXUS reviews and refreshes your full connection set.</div><ul class="living-list"><li>Partner status reviewed</li><li>Ecosystem additions scored</li><li>Referral activity logged vs expected</li><li>Priority introduction audit</li></ul></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-label">12 · NOW's LEVER Framework</div>
+  <h2 class="stitle">Partnership Engineering in <em>Five Stages</em></h2>
+  <div class="lever-wrap">
+    <div class="lever"><div class="lever-num">01</div><div class="lever-ttl">Learn</div><p class="lever-body">Deep discovery of each partner's ICP, referral criteria, and where client pain emerges. Document overlap and mutual triggers.</p></div>
+    <div class="lever"><div class="lever-num">02</div><div class="lever-ttl">Equilibrium</div><p class="lever-body">Balanced give-and-take from day one. Make the first introduction where possible. Set clear referral terms.</p></div>
+    <div class="lever"><div class="lever-num">03</div><div class="lever-ttl">Vision & Values</div><p class="lever-body">Align on shared principles: no fluff, client-first, transparency. Both parties understand the reciprocity expectation.</p></div>
+    <div class="lever"><div class="lever-num">04</div><div class="lever-ttl">Engage & Engineer</div><p class="lever-body">Build the systems: referral handoff process, shared tracking, intro scripts. Engineer repeatable pathways for mutual value.</p></div>
+    <div class="lever"><div class="lever-num">05</div><div class="lever-ttl">Roadmap</div><p class="lever-body">Map the 12-month partnership journey — quarterly milestones, joint content, case study capture, and scaling what works.</p></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-label">13 · Risks & Watchouts</div>
+  <h2 class="stitle">Weak Fits to <em>Know</em></h2>
+  <div class="pos-block"><p class="pos-text">Geographic limitations — ensure partners work with New Zealand businesses. Timing misalignment — some partners may see businesses too early in growth cycle for $10K+ brand investment. One-way referrals — partners in digital space may not need reverse referrals to industrial businesses. Price sensitivity — some partner clients may not reach Chris's minimum project thresholds. Industry mismatch — avoid partners serving consumer/retail businesses outside industrial focus.</p></div>
+</div>
+
+<div class="sec">
+  <div class="sec-label">14 · Reciprocity Engine</div>
+  <h2 class="stitle">How the <em>Engine Works</em></h2>
+  <div class="pos-block"><p class="pos-text">Chris receives: Warm introductions to established industrial businesses at growth/investment phases ready for brand work. Chris gives: Professional brand positioning that helps partners' clients become more successful and easier to work with. Trust compounds through: Successful brand projects that improve partners' client retention and satisfaction. Repeat triggers: Business growth phases, tender preparation periods, new leadership transitions, competitive pressures.</p></div>
+</div>
+
+</div><!-- /wrap -->
+
+<section class="edit-section">
+  <div class="edit-inner">
+    <div class="edit-hdr">
+      <div>
+        <div class="sec-label" style="margin-bottom:8px;">NET_SYNC Delta Force</div>
+        <div class="edit-ttl">Update Your NET_SYNC</div>
+        <p class="edit-sub">Something changed? New partner activated, ICP refined, geography shift? Submit below — your NET_SYNC will be updated in the next rebuild cycle. Usually within 48 hours.</p>
+      </div>
+      <div class="edit-badge">
+        <div class="edit-badge-l">Member ID</div>
+        <div class="edit-badge-v">chris_waters</div>
+      </div>
+    </div>
+    <form class="edit-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfxrGdGoqAVaj_7KUodIrM09wuwXru7oqVR-f-2puT9GsOshQ/formResponse" method="POST" target="_blank">
+      <input type="hidden" name="entry.711979712" value="Chris Waters">
+      <div class="fg">
+        <label class="flabel">Your Name</label>
+        <input class="finput" type="text" value="Chris Waters" readonly>
+      </div>
+      <div class="fg">
+        <label class="flabel">Your Email</label>
+        <input class="finput" type="email" name="entry.2094621950" placeholder="chris@watershedbrand.co.nz" value="chris@watershedbrand.co.nz">
+      </div>
+      <div class="fg">
+        <label class="flabel">What's Changed?</label>
+        <select class="fselect" name="entry.1047851132">
+          <option value="">Select update type...</option>
+          <option value="New Referral partner Activated (Advocate)">New Referral partner Activated (Advocate)</option><option value="ICP or IPP Shift">ICP or IPP Shift</option><option value="New Service or Product Launch">New Service or Product Launch</option><option value="Geography / Market expansion">Geography / Market expansion</option><option value="Key Relationship change (Retired)">Key Relationship change (Retired)</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label class="flabel">Priority</label>
+        <select class="fselect" name="entry.114994695">
+          <option value="Normal - include in next quarterly refresh">Normal — include in next quarterly refresh</option>
+          <option value="Urgent - update ASAP">Urgent — update ASAP</option>
+        </select>
+      </div>
+      <div class="fg full">
+        <label class="flabel">Details of the Update</label>
+        <textarea class="ftextarea" name="entry.1894679138" placeholder="Describe what's changed — names, companies, trigger language, new ICP details, etc."></textarea>
+      </div>
+      <button type="submit" class="fsubmit">→ Submit NET_SYNC Delta Request</button>
+      <p class="fnote">Updates are processed by NOW NEXUS and reflected in your next NET_SYNC rebuild. You'll receive confirmation when the update is live.</p>
+    </form>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-label">Your Full NET_SYNC Includes</div>
+      <h2 class="cta-ttl">The Complete<br>Connection Plan</h2>
+      <p class="cta-inc"><strong>5 priority introductions</strong> · Activation sequence · 30-day action plan · Reciprocity engine map · Eye-2-Eye guides · Partner archetypes · Two pitch options</p>
+      <p class="cta-sub">Then it stays live. Updated by you. Updated by NOW. Refreshed every 90 days.</p>
+      <a href="https://www.nowgroup.co.nz" class="cta-link" target="_blank">→ nowgroup.co.nz</a>
+    </div>
+    <div class="cta-feats">
+      <div class="cta-feat">🔄 <strong style="margin-right:6px">Living Document</strong> — not a static report. Your plan evolves with your business and the ecosystem around you.</div>
+      <div class="cta-feat">🎯 <strong style="margin-right:6px">Real named people</strong> — every connection has commercial rationale, referral triggers, and a specific first step.</div>
+      <div class="cta-feat">⚡ <strong style="margin-right:6px">Delta Force form</strong> — request updates directly from this page. Changes land in NEXUS within 48 hours.</div>
+      <div class="cta-feat">📍 <strong style="margin-right:6px">Tracking HQ</strong> — monitor referral activity, introductions made, and partner engagement in real time.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-nav">
+    <div class="foot-logo">NOW GROUP</div>
+    <div class="foot-links">
+      <a href="https://www.nowgroup.co.nz" target="_blank">Home</a>
+      <a href="https://www.nowgroup.co.nz/now-tracking-HQ" target="_blank">Tracking HQ</a>
+      <a href="https://www.nowgroup.co.nz/now-nav-hub" target="_blank">Nav Hub</a>
+      <a href="https://www.nowgroup.co.nz/genius-library" target="_blank">Genius Library</a>
+      <a href="https://now-group-eco.mykajabi.com/products/communities/nowgroup/meetups" target="_blank">Community</a>
+      <a href="https://www.nowgroup.co.nz/now-partners" target="_blank">Partner Hub</a>
+    </div>
+  </div>
+  <div class="foot-meta">Chris Waters — NET_SYNC.02 Strategic Connection Plan · NEXUS MKII · Generated 17 Apr 2026 · nowgroup.co.nz</div>
+</footer>
+
+</body>
+</html>
