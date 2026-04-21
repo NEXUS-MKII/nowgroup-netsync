@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rej Singh — NET_SYNC Preview · NOW Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ac:#F4511E;--ac-dark:#C23B0A;
+  --bg:#0F0D0B;--bg2:#1A1714;--bg3:#252018;--mid:#3D3428;
+  --muted:#8C7B6B;--cream:#F5F0E8;--cream2:#EDE5D8;--white:#FDFAF6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;}
+
+/* NAV */
+.topnav{position:sticky;top:0;z-index:100;background:rgba(15,13,11,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(244,81,30,0.15);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:54px;}
+.tnav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.tnav-logo img{height:30px;width:auto;}
+.tnav-logo-txt{font-family:'Blinker',sans-serif;font-size:15px;font-weight:700;letter-spacing:3px;color:var(--ac);text-transform:uppercase;}
+.tnav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;}
+.tnav-links a{font-family:'Barlow',sans-serif;font-size:10px;font-weight:500;letter-spacing:1px;color:var(--muted);text-decoration:none;padding:5px 10px;text-transform:uppercase;transition:color 0.15s;}
+.tnav-links a:hover{color:var(--ac);}
+.tnav-cta{background:var(--ac)!important;color:white!important;font-weight:600!important;margin-left:6px;}
+
+/* HERO */
+.hero{min-height:calc(100vh - 54px);display:grid;grid-template-rows:1fr auto;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 40%,rgba(244,81,30,0.13) 0%,transparent 65%),radial-gradient(ellipse 40% 40% at 15% 80%,rgba(244,81,30,0.06) 0%,transparent 55%);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(244,81,30,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(244,81,30,0.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 65% 35%,black 20%,transparent 65%);}
+.hero-body{position:relative;z-index:2;padding:60px 40px;display:flex;flex-direction:column;justify-content:center;}
+.eyebrow{font-family:'Barlow',sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;color:var(--ac);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--ac);}
+h1.hname{font-family:'Blinker',sans-serif;font-size:clamp(52px,9vw,120px);font-weight:900;line-height:0.88;color:var(--white);letter-spacing:-2px;margin-bottom:6px;}
+h1.hname span{color:var(--ac);}
+.hbiz{font-family:'Blinker',sans-serif;font-size:clamp(14px,2vw,22px);font-weight:600;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:28px;}
+.htagline{font-family:'Barlow',sans-serif;font-size:17px;font-weight:300;font-style:italic;line-height:1.55;color:var(--cream2);max-width:600px;border-left:3px solid var(--ac);padding-left:18px;margin-bottom:40px;}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap;margin-bottom:32px;}
+.stat-v{font-family:'Blinker',sans-serif;font-size:36px;font-weight:800;color:var(--ac);line-height:1;}
+.stat-l{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{display:inline-block;background:var(--ac);color:white;font-family:'Blinker',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;padding:14px 28px;text-decoration:none;text-transform:uppercase;transition:background 0.15s;}
+.btn-primary:hover{background:var(--ac-dark);}
+.btn-secondary{display:inline-block;background:transparent;color:var(--cream);font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;letter-spacing:1px;padding:14px 22px;text-decoration:none;text-transform:uppercase;border:1px solid rgba(244,81,30,0.3);transition:border-color 0.15s;}
+.btn-secondary:hover{border-color:var(--ac);color:var(--ac);}
+.hero-foot{position:relative;z-index:2;padding:18px 40px;border-top:1px solid rgba(244,81,30,0.1);display:flex;justify-content:space-between;}
+.hfoot-txt{font-family:'Barlow',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;color:var(--muted);text-transform:uppercase;opacity:0.5;}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;}
+.sec{padding:60px 40px;border-bottom:1px solid rgba(244,81,30,0.07);}
+.sec-label{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:3px;color:var(--ac);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+.sec-label::after{content:'';flex:1;height:1px;background:rgba(244,81,30,0.15);max-width:160px;}
+h2.stitle{font-family:'Blinker',sans-serif;font-size:clamp(28px,4.5vw,52px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.5px;margin-bottom:22px;}
+h2.stitle em{font-style:normal;color:var(--ac);}
+
+/* POSITIONING BLOCK */
+.pos-block{background:var(--bg2);border:1px solid rgba(244,81,30,0.13);padding:30px;position:relative;overflow:hidden;margin-bottom:18px;}
+.pos-block::before{content:'"';font-family:'Blinker',sans-serif;font-size:220px;font-weight:900;color:rgba(244,81,30,0.04);position:absolute;top:-55px;right:12px;line-height:1;pointer-events:none;}
+.pos-text{font-family:'Barlow',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:var(--cream);max-width:800px;position:relative;z-index:1;}
+.pos-text strong{color:var(--ac);font-weight:500;}
+
+/* CRED ROW */
+.cred-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:rgba(244,81,30,0.08);border:1px solid rgba(244,81,30,0.08);margin-top:18px;}
+.cred-item{background:var(--bg2);padding:14px 16px;}
+.cred-l{font-family:'Barlow',sans-serif;font-size:8px;font-weight:600;letter-spacing:2px;color:var(--ac);text-transform:uppercase;margin-bottom:3px;}
+.cred-v{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:var(--cream2);line-height:1.4;}
+.cred-v a{color:var(--ac);text-decoration:none;}
+
+/* DECO IMG */
+.deco-img{margin:0;width:100%;max-height:220px;overflow:hidden;}
+.deco-img img{width:100%;height:220px;object-fit:cover;object-position:center;opacity:0.6;filter:saturate(0.7);}
+
+/* ABOUT — edge + opportunity + what you solve */
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(244,81,30,0.08);}
+.about-card{padding:24px 20px;}
+.about-card:nth-child(1){background:var(--bg2);}
+.about-card:nth-child(2){background:var(--bg3);}
+.about-card:nth-child(3){background:var(--mid);}
+.about-card-label{font-family:'Barlow',sans-serif;font-size:8px;font-weight:600;letter-spacing:2px;color:var(--ac);text-transform:uppercase;margin-bottom:8px;}
+.about-card-ttl{font-family:'Blinker',sans-serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:10px;}
+.about-card-body{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:var(--cream2);line-height:1.6;}
+
+/* ARCHETYPES — 2 cards side by side */
+.arch-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.arch-card{background:var(--bg2);border:1px solid rgba(244,81,30,0.1);padding:24px;}
+.arch-card-num{font-family:'Blinker',sans-serif;font-size:48px;font-weight:900;color:rgba(244,81,30,0.08);line-height:1;margin-bottom:4px;}
+.arch-card-ttl{font-family:'Blinker',sans-serif;font-size:20px;font-weight:700;color:var(--ac);margin-bottom:12px;line-height:1.1;}
+.arch-card-row{margin-bottom:10px;}
+.arch-card-row-label{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--ac);text-transform:uppercase;margin-bottom:3px;}
+.arch-card-row-body{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:var(--cream2);line-height:1.5;}
+
+/* REFERRAL TRIGGERS */
+.trigger-stack{display:flex;flex-direction:column;gap:12px;}
+.trigger-item{display:grid;grid-template-columns:auto 1fr;gap:0;}
+.trigger-from{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--ac);text-transform:uppercase;background:rgba(244,81,30,0.1);border:1px solid rgba(244,81,30,0.2);padding:12px 16px;display:flex;align-items:center;white-space:nowrap;}
+.trigger-phrase{font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream);font-style:italic;line-height:1.6;background:var(--bg2);border:1px solid rgba(244,81,30,0.07);border-left:none;padding:14px 20px;}
+
+/* INTRODUCTIONS — cards */
+.intro-stack{display:flex;flex-direction:column;gap:16px;}
+.intro-card{background:var(--bg2);border:1px solid rgba(244,81,30,0.1);border-left:4px solid var(--ac);padding:24px 28px;}
+.intro-card-meta{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.intro-card-name{font-family:'Blinker',sans-serif;font-size:22px;font-weight:800;color:var(--white);}
+.intro-card-biz{font-family:'Barlow',sans-serif;font-size:11px;font-weight:500;color:var(--ac);text-transform:uppercase;letter-spacing:1px;}
+.intro-card-loc{font-family:'Barlow',sans-serif;font-size:11px;font-weight:300;color:var(--muted);}
+.intro-card-arch{display:inline-block;background:rgba(244,81,30,0.1);border:1px solid rgba(244,81,30,0.22);color:var(--ac);font-family:'Barlow',sans-serif;font-size:8px;font-weight:600;letter-spacing:1.5px;padding:3px 10px;text-transform:uppercase;margin-bottom:12px;}
+.intro-card-body{font-family:'Barlow',sans-serif;font-size:14px;font-weight:300;color:var(--cream2);line-height:1.65;margin-bottom:12px;}
+.intro-card-trigger{font-family:'Barlow',sans-serif;font-size:13px;font-weight:400;color:var(--cream);font-style:italic;border-left:2px solid rgba(244,81,30,0.3);padding-left:12px;margin-bottom:14px;line-height:1.5;}
+.intro-card-step{font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;color:var(--ac);}
+.intro-more{font-family:'Barlow',sans-serif;font-size:11px;font-weight:500;color:var(--muted);margin-top:12px;padding:14px 20px;background:var(--bg2);border:1px dashed rgba(244,81,30,0.2);text-align:center;}
+
+/* FULL SESSION — what they get */
+.session-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.session-item{background:var(--bg2);border:1px solid rgba(244,81,30,0.08);padding:20px 22px;}
+.session-item-ttl{font-family:'Blinker',sans-serif;font-size:17px;font-weight:700;color:var(--ac);margin-bottom:6px;}
+.session-item-body{font-family:'Barlow',sans-serif;font-size:13px;font-weight:300;color:var(--cream2);line-height:1.55;}
+
+/* NEXT STEP / CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--ac-dark),var(--ac));padding:80px 40px;position:relative;overflow:hidden;}
+.cta-section::before{content:'NET_SYNC';font-family:'Blinker',sans-serif;font-size:160px;font-weight:900;color:rgba(0,0,0,0.08);position:absolute;right:-20px;top:50%;transform:translateY(-50%);letter-spacing:-4px;white-space:nowrap;pointer-events:none;}
+.cta-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}
+.cta-label{font-family:'Barlow',sans-serif;font-size:9px;font-weight:600;letter-spacing:3px;color:rgba(255,255,255,0.65);text-transform:uppercase;margin-bottom:12px;}
+h2.cta-ttl{font-family:'Blinker',sans-serif;font-size:clamp(36px,6vw,72px);font-weight:900;color:white;line-height:0.9;letter-spacing:-1px;margin-bottom:20px;}
+.cta-body{font-family:'Barlow',sans-serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.88);line-height:1.6;max-width:640px;margin-bottom:14px;}
+.cta-signoff{font-family:'Blinker',sans-serif;font-size:22px;font-weight:700;color:white;margin-bottom:36px;letter-spacing:1px;}
+.cta-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.cta-btn-main{display:inline-block;background:white;color:var(--ac-dark);font-family:'Blinker',sans-serif;font-size:17px;font-weight:800;letter-spacing:2px;padding:16px 36px;text-decoration:none;text-transform:uppercase;transition:opacity 0.15s;}
+.cta-btn-main:hover{opacity:0.92;}
+.cta-btn-sec{display:inline-block;background:rgba(0,0,0,0.15);color:white;font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;letter-spacing:1px;padding:16px 24px;text-decoration:none;text-transform:uppercase;border:1px solid rgba(255,255,255,0.3);transition:background 0.15s;}
+.cta-btn-sec:hover{background:rgba(0,0,0,0.28);}
+.cta-happens{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px;}
+.cta-happens-item{background:rgba(0,0,0,0.14);color:rgba(255,255,255,0.85);font-family:'Barlow',sans-serif;font-size:12px;font-weight:400;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid rgba(244,81,30,0.1);}
+.foot-nav{max-width:1080px;margin:0 auto;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.foot-logo{font-family:'Blinker',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;color:var(--muted);text-transform:uppercase;opacity:0.45;}
+.foot-links{display:flex;gap:2px;flex-wrap:wrap;}
+.foot-links a{font-family:'Barlow',sans-serif;font-size:10px;font-weight:500;letter-spacing:1px;color:var(--muted);text-decoration:none;padding:4px 10px;text-transform:uppercase;opacity:0.45;transition:opacity 0.15s;}
+.foot-links a:hover{opacity:1;color:var(--ac);}
+.foot-meta{max-width:1080px;margin:0 auto;padding:8px 40px 18px;font-family:'Barlow',sans-serif;font-size:10px;color:var(--muted);opacity:0.3;text-align:center;}
+
+.divider{width:100%;height:1px;background:linear-gradient(90deg,var(--ac),transparent);opacity:0.2;}
+
+@media(max-width:900px){
+  .topnav,.hero-body,.sec,.cta-inner,.foot-nav{padding-left:20px;padding-right:20px;}
+  .about-grid,.arch-pair,.session-grid{grid-template-columns:1fr;}
+  .trigger-item{grid-template-columns:1fr;}
+  .trigger-from{white-space:normal;}
+  .trigger-phrase{border-left:1px solid rgba(244,81,30,0.07);border-top:none;}
+  .cta-btns{flex-direction:column;}
+  .hero-ctas{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a href="https://www.nowgroup.co.nz" class="tnav-logo" target="_blank">
+    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157048525/settings_images/77c4ffb-680-da2c-7576-b50632d8ad46_VID_LINK_LOGO.webp" alt="NOW Group" onerror="this.style.display='none'">
+    <span class="tnav-logo-txt">NOW GROUP</span>
+  </a>
+  <div class="tnav-links">
+    <a href="https://www.nowgroup.co.nz" target="_blank">Home</a>
+    <a href="https://scheduler.zoom.us/chris--now-group/now-group-assembly" target="_blank" class="tnav-cta">Book Your Session</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-body">
+    <div class="eyebrow">NET_SYNC Preview // Prospect · South-West Sydney, Australia</div>
+    <h1 class="hname">REJ<br><span>SINGH</span></h1>
+    <div class="hbiz">Envision Legal</div>
+    <p class="htagline">Your Connection Map is Ready, Rej.</p>
+    <div class="hero-stats">
+      <div><div class="stat-v">2</div><div class="stat-l">Intros Mapped</div></div>
+      <div><div class="stat-v">2</div><div class="stat-l">Partner Archetypes</div></div>
+      <div><div class="stat-v">5</div><div class="stat-l">In Full Session</div></div>
+    </div>
+    <div class="hero-ctas">
+      <a href="https://nowgroup.co.nz" class="btn-primary" target="_blank">→ Book Your NET_SYNC Session</a>
+      <a href="https://scheduler.zoom.us/chris--now-group/now-group-assembly" class="btn-secondary" target="_blank">Join a NOW Assembly</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="hfoot-txt">Built by NOW Group · nowgroup.co.nz · 22 Apr 2026</div>
+    <div class="hfoot-txt">↓ Scroll to explore</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+<div class="wrap">
+
+<!-- SECTION A — ABOUT -->
+<div class="sec">
+  <div class="sec-label">About Rej Singh</div>
+  <h2 class="stitle">Founder · <em>Envision Legal</em></h2>
+  <div class="pos-block">
+    <p class="pos-text">Rej Singh is the founder of Envision Legal — a boutique commercial law firm in South-West Sydney helping entrepreneurs, startups, and growing businesses get practical legal support without the big-firm overhead. After 15+ years across CBA, QBE, Marsh, and Avant in corporate and commercial law, Rej built Envision Legal around a simple idea: <strong>business-first legal advice delivered lean, fast, and in plain English.</strong></p>
+  </div>
+  <div class="cred-row">
+    <div class="cred-item"><div class="cred-l">Business</div><div class="cred-v">Envision Legal</div></div>
+    <div class="cred-item"><div class="cred-l">Location</div><div class="cred-v">South-West Sydney, Australia</div></div>
+    <div class="cred-item"><div class="cred-l">Credentials</div><div class="cred-v">15+ yrs · CBA · QBE · Marsh · Avant · Tokio Marine</div></div>
+    <div class="cred-item"><div class="cred-l">Website</div><div class="cred-v"><a href="https://envisionlegal.com.au" target="_blank">envisionlegal.com.au</a></div></div>
+  </div>
+</div>
+
+<div class="deco-img"><img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157048525/settings_images/641071-d620-5fd5-c02b-03d1de300c5d_NET_PArtners_IMG-2.webp" alt="NOW Group" onerror="this.parentElement.style.display='none'"></div>
+
+<!-- SECTION 1 — POSITION -->
+<div class="sec">
+  <div class="sec-label">01 · Your Position in the NOW Ecosystem</div>
+  <h2 class="stitle">Where You <em>Fit</em></h2>
+  <div class="about-grid">
+    <div class="about-card">
+      <div class="about-card-label">Your Edge</div>
+      <div class="about-card-ttl">Big-firm rigour. Boutique price point.</div>
+      <p class="about-card-body">15+ years in-house and contract legal across CBA, QBE, Marsh, Avant, and Tokio Marine. You've seen the structural risks that cost companies millions — now you help founders avoid them before they scale. That combination of corporate depth and plain-English delivery is rare in a boutique.</p>
+    </div>
+    <div class="about-card">
+      <div class="about-card-label">The Opportunity in This Network</div>
+      <div class="about-card-ttl">They need a lawyer they can actually refer.</div>
+      <p class="about-card-body">Every accountant, broker, and business adviser in NOW regularly encounters clients with legal exposure they can't name: shareholder drift, unclear IP ownership, sale-readiness gaps, contract risk. They need a lawyer they can refer to without worrying about big-firm sticker shock. That lawyer is you.</p>
+    </div>
+    <div class="about-card">
+      <div class="about-card-label">What You Solve</div>
+      <div class="about-card-ttl">The gap between ad-hoc and in-house.</div>
+      <p class="about-card-body">The exact space between "I'll Google it" and "we can't afford a full-time lawyer" — where growing businesses break. Fractional GC. Fixed-fee commercial work. Plain-English advice. Envision Legal closes it without the cost or commitment of either extreme.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2 — ARCHETYPES -->
+<div class="sec">
+  <div class="sec-label">02 · Your Two Highest-Value Partner Archetypes</div>
+  <h2 class="stitle">Who Refers <em>Consistently</em></h2>
+  <p style="font-family:'Barlow',sans-serif;font-size:15px;font-weight:300;color:var(--cream2);max-width:700px;line-height:1.65;margin-bottom:28px;">The NOW ecosystem contains specific partner profiles whose clients are already primed for what you offer. These are the two highest-leverage referral relationships for Rej Singh.</p>
+  <div class="arch-pair">
+    <div class="arch-card">
+      <div class="arch-card-num">01</div>
+      <div class="arch-card-ttl">Accountants &amp; Business Advisers</div>
+      <div class="arch-card-row">
+        <div class="arch-card-row-label">Why they matter</div>
+        <div class="arch-card-row-body">Accountants see legal gaps early — shareholder issues during year-end, structure problems during restructures, tax exposure on sales. They're often the first to spot something that needs legal attention, and the last to have a lawyer they're confident referring to.</div>
+      </div>
+      <div class="arch-card-row">
+        <div class="arch-card-row-label">The trigger moment</div>
+        <div class="arch-card-row-body">A client mentions selling, restructuring, or bringing in a new shareholder — the accountant knows the documentation won't hold. That's the Rej moment.</div>
+      </div>
+      <div class="arch-card-row">
+        <div class="arch-card-row-label">What flows back</div>
+        <div class="arch-card-row-body">Your M&amp;A and structuring work routinely surfaces tax and accounting questions. Warm lane back to the accountant, no friction.</div>
+      </div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-card-num">02</div>
+      <div class="arch-card-ttl">Business Brokers &amp; M&amp;A Advisers</div>
+      <div class="arch-card-row">
+        <div class="arch-card-row-label">Why they matter</div>
+        <div class="arch-card-row-body">Brokers live with sale-readiness failure. Deals fall apart at due diligence when shareholder agreements are missing, IP is unclear, or contracts weren't assignable. They want a lawyer who cleans that up before they go to market — not during.</div>
+      </div>
+      <div class="arch-card-row">
+        <div class="arch-card-row-label">The trigger moment</div>
+        <div class="arch-card-row-body">Broker has a seller who "needs a tidy-up" — shareholder agreement, employment contracts, IP register. Rej is the fix, before the listing goes live.</div>
+      </div>
+      <div class="arch-card-row">
+        <div class="arch-card-row-label">What flows back</div>
+        <div class="arch-card-row-body">Your sale and acquisition work routinely needs a broker. Direct cross-referral lane — clean, bilateral, no overlap.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="deco-img"><img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2157511448/settings_images/2ccf16d-3acc-23ad-64b7-c660dfe748c_Power_teams.webp" alt="NOW Group" onerror="this.parentElement.style.display='none'"></div>
+
+<!-- SECTION 3 — REFERRAL TRIGGERS -->
+<div class="sec">
+  <div class="sec-label">03 · Referral Triggers</div>
+  <h2 class="stitle">The Words That <em>Start the Conversation</em></h2>
+  <p style="font-family:'Barlow',sans-serif;font-size:15px;font-weight:300;color:var(--cream2);max-width:700px;line-height:1.65;margin-bottom:28px;">These are the exact phrases a NOW partner would use to refer into Envision Legal. Specific enough to send right now.</p>
+  <div class="trigger-stack">
+    <div class="trigger-item">
+      <div class="trigger-from">From an Accountant</div>
+      <div class="trigger-phrase">"My client is restructuring / selling / bringing in a shareholder and the documents aren't right — Rej Singh at Envision Legal does exactly that, fixed-fee, plain English."</div>
+    </div>
+    <div class="trigger-item">
+      <div class="trigger-from">From a Business Broker</div>
+      <div class="trigger-phrase">"My seller needs the shareholder agreement, IP, and contracts cleaned up before we list — Rej Singh gets that sale-ready without killing the timeline."</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4 — TWO INTRODUCTIONS -->
+<div class="sec">
+  <div class="sec-label">04 · Two Introductions Already Mapped</div>
+  <h2 class="stitle">Your First <em>Two Connections</em></h2>
+  <p style="font-family:'Barlow',sans-serif;font-size:15px;font-weight:300;color:var(--cream2);max-width:700px;line-height:1.65;margin-bottom:28px;">Scored matches based on your ICP, referral logic, and activation potential. Both are queued and ready to activate in your full NET_SYNC session.</p>
+  <div class="intro-stack">
+
+    <div class="intro-card">
+      <div class="intro-card-meta">
+        <span class="intro-card-name">Mina Baselyous</span>
+        <span class="intro-card-biz">Pinnacle Accounting &amp; Advisory</span>
+        <span class="intro-card-loc">Greater Melbourne, Australia</span>
+      </div>
+      <div class="intro-card-arch">Accountant · CPA · CTA · FTI</div>
+      <p class="intro-card-body">Mina isn't just an accountant — she's a Chartered Tax Adviser and Fellow of the Tax Institute. Those credentials put her at the advisory tier. Her clients are mid-market business owners restructuring, selling, and planning transactions — the exact moments Envision Legal's M&amp;A, shareholder, and structuring work gets triggered. Your Deloitte-grade backgrounds are a natural trust signal between you.</p>
+      <div class="intro-card-trigger">"Mina has a client discussing a sale, restructure, or shareholder change — her tax advice needs legal documentation to land. That's Rej."</div>
+      <div class="intro-card-step">→ Queued and ready to activate in your full NET_SYNC session.</div>
+    </div>
+
+    <div class="intro-card">
+      <div class="intro-card-meta">
+        <span class="intro-card-name">Kavitha Joachim</span>
+        <span class="intro-card-biz">KJ Audit &amp; Accounting</span>
+        <span class="intro-card-loc">Casey, Victoria, Australia</span>
+      </div>
+      <div class="intro-card-arch">Accountant · Audit Specialist</div>
+      <p class="intro-card-body">Kavitha's work sits in audit — one of the richest discovery surfaces for legal exposure. Shareholder disputes, unsigned agreements, IP ownership gaps, and compliance lapses all surface in the audit review. Her clients walk in with a compliance question and walk out needing legal help. That flow points directly to Envision Legal.</p>
+      <div class="intro-card-trigger">"Kavitha's audit flags a shareholder, contract, or compliance issue she can't resolve — Rej handles the legal side without the big-firm overhead."</div>
+      <div class="intro-card-step">→ Queued and ready to activate in your full NET_SYNC session.</div>
+    </div>
+
+  </div>
+  <div class="intro-more">+ 3 more priority introductions — including finance brokers, fractional CFOs, and IP-adjacent specialists — held for your full NET_SYNC session →</div>
+</div>
+
+<!-- SECTION 5 — FULL SESSION -->
+<div class="sec">
+  <div class="sec-label">05 · Your Full NET_SYNC Session</div>
+  <h2 class="stitle">The Complete <em>Connection Strategy</em></h2>
+  <p style="font-family:'Barlow',sans-serif;font-size:15px;font-weight:300;color:var(--cream2);max-width:700px;line-height:1.65;margin-bottom:28px;">The preview you're reading now is just the beginning. Your full NET_SYNC session delivers a complete, activation-ready connection strategy.</p>
+  <div class="session-grid">
+    <div class="session-item">
+      <div class="session-item-ttl">5 Priority Introductions</div>
+      <div class="session-item-body">Scored, ranked, and activation-sequenced from across the NOW ecosystem — including the partner archetypes beyond accountants and brokers already mapped in your Nexus profile.</div>
+    </div>
+    <div class="session-item">
+      <div class="session-item-ttl">30-Day Action Plan</div>
+      <div class="session-item-body">A structured sequence of outreach and activation steps to start conversations immediately — ordered so introductions compound rather than compete for your attention.</div>
+    </div>
+    <div class="session-item">
+      <div class="session-item-ttl">Eye-2-Eye Meeting Guides</div>
+      <div class="session-item-body">Tailored conversation frameworks for each priority introduction — what to say, what to listen for, how to close with a concrete next step.</div>
+    </div>
+    <div class="session-item">
+      <div class="session-item-ttl">Living Connection Map</div>
+      <div class="session-item-body">Your map updates every 90 days as the ecosystem grows and evolves. Not a static report — a commercial intelligence layer that stays current.</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-label">Your Next Step</div>
+    <h2 class="cta-ttl">The Ecosystem<br>Is Already<br>Working for You</h2>
+    <p class="cta-body">Rej — your profile is live in the NOW Network Engine. You told Chris the cold approach has been netting zero. The warm approach looks nothing like that. The next move is yours.</p>
+    <div class="cta-signoff">One Conversation Starts It.</div>
+    <div class="cta-btns">
+      <a href="https://nowgroup.co.nz" class="cta-btn-main" target="_blank">→ Book Your NET_SYNC Session</a>
+      <a href="https://scheduler.zoom.us/chris--now-group/now-group-assembly" class="cta-btn-sec" target="_blank">Join a NOW Assembly First</a>
+    </div>
+    <div class="cta-happens">
+      <div class="cta-happens-item">✓ 5 priority introductions named &amp; activated</div>
+      <div class="cta-happens-item">✓ 30-day action plan delivered</div>
+      <div class="cta-happens-item">✓ Eye-2-Eye meeting guides prepared</div>
+      <div class="cta-happens-item">✓ Living connection map goes live</div>
+      <div class="cta-happens-item">✓ The NOW ecosystem starts working harder for you</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-nav">
+    <div class="foot-logo">NOW GROUP</div>
+    <div class="foot-links">
+      <a href="https://www.nowgroup.co.nz" target="_blank">Home</a>
+      <a href="https://www.nowgroup.co.nz/now-tracking-HQ" target="_blank">Tracking HQ</a>
+      <a href="https://www.nowgroup.co.nz/now-nav-hub" target="_blank">Nav Hub</a>
+      <a href="https://www.nowgroup.co.nz/genius-library" target="_blank">Genius Library</a>
+      <a href="https://now-group-eco.mykajabi.com/products/communities/nowgroup/meetups" target="_blank">Community</a>
+      <a href="https://www.nowgroup.co.nz/now-partners" target="_blank">Partner Hub</a>
+    </div>
+  </div>
+  <div class="foot-meta">Built by NOW Group for Rej Singh · Envision Legal · NET_SYNC Preview · NEXUS MKII · 22 Apr 2026 · nowgroup.co.nz</div>
+</footer>
+
+</body>
+</html>
