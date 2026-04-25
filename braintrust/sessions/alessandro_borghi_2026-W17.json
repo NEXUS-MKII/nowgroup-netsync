@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-W17",
+  "member_id": "alessandro_borghi",
+  "member_name": "Alessandro Borghi",
+  "generated_at": "2026-04-25T04:51:42.728751+00:00",
+  "total": 10,
+  "prospects": [
+    {
+      "id": "peter_curran",
+      "name": "Peter Curran",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/peter-curran-seo",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "assia_salikhova",
+      "name": "Assia Salikhova",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/assia-salikhova",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "paul_david",
+      "name": "Paul David",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "linkedin.com/in/pauldwordsmith",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "vicki_corless",
+      "name": "Vicki Corless",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/vicki-corless-5a43931",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "susy_natal",
+      "name": "Susy Natal",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/susy-natal-07653566",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "jeremy_harford",
+      "name": "Jeremy Harford",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/jeremy-harford-71a990b0",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "cory_kilcullen",
+      "name": "Cory Kilcullen",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/cory-kilcullen-9b691a97",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "steve_barker",
+      "name": "Steve Barker",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/steve-barker-654b408b",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "sharn_piper",
+      "name": "Sharn Piper",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": {
+        "value": "linkedin.com/in/sharnpiper",
+        "source": "facilitator_manual",
+        "confidence": "HIGH",
+        "updated_by": "facilitator",
+        "updated_at": "2026-04-04T00:39:24Z",
+        "verified": true,
+        "previous_value": {
+          "value": "https://linkedin.com/in/sharnpiper",
+          "source": "facilitator_manual",
+          "confidence": "HIGH",
+          "updated_by": "facilitator",
+          "updated_at": "2026-03-31T09:17:11Z",
+          "verified": true,
+          "previous_value": null
+        }
+      },
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "catherine_adam_wonderbird_ltd",
+      "name": "Catherine Adam Wonderbird Ltd",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/catherineadamdesign",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    }
+  ]
+}
