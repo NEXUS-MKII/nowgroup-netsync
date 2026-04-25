@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-W17",
+  "member_id": "garth_lewis",
+  "member_name": "Garth Lewis",
+  "generated_at": "2026-04-25T04:51:42.925510+00:00",
+  "total": 10,
+  "prospects": [
+    {
+      "id": "richard_chen",
+      "name": "Richard Chen",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/richard-cp-chen",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "wendy_bennett",
+      "name": "Wendy Bennett",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "peter_curran",
+      "name": "Peter Curran",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/peter-curran-seo",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "tarlo_property_group",
+      "name": "Tarlo Property Group",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/jaytarlinton",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "shaun_tucker",
+      "name": "Shaun Tucker",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/theshauntucker",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "matt_lovesmith",
+      "name": "Matt Love-Smith",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/mattlovesmith",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "ross_wilson_executive",
+      "name": "Ross Wilson Executive",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/rosspwilson",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "michelle_hill",
+      "name": "Michelle Hill",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "corey_mack",
+      "name": "Corey Mack",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/corey-mack-928a80108",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "astiana_trouland",
+      "name": "Astiana Trouland",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/astiana-trouland-932356208",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    }
+  ]
+}
