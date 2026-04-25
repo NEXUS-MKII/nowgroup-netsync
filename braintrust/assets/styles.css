@@ -1,0 +1,333 @@
+/* ═══════════════════════════════════════════════════════════════════
+   NOW Brain Trust — Wizard survey styling
+   Shared DNA with the brandkit_intake form for consistency.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+    --primary:   #1F2937;
+    --secondary: #E8840A;
+    --accent:    #F59E0B;
+    --ink:       #0F172A;
+    --body:      #374151;
+    --muted:     #6B7280;
+    --cream:     #FAFAF9;
+    --surface:   #FFFFFF;
+    --rule:      #E5E7EB;
+    --focus:     #FBBF24;
+    --error:     #DC2626;
+    --success:   #059669;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--cream);
+    color: var(--body);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+.app {
+    max-width: 720px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+}
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.brand-mark img { height: 36px; width: auto; display: block; }
+.header-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary);
+    padding-left: 14px;
+    margin-left: 4px;
+    border-left: 2px solid var(--secondary);
+}
+.progress {
+    flex: 1;
+    height: 4px;
+    background: var(--rule);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 100%;
+    background: var(--secondary);
+    border-radius: 999px;
+    transition: width 240ms ease;
+}
+.step-counter {
+    font-family: 'Archivo', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    font-variant-numeric: tabular-nums;
+    min-width: 65px;
+    text-align: right;
+    letter-spacing: 0.04em;
+}
+.step-counter .slash { color: var(--secondary); margin: 0 2px; font-weight: 500; }
+
+/* ── WIZARD ─────────────────────────────────────────────── */
+.wizard { flex: 1; display: flex; align-items: center; padding: 32px 0; }
+.step {
+    display: none;
+    width: 100%;
+    animation: fadeIn 180ms ease;
+}
+.step[hidden] { display: none !important; }
+.step.active { display: block; }
+.step-inner { max-width: 640px; margin: 0 auto; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.eyebrow {
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 16px;
+}
+.eyebrow.error { color: var(--error); }
+h1 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+h1 em, h2 em {
+    font-family: 'Archivo', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--secondary);
+}
+h2 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+.lead em { font-style: italic; font-weight: 600; color: var(--primary); }
+.lead {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 16px;
+}
+.sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 32px;
+}
+.q-hint {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+/* ── PROSPECT CARD ──────────────────────────────────────── */
+.prospect-card {
+    background: var(--surface);
+    border: 1.5px solid var(--rule);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.p-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.p-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: var(--cream);
+    font-family: 'Archivo', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.p-id { flex: 1; }
+.p-name {
+    font-family: 'Archivo', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+.p-role {
+    font-size: 14px;
+    color: var(--body);
+    line-height: 1.4;
+}
+.p-location {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+}
+.p-meta {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.p-meta .chip {
+    background: var(--cream);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+.p-meta .chip.linked { background: #E0F2FE; color: #0369A1; }
+
+/* ── Q BLOCKS ───────────────────────────────────────────── */
+.q-block { margin-bottom: 24px; }
+.q-block[hidden] { display: none !important; }
+
+.choice-row { display: flex; gap: 12px; }
+.choice-row .choice-btn { flex: 1; }
+.choice-col { display: flex; flex-direction: column; gap: 8px; }
+
+.choice-btn {
+    padding: 14px 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--body);
+    background: var(--surface);
+    border: 1.5px solid var(--rule);
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 120ms ease;
+}
+.choice-btn:hover { border-color: var(--body); color: var(--ink); }
+.choice-btn.selected {
+    border-color: var(--secondary);
+    background: #FFF7ED;
+    color: var(--ink);
+}
+.choice-btn.big {
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 24px;
+    text-align: center;
+}
+
+/* ── NAV ────────────────────────────────────────────────── */
+.nav-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+.btn-primary, .btn-secondary {
+    font-family: 'Archivo', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 120ms ease;
+}
+.btn-primary {
+    background: var(--secondary);
+    color: white;
+    box-shadow: 0 2px 8px rgba(232,132,10,0.25);
+}
+.btn-primary:hover { background: #D97706; }
+.btn-primary:disabled { background: var(--rule); color: var(--muted); cursor: not-allowed; box-shadow: none; }
+.btn-secondary {
+    background: transparent;
+    color: var(--muted);
+    border: 1.5px solid var(--rule);
+    font-size: 13px;
+    padding: 10px 18px;
+}
+.btn-secondary:hover { border-color: var(--body); color: var(--ink); }
+
+/* ── SUCCESS ─────────────────────────────────────────────── */
+.success { text-align: center; padding: 48px 0; }
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: var(--success);
+    color: white;
+    font-size: 42px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+.app-footer {
+    padding: 24px 0;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'Archivo', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.app-footer strong { color: var(--primary); }
+
+/* ── MOBILE ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .app { padding: 0 16px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 20px; }
+    .lead { font-size: 16px; }
+    .prospect-card { padding: 16px; }
+    .p-name { font-size: 20px; }
+    .p-avatar { width: 48px; height: 48px; font-size: 18px; }
+    .choice-btn.big { font-size: 16px; padding: 16px; }
+    .choice-row { flex-direction: column; }
+    .app-footer { flex-direction: column; gap: 4px; text-align: center; }
+}
