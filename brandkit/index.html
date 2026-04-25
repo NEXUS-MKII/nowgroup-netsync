@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build your Brand Starter Kit — NOW</title>
+<meta name="description" content="Eight questions. Two minutes. We build you a personalised brand starter kit — voice, visuals, and the tools to use them.">
+<meta property="og:title" content="Build your Brand Starter Kit">
+<meta property="og:description" content="Eight questions. Two minutes. Personalised brand foundations, free.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<main class="app" id="app">
+
+    <!-- ── HEADER ── -->
+    <header class="app-header">
+        <a class="brand-mark" href="https://nowgroup.co.nz" target="_blank" rel="noopener">
+            <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2148205486/images/6bb4f5-1466-43ad-8723-23f6ab50fb37_NOW_Orange_BKGround-2.png" alt="NOW" />
+        </a>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+        <div class="step-counter"><span id="stepNow">01</span> <span class="slash">/</span> <span id="stepTotal">08</span></div>
+    </header>
+
+    <!-- ── WIZARD STEPS ── -->
+    <div class="wizard" id="wizard">
+
+        <!-- Step 0: Welcome -->
+        <section class="step active" data-step="0">
+            <div class="step-inner">
+                <div class="eyebrow">Brand Starter Kit · NOW</div>
+                <h1>Eight questions.<br/>Two minutes.<br/>A kit <em>built for you</em>.</h1>
+                <p class="lead">We'll use your answers — and a real sample of your <em>writing</em> — to generate a personalised brand foundation. Colour palette, typography, voice anchor, post filter, and a blog schema. <em>Yours</em>, not ours.</p>
+                <p class="sub">Nothing you enter is shared or sold. We use it to build your kit and (if you want) send you a copy.</p>
+                <button class="btn-primary" data-next>Let's go →</button>
+            </div>
+        </section>
+
+        <!-- Q1: Business + name + role -->
+        <section class="step" data-step="1">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 01 / 08</div>
+                <h2>Who are you and what do you <em>trade as</em>?</h2>
+                <p class="q-hint">Your name, your role, and the business name people know you by.</p>
+                <div class="field-group">
+                    <label>Your full name<input type="text" name="person_name" placeholder="Jane Smith" data-required></label>
+                    <label>Your role or title<input type="text" name="person_role" placeholder="Founder &amp; Mortgage Broker" data-required></label>
+                    <label>Business name<input type="text" name="business_name" placeholder="Smith &amp; Co" data-required></label>
+                </div>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q2: One sentence positioning -->
+        <section class="step" data-step="2">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 02 / 08</div>
+                <h2>In <em>one sentence</em> — what do you do, for who?</h2>
+                <p class="q-hint">No marketing-speak. Plain language. How you'd describe it to a mate at the pub.</p>
+                <textarea name="positioning" rows="3" placeholder="I help first-home buyers in Auckland get finance-ready without the usual bullshit." data-required data-minchars="20"></textarea>
+                <p class="q-note">Good ones are specific. "Small business coach" is weak. "Help Auckland tradies scale past the owner-operator trap" is strong.</p>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q3: Industry / archetype -->
+        <section class="step" data-step="3">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 03 / 08</div>
+                <h2>What's your main <em>archetype</em>?</h2>
+                <p class="q-hint">Pick the closest. It shapes the language calibration in your voice anchor.</p>
+                <div class="pick-grid" data-name="archetype" data-required>
+                    <button class="pick" data-value="mortgage_broker">Mortgage Broker</button>
+                    <button class="pick" data-value="buyers_agent">Buyer's Agent</button>
+                    <button class="pick" data-value="financial_planner">Financial Planner</button>
+                    <button class="pick" data-value="accountant">Accountant / Bookkeeper</button>
+                    <button class="pick" data-value="lawyer">Lawyer / Conveyancer</button>
+                    <button class="pick" data-value="business_coach">Business Coach</button>
+                    <button class="pick" data-value="consultant">Consultant / Strategist</button>
+                    <button class="pick" data-value="marketing">Marketing / Creative</button>
+                    <button class="pick" data-value="trades">Trades / Physical Business</button>
+                    <button class="pick" data-value="wellness">Wellness / Coaching</button>
+                    <button class="pick" data-value="tech">Tech / SaaS</button>
+                    <button class="pick" data-value="other">Something else</button>
+                </div>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q4: Brand vibe — pick 3 -->
+        <section class="step" data-step="4">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 04 / 08</div>
+                <h2>Pick three words that describe your <em>brand vibe</em>.</h2>
+                <p class="q-hint">Not aspiration — reality. How you actually sound and feel.</p>
+                <div class="pick-grid multi" data-name="vibe_words" data-required data-maxpicks="3">
+                    <button class="pick" data-value="Direct">Direct</button>
+                    <button class="pick" data-value="Warm">Warm</button>
+                    <button class="pick" data-value="Premium">Premium</button>
+                    <button class="pick" data-value="Bold">Bold</button>
+                    <button class="pick" data-value="Playful">Playful</button>
+                    <button class="pick" data-value="Measured">Measured</button>
+                    <button class="pick" data-value="Confident">Confident</button>
+                    <button class="pick" data-value="Grounded">Grounded</button>
+                    <button class="pick" data-value="Irreverent">Irreverent</button>
+                    <button class="pick" data-value="Precise">Precise</button>
+                    <button class="pick" data-value="Approachable">Approachable</button>
+                    <button class="pick" data-value="Punchy">Punchy</button>
+                </div>
+                <p class="q-note"><span id="vibeCount">0</span> of 3 selected</p>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q5: Primary colour -->
+        <section class="step" data-step="5">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 05 / 08</div>
+                <h2>Pick your <em>primary colour</em>.</h2>
+                <p class="q-hint">Or paste your own hex codes if you already have a brand.</p>
+                <div class="swatch-grid" data-name="colour_pick" data-required>
+                    <button class="swatch-pick" data-value="slate" data-primary="#1F2937" data-secondary="#E8840A" data-accent="#F59E0B" style="background:#1F2937">Slate<span>#1F2937</span></button>
+                    <button class="swatch-pick" data-value="navy" data-primary="#1E3A8A" data-secondary="#F59E0B" data-accent="#FBBF24" style="background:#1E3A8A">Navy<span>#1E3A8A</span></button>
+                    <button class="swatch-pick" data-value="forest" data-primary="#14532D" data-secondary="#CA8A04" data-accent="#EAB308" style="background:#14532D">Forest<span>#14532D</span></button>
+                    <button class="swatch-pick" data-value="burgundy" data-primary="#7F1D1D" data-secondary="#D4A373" data-accent="#E9C46A" style="background:#7F1D1D">Burgundy<span>#7F1D1D</span></button>
+                    <button class="swatch-pick" data-value="teal" data-primary="#115E59" data-secondary="#F59E0B" data-accent="#FCD34D" style="background:#115E59">Teal<span>#115E59</span></button>
+                    <button class="swatch-pick" data-value="aubergine" data-primary="#4C1D95" data-secondary="#F59E0B" data-accent="#FCD34D" style="background:#4C1D95">Aubergine<span>#4C1D95</span></button>
+                    <button class="swatch-pick" data-value="terracotta" data-primary="#9A3412" data-secondary="#065F46" data-accent="#FCD34D" style="background:#9A3412">Terracotta<span>#9A3412</span></button>
+                    <button class="swatch-pick light" data-value="cream" data-primary="#0F172A" data-secondary="#D97706" data-accent="#F59E0B" style="background:#FAFAF9;color:#0F172A">Ink on cream<span>#0F172A</span></button>
+                </div>
+                <div class="custom-hex">
+                    <label class="checkbox">
+                        <input type="checkbox" id="customHexToggle"> I have existing brand colours
+                    </label>
+                    <div class="hex-inputs" id="hexInputs" hidden>
+                        <label>Primary hex <input type="text" name="custom_primary" placeholder="#1F2937" pattern="#[0-9A-Fa-f]{6}"></label>
+                        <label>Accent hex  <input type="text" name="custom_accent"  placeholder="#E8840A" pattern="#[0-9A-Fa-f]{6}"></label>
+                    </div>
+                </div>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q6: Font feel -->
+        <section class="step" data-step="6">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 06 / 08</div>
+                <h2>Which <em>typography feel</em> is closest?</h2>
+                <p class="q-hint">Not a final pick. We'll use this to calibrate the pairing.</p>
+                <div class="font-picks" data-name="font_feel" data-required>
+                    <button class="font-pick" data-value="modern_sans" data-display="Archivo" data-body="Inter">
+                        <div class="sample-display" style="font-family:Archivo,sans-serif">Modern Sans</div>
+                        <div class="sample-body"   style="font-family:Inter,sans-serif">Clean, direct, current. Archivo + Inter. Right for most service businesses and finance.</div>
+                    </button>
+                    <button class="font-pick" data-value="premium_serif" data-display="Playfair Display" data-body="Source Sans 3">
+                        <div class="sample-display" style="font-family:'Playfair Display',serif">Premium Serif</div>
+                        <div class="sample-body"   style="font-family:'Source Sans 3',sans-serif">Heritage, editorial, considered. Playfair + Source Sans. Right for advisory and premium positioning.</div>
+                    </button>
+                    <button class="font-pick" data-value="trade_industrial" data-display="Oswald" data-body="Roboto">
+                        <div class="sample-display" style="font-family:Oswald,sans-serif">TRADE / INDUSTRIAL</div>
+                        <div class="sample-body"   style="font-family:Roboto,sans-serif">Strong, condensed, no-nonsense. Oswald + Roboto. Right for trades, physical businesses, tools.</div>
+                    </button>
+                    <button class="font-pick" data-value="warm_approachable" data-display="Fraunces" data-body="Nunito">
+                        <div class="sample-display" style="font-family:Fraunces,serif">Warm Approachable</div>
+                        <div class="sample-body"   style="font-family:Nunito,sans-serif">Friendly, soft edges, human. Fraunces + Nunito. Right for wellness, coaching, community work.</div>
+                    </button>
+                </div>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q7: Website URL + writing sample -->
+        <section class="step" data-step="7">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 07 / 08</div>
+                <h2>Paste your website URL and a <em>writing sample</em>.</h2>
+                <p class="q-hint">The sample is the single most important input. We use it to derive your voice — structural rules, banned words, signature devices, temperature pattern. No sample = generic kit.</p>
+                <label>Your website URL<input type="url" name="website_url" placeholder="https://yourbusiness.com" data-required></label>
+                <label>Writing sample — a LinkedIn post, an email, or an about-page paragraph you actually wrote (100+ words).</label>
+                <textarea name="writing_sample" rows="10" placeholder="Paste here — minimum 100 words. The more real, the better. If it reads like you actually wrote it (not a committee version), it'll produce a sharper voice anchor." data-required data-minchars="100"></textarea>
+                <p class="q-note"><span id="writingCount">0</span> characters · minimum 100 words (~600 characters) for a useful anchor</p>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q8: Logo URL -->
+        <section class="step" data-step="8">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 08 / 08</div>
+                <h2>Paste your <em>logo URL</em>.</h2>
+                <p class="q-hint">Don't upload — paste the direct image URL. Easiest way: hover over your logo on your website → right-click → <strong>Copy image address</strong>. Example: <code>https://yoursite.com/wp-content/uploads/logo.png</code></p>
+                <label>Logo URL (optional)
+                    <input type="url" name="logo_url" placeholder="https://yoursite.com/logo.png">
+                </label>
+                <p class="q-note">Can't get the URL? Leave it blank. We'll auto-grab one from your website URL, and fall back to a wordmark if that fails.</p>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final: Email + submit -->
+        <section class="step" data-step="9">
+            <div class="step-inner">
+                <div class="q-eyebrow">One last thing</div>
+                <h2>Where do we send <em>your kit</em>?</h2>
+                <p class="q-hint">We'll email you a PDF + a private URL for your personalised Brand Starter Kit. Usually within 24 hours.</p>
+                <label>Your email<input type="email" name="email" placeholder="you@yourbusiness.com" data-required></label>
+                <div class="consent">
+                    <label class="checkbox">
+                        <input type="checkbox" id="consent" data-required>
+                        I'm happy for NOW to send my kit and occasional follow-up emails. No spam. Unsubscribe any time.
+                    </label>
+                </div>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary btn-submit" id="submitBtn">Build my kit →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success -->
+        <section class="step" data-step="10">
+            <div class="step-inner success">
+                <div class="success-icon">✓</div>
+                <h1>Submitted. Thanks.</h1>
+                <p class="lead">Your Brand Starter Kit is in the build queue. You'll get a personalised PDF + private URL within 24 hours. Usually much faster.</p>
+                <p class="sub">If it's taking longer than a day, reply to the email we just sent you — it might have landed in spam.</p>
+                <div class="share-note">
+                    <strong>While you wait:</strong> the kit system is part of the <em>WOW Factor</em> method NOW uses with members and clients. Ask about membership or bundles when your kit lands.
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer class="app-footer">
+        <div>Built by <strong>NOW</strong> · nowgroup.co.nz</div>
+        <div>Networks, signal, brand — engineered.</div>
+    </footer>
+
+</main>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
