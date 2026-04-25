@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-W17",
+  "member_id": "james_watt_smith",
+  "member_name": "James (Jim) Watt-Smith",
+  "generated_at": "2026-04-25T04:51:42.565966+00:00",
+  "total": 10,
+  "prospects": [
+    {
+      "id": "ida_kohu",
+      "name": "Ida Kohu",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/ida-kohu-a5a32b22b",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "lisa_meyer",
+      "name": "Lisa Meyer",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/lisa-meyer-05625554",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "michele_scherr",
+      "name": "Michele Scherr",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/michele-scherr",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "lisa_ng",
+      "name": "Lisa Ng",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/lisa-ng-wellness",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "robert_bonifacio",
+      "name": "Robert Bonifacio",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/robert-bonifacio",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "sharn_piper",
+      "name": "Sharn Piper",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": {
+        "value": "linkedin.com/in/sharnpiper",
+        "source": "facilitator_manual",
+        "confidence": "HIGH",
+        "updated_by": "facilitator",
+        "updated_at": "2026-04-04T00:39:24Z",
+        "verified": true,
+        "previous_value": {
+          "value": "https://linkedin.com/in/sharnpiper",
+          "source": "facilitator_manual",
+          "confidence": "HIGH",
+          "updated_by": "facilitator",
+          "updated_at": "2026-03-31T09:17:11Z",
+          "verified": true,
+          "previous_value": null
+        }
+      },
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "clint_griffin",
+      "name": "Clint Griffin",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/clintgriffin",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "prerita_r_sood",
+      "name": "Prerita R Sood",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/prerita-sood",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "kelvin_clarke",
+      "name": "Kelvin Clarke",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/kelvin-clarke",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "caelan_huntress",
+      "name": "Caelan Huntress",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/caelanhuntress",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    }
+  ]
+}
