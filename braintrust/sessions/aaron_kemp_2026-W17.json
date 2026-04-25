@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-W17",
+  "member_id": "aaron_kemp",
+  "member_name": "Aaron Kemp",
+  "generated_at": "2026-04-25T04:51:42.458520+00:00",
+  "total": 10,
+  "prospects": [
+    {
+      "id": "vanessa_crafts",
+      "name": "Vanessa Crafts",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/vanessa-crafts-74143198",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "nathan_williams__the_pitch_coach",
+      "name": "Nathan Williams - The Pitch Coach",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/nathanwilliamsreferrals",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "leo_bourke",
+      "name": "Leo Bourke",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/leo-bourke-978a27a",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "robyn_vintiner",
+      "name": "Robyn Vintiner",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/claritycoach",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "jo_mcclure",
+      "name": "Jo Mcclure",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/jo-mcclure-royce-74aba49",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "jung",
+      "name": "Jung",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "linkedin.com/in/jungsbusinessconsulting",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "sanjeev_jangra",
+      "name": "Sanjeev Jangra",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/sanjeev-jangra-loanmarket",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "karen_legrand",
+      "name": "Karen Le-Grand",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/legrandpanoply",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "caelan_huntress",
+      "name": "Caelan Huntress",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/caelanhuntress",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "matthew_wall",
+      "name": "Matthew Wall",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "www.linkedin.com/in/mattwall007",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    }
+  ]
+}
