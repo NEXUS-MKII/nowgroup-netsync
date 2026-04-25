@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain Trust — NOW</title>
+<meta name="description" content="Rate the people you know in your NOW network. Quick wizard, under two minutes.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<main class="app" id="app">
+
+    <header class="app-header">
+        <a class="brand-mark" href="https://nowgroup.co.nz" target="_blank" rel="noopener">
+            <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2148205486/images/6bb4f5-1466-43ad-8723-23f6ab50fb37_NOW_Orange_BKGround-2.png" alt="NOW" />
+        </a>
+        <div class="header-title">Brain Trust</div>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+        <div class="step-counter"><span id="current">01</span> <span class="slash">/</span> <span id="total">10</span></div>
+    </header>
+
+    <div class="wizard" id="wizard">
+
+        <!-- ── LOADING ── -->
+        <section class="step active" id="loading-step">
+            <div class="step-inner">
+                <div class="eyebrow">Loading your session…</div>
+                <h1>Just a sec.</h1>
+                <p class="lead">Pulling your personalised list.</p>
+            </div>
+        </section>
+
+        <!-- ── ERROR ── -->
+        <section class="step" id="error-step" hidden>
+            <div class="step-inner">
+                <div class="eyebrow error">Something's off</div>
+                <h1 id="errorTitle">Session not found</h1>
+                <p class="lead" id="errorBody">Double-check your link. If it's still not working, reply to the email that sent you here.</p>
+            </div>
+        </section>
+
+        <!-- ── WELCOME ── -->
+        <section class="step" id="welcome-step" hidden>
+            <div class="step-inner">
+                <div class="eyebrow">Hi <span id="memberName">—</span></div>
+                <h1>Rate <span id="welcomeCount">10</span> people in <em>your network</em>.</h1>
+                <p class="lead">For each person, we'll ask five quick questions. If you don't know them, <em>one tap skips</em>. If you do know them, it's about 10 seconds each.</p>
+                <p class="sub">Your answers stay inside NEXUS — they help us work out who's best placed to open <em>warm introductions</em>.</p>
+                <button class="btn-primary" id="startBtn">Let's go →</button>
+            </div>
+        </section>
+
+        <!-- ── PROSPECT WIZARD ── -->
+        <section class="step" id="prospect-step" hidden>
+            <div class="step-inner">
+                <div class="prospect-card">
+                    <div class="p-header">
+                        <div class="p-avatar" id="pAvatar">—</div>
+                        <div class="p-id">
+                            <div class="p-name" id="pName">—</div>
+                            <div class="p-role" id="pRole">—</div>
+                            <div class="p-location" id="pLocation"></div>
+                        </div>
+                    </div>
+                    <div class="p-meta" id="pMeta"></div>
+                </div>
+
+                <!-- Q1: Know them? -->
+                <div class="q-block" id="q1">
+                    <h2>Do you know them?</h2>
+                    <div class="choice-row">
+                        <button class="choice-btn big" data-answer="know_yes">Yes</button>
+                        <button class="choice-btn big" data-answer="know_no">No, skip</button>
+                    </div>
+                </div>
+
+                <!-- Q2-5: appear only if Q1 = yes -->
+                <div class="q-block" id="q2" hidden>
+                    <h2>How well?</h2>
+                    <div class="choice-col">
+                        <button class="choice-btn" data-q="quality" data-v="1">Heard of them only</button>
+                        <button class="choice-btn" data-q="quality" data-v="2">Met once or twice</button>
+                        <button class="choice-btn" data-q="quality" data-v="3">Known for years, casual</button>
+                        <button class="choice-btn" data-q="quality" data-v="4">Close — we stay in touch</button>
+                        <button class="choice-btn" data-q="quality" data-v="5">Deep trust — can vouch for them</button>
+                    </div>
+                </div>
+
+                <div class="q-block" id="q3" hidden>
+                    <h2>When did you last connect?</h2>
+                    <div class="choice-col">
+                        <button class="choice-btn" data-q="recency" data-v="week">Within the last week</button>
+                        <button class="choice-btn" data-q="recency" data-v="month">Within the last month</button>
+                        <button class="choice-btn" data-q="recency" data-v="quarter">Within the last 3 months</button>
+                        <button class="choice-btn" data-q="recency" data-v="year">Within the last year</button>
+                        <button class="choice-btn" data-q="recency" data-v="longer">Longer than a year</button>
+                        <button class="choice-btn" data-q="recency" data-v="unsure">Can't remember</button>
+                    </div>
+                </div>
+
+                <div class="q-block" id="q4" hidden>
+                    <h2>What kind of relationship?</h2>
+                    <div class="choice-col">
+                        <button class="choice-btn" data-q="context" data-v="business">Business / professional</button>
+                        <button class="choice-btn" data-q="context" data-v="social">Social / personal</button>
+                        <button class="choice-btn" data-q="context" data-v="both">Both</button>
+                        <button class="choice-btn" data-q="context" data-v="other">Something else</button>
+                    </div>
+                </div>
+
+                <div class="q-block" id="q5" hidden>
+                    <h2>Would you be willing to open a warm intro to them?</h2>
+                    <p class="q-hint">Not committing to anything — just whether, in principle, you'd consider it if a good match came up.</p>
+                    <div class="choice-col">
+                        <button class="choice-btn" data-q="willing" data-v="yes">Yes, happy to</button>
+                        <button class="choice-btn" data-q="willing" data-v="maybe">Maybe, depends on who</button>
+                        <button class="choice-btn" data-q="willing" data-v="no">No, I'd rather not</button>
+                        <button class="choice-btn" data-q="willing" data-v="ask_first">Ask me first before using this</button>
+                    </div>
+                </div>
+
+                <div class="nav-row">
+                    <button class="btn-secondary" id="skipBtn">Skip this one</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DONE ── -->
+        <section class="step" id="done-step" hidden>
+            <div class="step-inner success">
+                <div class="success-icon">✓</div>
+                <h1>Done. Thanks.</h1>
+                <p class="lead">You just helped NOW figure out where the warm intros live. Next time we spot a match that runs through you, we'll check with you first.</p>
+                <p class="sub">Session saved. You can close this tab.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="app-footer">
+        <div>Built by <strong>NOW</strong> · nowgroup.co.nz</div>
+        <div>Networks, signal, brand — engineered.</div>
+    </footer>
+
+</main>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
