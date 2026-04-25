@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-W17",
+  "member_id": "keath_seto",
+  "member_name": "Keath Seto",
+  "generated_at": "2026-04-25T04:51:42.629111+00:00",
+  "total": 10,
+  "prospects": [
+    {
+      "id": "mitchell_wilson",
+      "name": "Mitchell Wilson",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/mitch1w",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "bronwyn_harris",
+      "name": "Bronwyn Harris",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/bronwyn-harris-48b97b51",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "helen_jackson",
+      "name": "Helen Jackson",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/helen-jackson",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "billig_marzan",
+      "name": "Billig Marzan",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "emma_milne",
+      "name": "Emma Milne",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/emma-milne-81b7709a",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "sam_kraljev",
+      "name": "Sam Kraljev",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/that-sales-development-guy",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "joe_de_leijer",
+      "name": "Joe De Leijer",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/joe-de-leijer-23245278",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "catherine_adam_wonderbird_ltd",
+      "name": "Catherine Adam Wonderbird Ltd",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/catherineadamdesign",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "janine_fraser__fractional_executive_assi",
+      "name": "Janine Fraser - Fractional Executive Assistant Growth Partner",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/janine-fraser-fractional-executive-assistant-growth-partner-ab6940104",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "pete_mcevoy",
+      "name": "Pete Mcevoy",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/pete-mcevoy-7428a919",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    }
+  ]
+}
