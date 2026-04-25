@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The DNA Analyser — NOW DNA X Factor</title>
+<meta name="description" content="Find your X factor. 22 questions across four pillars resolve DNA^X to a number, 1 through 6 — and the next A-word that climbs you up the ladder.">
+<meta property="og:title" content="The DNA Analyser — NOW DNA X Factor">
+<meta property="og:description" content="DNA^X is the question. The Analyser gives you the answer — your tier, your top three moves, and the module that activates your next A-word.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<main class="app" id="app">
+
+    <header class="app-header">
+        <a class="brand-mark" href="https://nowgroup.co.nz" target="_blank" rel="noopener">
+            <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2148205486/images/6bb4f5-1466-43ad-8723-23f6ab50fb37_NOW_Orange_BKGround-2.png" alt="NOW">
+        </a>
+        <div class="header-title">The DNA Analyser <span class="dna-mark">DNA<sup>X</sup></span></div>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+        <div class="step-counter"><span id="stepNow">01</span> <span class="slash">/</span> <span id="stepTotal">22</span></div>
+    </header>
+
+    <div class="wizard" id="wizard">
+
+        <!-- ── WELCOME ── -->
+        <section class="step active" data-step="0">
+            <div class="step-inner">
+                <div class="eyebrow">NOW DNA X Factor · Done Now, Authentic.</div>
+                <h1>What's your <em>X</em>?</h1>
+                <p class="lead">DNA<sup style="font-size:0.6em;font-weight:800;color:var(--secondary)">X</sup> is the question. Twenty-two questions across four pillars — <em>Strategy</em>, <em>Systems</em>, <em>Content</em>, <em>Conversion</em> — resolve <em>X</em> to a number. 1, 2, 3, 4, 5, or 6. Your tier on the ladder. Your three highest-leverage moves. The Marketing NOW module that activates the next A-word and climbs you up.</p>
+                <p class="sub">Eight minutes. No login. No spam. Real diagnostic, not a sales funnel pretending to be one.</p>
+                <button class="btn-primary" data-next>Find my X factor →</button>
+            </div>
+        </section>
+
+        <!-- ── DIMENSION 1: STRATEGY ── -->
+        <section class="step section-intro" data-step="section-1">
+            <div class="step-inner">
+                <div class="dim-tag">Pillar 01 / 04</div>
+                <h2>Strategy &amp; <em>Positioning</em></h2>
+                <p class="lead">Do you know who you're for, and why you're different?</p>
+                <p class="sub">Five questions. Each scores 0 (no) / 1 (partial) / 2 (solid).</p>
+                <button class="btn-primary" data-next>Continue →</button>
+            </div>
+        </section>
+
+        <!-- Q1 -->
+        <section class="step" data-step="1">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 01 / 22 · Strategy</div>
+                <h2>Do you have a written <em>ideal-client definition</em>?</h2>
+                <div class="answer-stack" data-q="q1_icp">
+                    <button class="ans" data-v="0">No — I just take whoever's a good fit</button>
+                    <button class="ans" data-v="1">Rough idea in my head, not written down</button>
+                    <button class="ans" data-v="2">Written + every new lead screened against it</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q2 -->
+        <section class="step" data-step="2">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 02 / 22 · Strategy</div>
+                <h2>State your <em>one-line positioning promise</em> in under 15 words.</h2>
+                <p class="q-hint">Try it right here. We score this for clarity, specificity, and differentiation — not against a template.</p>
+                <textarea name="q2_positioning" rows="3" placeholder="e.g. 'I help mortgage brokers in AU/NZ build referral flywheels that produce 20+ deals a year.'" data-required data-minchars="20"></textarea>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary" data-next>Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q3 -->
+        <section class="step" data-step="3">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 03 / 22 · Strategy</div>
+                <h2>Do you actively say <em>"no"</em> to clients outside your ICP?</h2>
+                <div class="answer-stack" data-q="q3_disqualify">
+                    <button class="ans" data-v="0">Never — work is work</button>
+                    <button class="ans" data-v="1">Sometimes, reluctantly</button>
+                    <button class="ans" data-v="2">Regularly — we have a disqualification process</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q4 -->
+        <section class="step" data-step="4">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 04 / 22 · Strategy</div>
+                <h2>Can you name what you do <em>differently</em> from your three biggest competitors?</h2>
+                <div class="answer-stack" data-q="q4_diff">
+                    <button class="ans" data-v="0">Not really — we're roughly the same</button>
+                    <button class="ans" data-v="1">Broadly, in feel, but not concretely</button>
+                    <button class="ans" data-v="2">Yes — specifically and concretely</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q5 -->
+        <section class="step" data-step="5">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 05 / 22 · Strategy</div>
+                <h2>Do you have a documented <em>brand voice and tone system</em>?</h2>
+                <div class="answer-stack" data-q="q5_voice">
+                    <button class="ans" data-v="0">No — I write whatever sounds right</button>
+                    <button class="ans" data-v="1">Rough notes, applied inconsistently</button>
+                    <button class="ans" data-v="2">Yes — and it's applied across every channel</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DIMENSION 2: SYSTEMS ── -->
+        <section class="step section-intro" data-step="section-2">
+            <div class="step-inner">
+                <div class="dim-tag">Pillar 02 / 04</div>
+                <h2>Systems &amp; <em>Infrastructure</em></h2>
+                <p class="lead">Can your marketing run without you manually poking it?</p>
+                <button class="btn-primary" data-next>Continue →</button>
+            </div>
+        </section>
+
+        <!-- Q6 -->
+        <section class="step" data-step="6">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 06 / 22 · Systems</div>
+                <h2>Do you have a <em>CRM</em> with every lead in one place?</h2>
+                <div class="answer-stack" data-q="q6_crm">
+                    <button class="ans" data-v="0">No — leads live in inbox/spreadsheets</button>
+                    <button class="ans" data-v="1">Partial — some in CRM, some not</button>
+                    <button class="ans" data-v="2">Yes — and every lead enters automatically</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q7 -->
+        <section class="step" data-step="7">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 07 / 22 · Systems</div>
+                <h2>Is your <em>pipeline stage tracking</em> systematic?</h2>
+                <div class="answer-stack" data-q="q7_pipeline">
+                    <button class="ans" data-v="0">We don't track stages</button>
+                    <button class="ans" data-v="1">We track in our heads</button>
+                    <button class="ans" data-v="2">Each stage has clear entry + exit rules</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q8 -->
+        <section class="step" data-step="8">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 08 / 22 · Systems</div>
+                <h2>Do you have <em>email automation</em> for nurturing leads?</h2>
+                <div class="answer-stack" data-q="q8_automation">
+                    <button class="ans" data-v="0">No — manual when I remember</button>
+                    <button class="ans" data-v="1">Some broadcast-style sends</button>
+                    <button class="ans" data-v="2">Yes — triggered sequences by lead state</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q9 -->
+        <section class="step" data-step="9">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 09 / 22 · Systems</div>
+                <h2>Can you answer <em>"which marketing channel drove last month's revenue"</em> in under 5 minutes?</h2>
+                <div class="answer-stack" data-q="q9_attribution">
+                    <button class="ans" data-v="0">No idea</button>
+                    <button class="ans" data-v="1">Rough guess</button>
+                    <button class="ans" data-v="2">Exact numbers, any month</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q10 -->
+        <section class="step" data-step="10">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 10 / 22 · Systems</div>
+                <h2>How often do leads <em>fall through the cracks</em> (no follow-up, missed reply, forgotten)?</h2>
+                <div class="answer-stack" data-q="q10_followup">
+                    <button class="ans" data-v="0">Often — leads regularly go cold</button>
+                    <button class="ans" data-v="1">Sometimes — depends how busy I am</button>
+                    <button class="ans" data-v="2">Almost never — the system catches them</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DIMENSION 3: CONTENT ── -->
+        <section class="step section-intro" data-step="section-3">
+            <div class="step-inner">
+                <div class="dim-tag">Pillar 03 / 04</div>
+                <h2>Content &amp; <em>Visibility</em></h2>
+                <p class="lead">Are you being found, remembered, and cited?</p>
+                <button class="btn-primary" data-next>Continue →</button>
+            </div>
+        </section>
+
+        <!-- Q11 -->
+        <section class="step" data-step="11">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 11 / 22 · Content</div>
+                <h2>How many pieces of content did you publish in the <em>last 30 days</em>?</h2>
+                <div class="answer-stack" data-q="q11_volume">
+                    <button class="ans" data-v="0">0–2</button>
+                    <button class="ans" data-v="1">3–8</button>
+                    <button class="ans" data-v="2">9 or more</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q12 -->
+        <section class="step" data-step="12">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 12 / 22 · Content</div>
+                <h2>Do you have a <em>signature content framework</em> you return to?</h2>
+                <div class="answer-stack" data-q="q12_framework">
+                    <button class="ans" data-v="0">No — I post when inspired</button>
+                    <button class="ans" data-v="1">A couple of recurring themes</button>
+                    <button class="ans" data-v="2">Yes — and I can name it in one phrase</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q13 -->
+        <section class="step" data-step="13">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 13 / 22 · Content</div>
+                <h2>Is your content generating <em>inbound enquiries</em>?</h2>
+                <div class="answer-stack" data-q="q13_inbound">
+                    <button class="ans" data-v="0">Never</button>
+                    <button class="ans" data-v="1">Occasionally</button>
+                    <button class="ans" data-v="2">Consistently — enquiries cite specific pieces</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q14 -->
+        <section class="step" data-step="14">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 14 / 22 · Content</div>
+                <h2>Do you <em>own your audience</em> (email list, newsletter, podcast) — or rent from platforms?</h2>
+                <div class="answer-stack" data-q="q14_owned">
+                    <button class="ans" data-v="0">Only social — no owned channel</button>
+                    <button class="ans" data-v="1">Small list I don't actively use</button>
+                    <button class="ans" data-v="2">Active list + owned channel I publish to</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q15 -->
+        <section class="step" data-step="15">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 15 / 22 · Content</div>
+                <h2>Is your content structured for <em>AI search citation</em> (answer-first, FAQ, schema)?</h2>
+                <div class="answer-stack" data-q="q15_geo">
+                    <button class="ans" data-v="0">No — I write for humans, not bots</button>
+                    <button class="ans" data-v="1">Some pieces, accidentally</button>
+                    <button class="ans" data-v="2">Yes — it's a deliberate practice</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DIMENSION 4: CONVERSION ── -->
+        <section class="step section-intro" data-step="section-4">
+            <div class="step-inner">
+                <div class="dim-tag">Pillar 04 / 04</div>
+                <h2>Conversion &amp; <em>Revenue</em></h2>
+                <p class="lead">Does traffic → leads → revenue work as a system?</p>
+                <button class="btn-primary" data-next>Continue →</button>
+            </div>
+        </section>
+
+        <!-- Q16 -->
+        <section class="step" data-step="16">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 16 / 22 · Conversion</div>
+                <h2>What's your typical <em>lead-to-client conversion rate</em>?</h2>
+                <div class="answer-stack" data-q="q16_conversion">
+                    <button class="ans" data-v="0">Don't know — never measured</button>
+                    <button class="ans" data-v="1">Rough guess — "a few out of every ten"</button>
+                    <button class="ans" data-v="2">Measured — I can quote a % by segment</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q17 -->
+        <section class="step" data-step="17">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 17 / 22 · Conversion</div>
+                <h2>Do you have a <em>consistent monthly flow</em> of qualified leads?</h2>
+                <div class="answer-stack" data-q="q17_flow">
+                    <button class="ans" data-v="0">Spiky — feast or famine</button>
+                    <button class="ans" data-v="1">Some months yes, some no</button>
+                    <button class="ans" data-v="2">Steady baseline I can rely on</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q18 -->
+        <section class="step" data-step="18">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 18 / 22 · Conversion</div>
+                <h2>Do you have a defined <em>warm-lead next-step</em> (call, demo, low-ticket asset)?</h2>
+                <div class="answer-stack" data-q="q18_nextstep">
+                    <button class="ans" data-v="0">No — every lead is bespoke from scratch</button>
+                    <button class="ans" data-v="1">Roughly — but it's not codified</button>
+                    <button class="ans" data-v="2">Yes — and it converts predictably</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q19 -->
+        <section class="step" data-step="19">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 19 / 22 · Conversion</div>
+                <h2>Do you have a <em>referral or activation system</em> producing measurable revenue?</h2>
+                <div class="answer-stack" data-q="q19_referral">
+                    <button class="ans" data-v="0">No — referrals are happy accidents</button>
+                    <button class="ans" data-v="1">Ad-hoc — we ask sometimes</button>
+                    <button class="ans" data-v="2">Systematic, scored, producing measurable referral revenue</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q20 -->
+        <section class="step" data-step="20">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 20 / 22 · Conversion</div>
+                <h2>How much of your monthly revenue comes from marketing you'd be <em>happy for a competitor to copy</em>?</h2>
+                <p class="q-hint">If they could see exactly what you do and how — would it still work? That's a system. If it wouldn't, it's a personal effort.</p>
+                <div class="answer-stack" data-q="q20_moat">
+                    <button class="ans" data-v="0">I have no idea — I haven't thought about it</button>
+                    <button class="ans" data-v="1">Less than 50%</button>
+                    <button class="ans" data-v="2">More than 50% — the system is the moat</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── BUDGET / READINESS ── -->
+        <section class="step section-intro" data-step="section-5">
+            <div class="step-inner">
+                <div class="dim-tag">Final 02 / 02</div>
+                <h2>Two more — <em>readiness</em>.</h2>
+                <p class="lead">Honest answers here means we can match recommendations to your reality, not throw a $5K solution at a $497 problem.</p>
+                <button class="btn-primary" data-next>Continue →</button>
+            </div>
+        </section>
+
+        <!-- Q21 -->
+        <section class="step" data-step="21">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 21 / 22 · Readiness</div>
+                <h2>What's your current <em>monthly marketing spend</em>?</h2>
+                <p class="q-hint">All-in: tools, ads, content, agencies, your own time billed at any rate.</p>
+                <div class="answer-stack" data-q="q21_spend">
+                    <button class="ans" data-v="0">Under $500/month</button>
+                    <button class="ans" data-v="1">$500–$2,000/month</button>
+                    <button class="ans" data-v="2">$2,000–$5,000/month</button>
+                    <button class="ans" data-v="3">$5,000+ /month</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q22 -->
+        <section class="step" data-step="22">
+            <div class="step-inner">
+                <div class="q-eyebrow">Step 22 / 22 · Readiness</div>
+                <h2>If your score reveals a real gap — <em>what could you commit</em> to fixing it?</h2>
+                <p class="q-hint">No commitment from this answer — we just want to recommend something you can actually act on.</p>
+                <div class="answer-stack" data-q="q22_commit">
+                    <button class="ans" data-v="0">Free / DIY only — show me the moves, I'll do them</button>
+                    <button class="ans" data-v="1">Up to $500 one-time — I'd buy a ready-made template</button>
+                    <button class="ans" data-v="2">$500–$1,500 — I'd take a bundled solution</button>
+                    <button class="ans" data-v="3">$1,500–$5,000 — I'd commission a bespoke build</button>
+                    <button class="ans" data-v="4">$5,000+ — I want the complete factory built</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── EMAIL CAPTURE + SUBMIT ── -->
+        <section class="step" data-step="23">
+            <div class="step-inner">
+                <div class="q-eyebrow">Where to send your report</div>
+                <h2>Where do we send your <em>DNA Analyser</em>?</h2>
+                <p class="q-hint">PDF + private URL. Usually within an hour. Resolves your <em>X factor</em> into a number 1 through 6, scores by pillar, top three moves, and the Marketing NOW module mapped to the A-word that climbs you up the ladder.</p>
+                <div class="field-group">
+                    <label>Your name<input type="text" name="person_name" placeholder="Jane Smith" data-required></label>
+                    <label>Business name<input type="text" name="business_name" placeholder="Smith &amp; Co"></label>
+                    <label>Your email<input type="email" name="email" placeholder="you@yourbusiness.com" data-required></label>
+                </div>
+                <div class="consent">
+                    <label class="checkbox">
+                        <input type="checkbox" id="consent" data-required>
+                        I'm happy for NOW to send my report and occasional follow-up. No spam. Unsubscribe any time.
+                    </label>
+                </div>
+                <div class="step-nav">
+                    <button class="btn-secondary" data-prev>← Back</button>
+                    <button class="btn-primary btn-submit" id="submitBtn">Run my DNA Analyser →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DONE ── -->
+        <section class="step" data-step="24">
+            <div class="step-inner success">
+                <div class="success-icon">DNA<sup id="successSuperscript">X</sup></div>
+                <div class="reveal-meta" id="revealMeta" hidden>
+                    <div class="reveal-tier">Your X resolves to: <strong>DNA<sup id="revealSup">6</sup></strong></div>
+                    <div class="reveal-score">Score: <strong><span id="revealScore">40</span> / 40</strong></div>
+                </div>
+                <h1>Submitted. <em>Sequencing.</em></h1>
+                <p class="lead">Your <strong>DNA Analyser</strong> is being built — your <em>X factor</em> resolved. You'll receive the full report by email within an hour, usually much faster.</p>
+                <p class="sub">Inside the report: your score out of 40, where you sit on the DNA^1 → DNA^6 ladder, the four pillar breakdowns, your three highest-leverage moves, and the Marketing NOW module that activates the A-word moving you up.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="app-footer">
+        <div>Built by <strong>NOW</strong> · NOW DNA X Factor · nowgroup.co.nz</div>
+        <div><strong>Done Now, Authentic.</strong> — Hand built by robots. From your DNA.</div>
+    </footer>
+
+</main>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
