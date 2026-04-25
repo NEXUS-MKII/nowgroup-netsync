@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-W17",
+  "member_id": "farhad_malegam",
+  "member_name": "Farhad Malegam",
+  "generated_at": "2026-04-25T04:51:42.508864+00:00",
+  "total": 10,
+  "prospects": [
+    {
+      "id": "justin_kabbani",
+      "name": "Justin Kabbani",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/justinkabbani",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "kelvin_clarke",
+      "name": "Kelvin Clarke",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/kelvin-clarke",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "bernadette_smith",
+      "name": "Bernadette Smith",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/bernadette-smith-bba801a",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "maria_chapman",
+      "name": "Maria Chapman",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/mc2mariachapman",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "ian_haddow",
+      "name": "Ian Haddow",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/ian-haddow",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "sherma_kala",
+      "name": "Sherma Kala",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/sherma-kala-business-communications",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "lana_burgess",
+      "name": "Lana Burgess",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/lana-burgess",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "courtney_wilson",
+      "name": "Courtney Wilson",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/courtney-wilson-designer",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "lijin_james",
+      "name": "Lijin James",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/lijin-james-ba603a1b6",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "uma_panch_keynote_speaker",
+      "name": "Uma Panch Keynote Speaker",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/uma-panchapakesan",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    }
+  ]
+}
