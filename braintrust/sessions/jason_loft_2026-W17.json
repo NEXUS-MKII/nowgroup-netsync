@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-W17",
+  "member_id": "jason_loft",
+  "member_name": "Jason Loft",
+  "generated_at": "2026-04-25T04:51:42.872179+00:00",
+  "total": 10,
+  "prospects": [
+    {
+      "id": "jason_robb",
+      "name": "Jason Robb",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/jason-robb-45a48026a",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "kelly_gough",
+      "name": "Kelly Gough",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/kelly-gough-5a8ba941",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "priyanth_gnanasekaran",
+      "name": "Priyanth Gnanasekaran",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/priyanthg",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "jeremy_harford",
+      "name": "Jeremy Harford",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/jeremy-harford-71a990b0",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "glenn_marvin",
+      "name": "Glenn Marvin",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/glennmarvin",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "vanessa_crafts",
+      "name": "Vanessa Crafts",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/vanessa-crafts-74143198",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "richard_chen",
+      "name": "Richard Chen",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/richard-cp-chen",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "blake_thompson",
+      "name": "Blake Thompson",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/blake-thompson-517444146",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "nicole_burrowshealy",
+      "name": "Nicole Burrows-Healy",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": "https://www.linkedin.com/in/nicole-burrows-healy",
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    },
+    {
+      "id": "sharn_piper",
+      "name": "Sharn Piper",
+      "role": "",
+      "company": "",
+      "city": "",
+      "country": "",
+      "linkedin_url": {
+        "value": "linkedin.com/in/sharnpiper",
+        "source": "facilitator_manual",
+        "confidence": "HIGH",
+        "updated_by": "facilitator",
+        "updated_at": "2026-04-04T00:39:24Z",
+        "verified": true,
+        "previous_value": {
+          "value": "https://linkedin.com/in/sharnpiper",
+          "source": "facilitator_manual",
+          "confidence": "HIGH",
+          "updated_by": "facilitator",
+          "updated_at": "2026-03-31T09:17:11Z",
+          "verified": true,
+          "previous_value": null
+        }
+      },
+      "archetype": "",
+      "chris_linkedin_connected": true,
+      "rank_score": 0.4
+    }
+  ]
+}
