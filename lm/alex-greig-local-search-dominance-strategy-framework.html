@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Search Dominance Strategy Framework — Supernova Search</title>
+<meta name="description" content="A roofing contractor in Hamilton was invisible online while his main competitor dominated every &#39;roofing Hamilton&#39; search. Three months later, he owned page one A framework by Alex Greig, Supernova Search.">
+
+<style>
+:root {
+    --primary:    #1F2937;
+    --secondary:  #374151;
+    --accent:     #E8840A;
+    --accent-soft: #FFD9A8;
+    --cta:        #E8840A;
+    --ink:        #0F172A;
+    --body:       #374151;
+    --cream:      #FAFAF9;
+    --mozzarella: #F5F5F4;
+    --rule:       #E5E7EB;
+    --red-flag:   #DC2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+@page { size: A4 portrait; margin: 5mm 8mm; }
+html { font-size: 9.5pt; -webkit-font-smoothing: antialiased; }
+body {
+    font-family: 'Roboto', -apple-system, sans-serif;
+    color: var(--body); background: var(--cream); line-height: 1.4;
+    max-width: 190mm; margin: 0 auto; padding: 6mm 8mm 4mm;
+}
+@media screen { body { background: var(--cream); box-shadow: 0 0 24px rgba(0,0,0,.08); margin: 24px auto; min-height: 277mm; } html { background: #EAEAEA; padding: 1px 0; } }
+h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; color: var(--secondary); font-weight: 700; }
+
+.micro-line { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 4mm; }
+
+.cover { padding-bottom: 5mm; margin-bottom: 6mm; border-bottom: 2px solid var(--accent); }
+.eyebrow { font-family: 'Oswald', sans-serif; font-size: 8pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 2mm; }
+h1.title { font-size: 26pt; line-height: 1.05; color: var(--primary); margin-bottom: 3mm; }
+.subtitle { font-size: 12pt; color: var(--body); font-style: italic; line-height: 1.4; max-width: 130mm; }
+.brand-mark { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 4mm; }
+.brand-mark .meta { font-family: 'Oswald', sans-serif; font-size: 7.5pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); }
+.brand-mark .name { font-family: 'Oswald', sans-serif; font-size: 9pt; font-weight: 800; color: var(--secondary); text-align: right; }
+.brand-mark .name .person { font-size: 7.5pt; font-weight: 500; color: var(--body); margin-top: 1mm; }
+
+.framework-intro { font-size: 11pt; line-height: 1.5; color: var(--ink); padding: 4mm 5mm; border-left: 3px solid var(--accent); background: var(--cream); margin-bottom: 6mm; }
+.framework-intro h2 { font-family: 'Oswald', sans-serif; font-size: 14pt; color: var(--primary); margin-bottom: 2mm; line-height: 1.15; }
+
+.framework-grid { display: grid; gap: 3.5mm; margin-bottom: 6mm; }
+.fw-item { background: white; border: 1px solid var(--rule); border-left: 5px solid var(--accent); border-radius: 3pt; padding: 4mm 5mm 4mm 5mm; display: grid; grid-template-columns: 14mm 1fr; gap: 4mm; }
+.fw-num { font-family: 'Oswald', sans-serif; font-size: 26pt; font-weight: 900; color: var(--accent); line-height: 1; padding-top: 1mm; }
+.fw-content { padding-top: 1mm; }
+.fw-title { font-family: 'Oswald', sans-serif; font-size: 13pt; font-weight: 700; color: var(--primary); margin-bottom: 2mm; line-height: 1.15; }
+.fw-desc { font-size: 9.5pt; line-height: 1.5; color: var(--body); }
+
+.red-flag-bar { background: var(--red-flag); color: white; padding: 4mm 6mm; border-radius: 3pt; margin-bottom: 5mm; display: flex; align-items: center; gap: 4mm; }
+.red-flag-label { font-family: 'Oswald', sans-serif; font-weight: 800; font-size: 11pt; letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; }
+.red-flag-text { font-size: 10pt; line-height: 1.3; }
+
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 4mm; }
+.cta { padding: 4mm 5mm; border-radius: 3pt; }
+.cta.soft { background: var(--cream); border: 1px solid var(--rule); }
+.cta.hard { background: var(--cta); color: white; }
+.cta-label { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.8; }
+.cta.soft .cta-label { color: var(--accent); }
+.cta-title { font-family: 'Oswald', sans-serif; font-size: 11pt; font-weight: 700; margin-top: 1mm; }
+.cta-body { font-size: 9.5pt; line-height: 1.35; margin-top: 1.5mm; }
+.cta-body a { color: inherit; text-decoration: underline; font-weight: 600; }
+
+.footer { font-family: 'Oswald', sans-serif; font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); border-top: 1px solid var(--rule); padding-top: 3mm; display: flex; justify-content: space-between; }
+.footer .domain { color: var(--accent); font-weight: 700; }
+</style>
+<style>
+/* Oswald — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_700_normal.woff2') format('woff2');
+}
+/* Roboto — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_400_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_700_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_700_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_800_normal.woff2') format('woff2');
+}
+</style>
+</head>
+<body>
+
+<div class="micro-line">Print · Save · Share with your team</div>
+
+<div class="cover">
+    <div class="eyebrow">The Local Authority Stack</div>
+    <h1 class="title">Local Search Dominance Strategy Framework</h1>
+<div class="subtitle">A roofing contractor in Hamilton was invisible online while his main competitor dominated every &#39;roofing Hamilton&#39; search. Three months later, he owned page one</div>    <div class="brand-mark">
+        <div class="meta">Free Resource · Supernova Search</div>
+        <div class="name">
+            SUPERNOVA SEARCH
+            <div class="person">Alex Greig · Supernova Search</div>
+        </div>
+    </div>
+</div>
+
+<div class="framework-intro">
+    <h2>The Local Authority Stack</h2>
+A roofing contractor in Hamilton was invisible online while his main competitor dominated every &#39;roofing Hamilton&#39; search. Three months later, he owned page one. Here&#39;s exactly how.
+
+Local search dominance isn&#39;t about gaming algorithms — it&#39;s about becoming the obvious choice for your service area. </div>
+
+<div class="framework-grid">
+    <div class="fw-item">
+        <div class="fw-num">01</div>
+        <div class="fw-content">
+            <div class="fw-title">The Agency Accountability Ladder</div>
+<div class="fw-desc">The Agency Accountability Ladder — four levels from Pretty Reports to ROI Proof that separate real agencies from report generators</div>        </div>
+    </div>
+    <div class="fw-item">
+        <div class="fw-num">02</div>
+        <div class="fw-content">
+            <div class="fw-title">The Local Authority Stack</div>
+<div class="fw-desc">The Local Authority Stack — Foundation Signals, Relevance Proof, Authority Building, and Performance Optimisation for local search dominance</div>        </div>
+    </div>
+    <div class="fw-item">
+        <div class="fw-num">03</div>
+        <div class="fw-content">
+            <div class="fw-title">The Lead Pipeline Protocol</div>
+<div class="fw-desc">The Lead Pipeline Protocol — five sequential stages from Traffic Foundation to Performance Tracking for predictable monthly leads</div>        </div>
+    </div>
+    <div class="fw-item">
+        <div class="fw-num">04</div>
+        <div class="fw-content">
+            <div class="fw-title">The Revenue Attribution Model</div>
+<div class="fw-desc">The Revenue Attribution Model — five critical metrics from CAC to Attribution Windows that track marketing ROI accurately</div>        </div>
+    </div>
+</div>
+
+
+<div class="cta-grid">
+    <div class="cta soft">
+        <div class="cta-label">Save &amp; Share</div>
+        <div class="cta-title">Save This Framework</div>
+        <div class="cta-body">Follow for weekly marketing insights that actually work</div>
+    </div>
+    <div class="cta hard">
+        <div class="cta-label">Book a Call</div>
+        <div class="cta-title">Strategy Call</div>
+        <div class="cta-body">
+            Ready for predictable leads? Book a free strategy call at supernovasearch.co.nz
+<br><a href="https://www.supernovasearch.co.nz/">www.supernovasearch.co.nz/</a>        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <span>Alex Greig · AI-powered digital marketing from a co-founder who built a $600-to-billion-dollar company. Founder oversight on every account. ROI or nothing.</span>
+    <span class="domain">www.supernovasearch.co.nz</span>
+</div>
+
+</body>
+</html>
