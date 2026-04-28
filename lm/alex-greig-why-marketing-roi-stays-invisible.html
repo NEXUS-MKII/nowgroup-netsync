@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Marketing ROI Stays Invisible — Supernova Search</title>
+<meta name="description" content="The ROI Clarity Method A diagnostic by Alex Greig, Supernova Search.">
+<meta property="og:title" content="Why Marketing ROI Stays Invisible">
+<meta property="og:description" content="The ROI Clarity Method">
+
+<style>
+:root {
+    --primary:    #1F2937;
+    --secondary:  #E8840A;
+    --accent:     #F59E0B;
+    --accent-soft: #F8C060;
+    --cta:        #E8840A;
+    --cta-accent: #C57008;
+    --ink:        #0F172A;
+    --body:       #374151;
+    --cream:      #FAFAF9;
+    --mozzarella: #F5F5F4;
+    --rule:       #E5E7EB;
+    --red-flag:   #DC2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+@page { size: A4 portrait; margin: 5mm 8mm; }
+html { font-size: 9.5pt; -webkit-font-smoothing: antialiased; }
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--body); background: var(--cream); line-height: 1.45;
+    max-width: 190mm; margin: 0 auto; padding: 6mm 8mm 4mm;
+}
+@media screen { body { background: var(--cream); box-shadow: 0 0 24px rgba(0,0,0,.08); margin: 24px auto; min-height: 277mm; } html { background: #EAEAEA; padding: 1px 0; } }
+h1, h2, h3, h4 { font-family: 'Archivo', sans-serif; color: var(--secondary); font-weight: 700; }
+
+.micro-line { font-family: 'Archivo', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 4mm; }
+
+.cover { padding-bottom: 5mm; margin-bottom: 6mm; border-bottom: 2px solid var(--accent); }
+.eyebrow { font-family: 'Archivo', sans-serif; font-size: 8pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 2mm; }
+h1.title { font-size: 26pt; line-height: 1.05; color: var(--primary); margin-bottom: 3mm; }
+.subtitle { font-size: 12pt; color: var(--body); font-style: italic; line-height: 1.4; max-width: 130mm; }
+.brand-mark { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 4mm; }
+.brand-mark .meta { font-family: 'Archivo', sans-serif; font-size: 7.5pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); }
+.brand-mark .name { font-family: 'Archivo', sans-serif; font-size: 9pt; font-weight: 800; color: var(--secondary); text-align: right; }
+.brand-mark .name .person { font-size: 7.5pt; font-weight: 500; color: var(--body); margin-top: 1mm; }
+
+.hero-img-wrap { margin: 0 0 5mm 0; border-radius: 4pt; overflow: hidden; }
+.hero-img { display: block; width: 100%; height: 55mm; object-fit: cover; }
+
+.article { font-size: 10.5pt; line-height: 1.55; color: var(--ink); margin-bottom: 6mm; }
+.article p { margin-bottom: 3.5mm; }
+.article p:first-child::first-letter { font-family: 'Archivo', sans-serif; font-size: 32pt; font-weight: 800; line-height: 0.9; float: left; padding-right: 2mm; padding-top: 1mm; color: var(--accent); }
+
+.framework-callout { background: white; border: 1px solid var(--rule); border-left: 4px solid var(--accent); padding: 4mm 5mm; margin-bottom: 5mm; border-radius: 3pt; }
+.framework-callout .label { font-family: 'Archivo', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1mm; }
+.framework-callout .name { font-size: 13pt; font-weight: 700; color: var(--primary); font-family: 'Archivo', sans-serif; }
+
+.pullquote { font-family: 'Archivo', sans-serif; font-size: 13pt; line-height: 1.35; color: var(--primary); padding: 5mm 6mm; background: var(--mozzarella); border-radius: 3pt; margin: 5mm 0; font-style: italic; }
+.pullquote::before { content: "\201C"; font-size: 24pt; line-height: 0; vertical-align: -8pt; color: var(--accent); margin-right: 2mm; }
+.pullquote::after { content: "\201D"; font-size: 24pt; line-height: 0; vertical-align: -8pt; color: var(--accent); margin-left: 2mm; }
+.pullquote .author { display: block; font-size: 8pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--body); font-style: normal; margin-top: 3mm; }
+
+.spine { background: var(--cream); border: 1px dashed var(--accent); border-radius: 3pt; padding: 4mm 5mm; margin-bottom: 5mm; }
+.spine-label { font-family: 'Archivo', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 2mm; }
+.spine ul { list-style: none; padding: 0; margin: 0; }
+.spine li { padding: 1mm 0 1mm 5mm; font-size: 9.5pt; line-height: 1.4; color: var(--ink); position: relative; }
+.spine li::before { content: "■"; color: var(--accent); position: absolute; left: 0; font-size: 7pt; top: 1.5mm; }
+
+.shift-section { margin-bottom: 5mm; }
+.shift-section h3 { font-size: 12pt; line-height: 1.2; color: var(--primary); margin-bottom: 3mm; padding-bottom: 1.5mm; border-bottom: 1px solid var(--rule); }
+.shift-list { list-style: none; padding: 0; counter-reset: shift; }
+.shift-list li { counter-increment: shift; padding: 2.5mm 0 2.5mm 11mm; font-size: 10pt; line-height: 1.45; color: var(--body); position: relative; border-bottom: 1px dotted var(--rule); }
+.shift-list li:last-child { border-bottom: none; }
+.shift-list li::before { content: counter(shift, decimal-leading-zero); font-family: 'Archivo', sans-serif; font-size: 13pt; font-weight: 800; color: var(--accent); position: absolute; left: 0; top: 1.5mm; }
+
+.red-flag-bar { background: var(--red-flag); color: white; padding: 4mm 6mm; border-radius: 3pt; margin-bottom: 5mm; display: flex; align-items: center; gap: 4mm; }
+.red-flag-label { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 11pt; letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; }
+.red-flag-text { font-size: 10pt; line-height: 1.3; }
+
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 4mm; }
+.cta { padding: 4mm 5mm; border-radius: 3pt; }
+.cta.soft { background: var(--cream); border: 1px solid var(--rule); }
+.cta.hard { background: var(--cta); color: white; }
+.cta-label { font-family: 'Archivo', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.8; }
+.cta.soft .cta-label { color: var(--accent); }
+.cta-title { font-family: 'Archivo', sans-serif; font-size: 11pt; font-weight: 700; margin-top: 1mm; }
+.cta-body { font-size: 9.5pt; line-height: 1.35; margin-top: 1.5mm; }
+.cta-body a { color: inherit; text-decoration: underline; font-weight: 600; }
+
+.footer { font-family: 'Archivo', sans-serif; font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); border-top: 1px solid var(--rule); padding-top: 3mm; display: flex; justify-content: space-between; }
+.footer .domain { color: var(--accent); font-weight: 700; }
+</style>
+<style>
+/* Archivo — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Archivo';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_400_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_700_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_700_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_800_normal.woff2') format('woff2');
+}
+/* Inter — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_400_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_700_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_700_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_800_normal.woff2') format('woff2');
+}
+</style>
+</head>
+<body>
+
+<div class="micro-line">Print · Save · Share with your team</div>
+
+<div class="hero-img-wrap">
+    <img src="file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/lm_builder/images/_cached/unsplash_e874c13537aa21d3.jpg" alt="black laptop computer" class="hero-img">
+</div>
+
+<div class="cover">
+<div class="eyebrow">The ROI Clarity Method</div>    <h1 class="title">Why Marketing ROI Stays Invisible</h1>
+<div class="subtitle">The ROI Clarity Method</div>    <div class="brand-mark">
+        <div class="meta">Free Resource · Supernova Search</div>
+        <div class="name">
+            SUPERNOVA SEARCH
+            <div class="person">Alex Greig · Co-Founder — Supernova Search</div>
+        </div>
+    </div>
+</div>
+
+<div class="framework-callout">
+    <div class="label">The Framework</div>
+    <div class="name">The ROI Clarity Method</div>
+</div>
+
+<div class="article">
+<p>I watched a client spend $847,000 on marketing last year. When I asked what drove their best month, they couldn&#39;t tell me. They knew their total spend. They knew their revenue went up. But they had no idea which $100 of that $847,000 actually worked.</p><p>Most businesses waste 60% of their marketing spend because they can&#39;t measure what actually drives sales. They&#39;re flying blind with expensive fuel.</p><p>The problem isn&#39;t the marketing. It&#39;s the measurement. Most companies track vanity metrics instead of money metrics. They celebrate website visits while their bank account stays flat.</p><p>Here&#39;s what I call the ROI Clarity Method. Four parts: Track, Tag, Test, Terminate.</p><p>Track means measuring actual sales, not clicks or impressions. Every lead needs a dollar value. Every campaign needs a profit number. No exceptions.</p><p>Tag means knowing exactly where each customer came from. Not just &#39;Google Ads&#39; but which specific ad, keyword, and landing page. One Auckland plumbing company I worked with discovered that 80% of their profitable jobs came from just three keywords out of 200 they were bidding on.</p><p>Test means running controlled experiments, not just launching campaigns and hoping. Change one variable at a time. Measure the result. Keep what works, kill what doesn&#39;t.</p><p>Terminate means cutting losing campaigns fast and doubling down on winners. Most businesses keep bad campaigns running because they&#39;re emotionally attached to the creative or the strategy. Data doesn&#39;t lie. Feelings do.</p><p>A construction company in Wellington was spending $12,000 per month across five different marketing channels. We applied the ROI Clarity Method and discovered that two channels were generating all their profitable work. We killed the other three and doubled spend on the winners. Same budget, 180% more profit.</p><p>The hardest part isn&#39;t the method. It&#39;s admitting that half of what you&#39;re currently doing isn&#39;t working. But once you can see clearly what drives real results, scaling becomes simple math.</p><p>Follow for weekly marketing insights that actually move the needle.</p></div>
+
+<div class="pullquote">
+    Auckland plumbing company: 80% of profit came from just 3 keywords out of 200
+<span class="author">— Alex Greig</span></div>
+
+<div class="spine">
+    <div class="spine-label">The Spine — what holds this together</div>
+    <ul>
+<li>Most businesses waste 60% of their marketing spend because they can&#39;t measure what actually drives sales.</li><li>Local search dominance comes down to three factors that 90% of agencies ignore completely.</li><li>The agencies charging the most often deliver the least measurable results.</li><li>Predictable lead flow requires treating marketing like operations, not creativity.</li>    </ul>
+</div>
+
+<div class="shift-section">
+    <h3>The Shift — frameworks that reposition the problem</h3>
+    <ul class="shift-list">
+<li>ROI Clarity Method: Track actual sales, Tag lead sources, Test systematically, Terminate losing campaigns</li><li>Local Dominance Triangle: Authority through trust signals, Activity through engagement, Accuracy in business information</li><li>Agency Reality Check: Unrealistic promises, Vanity metrics focus, Long contracts without guarantees, Overly complex explanations</li><li>Pipeline Certainty System: Capacity planning, Channel diversification, Consistent cadence, Conversion optimization</li>    </ul>
+</div>
+
+
+<div class="cta-grid">
+    <div class="cta soft">
+        <div class="cta-label">Save &amp; Share</div>
+        <div class="cta-title">Save This Diagnostic</div>
+        <div class="cta-body">Follow for weekly marketing insights that actually move the needle</div>
+    </div>
+    <div class="cta hard">
+        <div class="cta-label">Book a Call</div>
+        <div class="cta-title">Strategy Call</div>
+        <div class="cta-body">
+            Ready to fix your marketing ROI? Book a strategy session at supernovasearch.co.nz
+<br><a href="https://www.supernovasearch.co.nz/">www.supernovasearch.co.nz/</a>        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <span>Alex Greig · AI-powered digital marketing from a co-founder who built a $600-to-billion-dollar company. Founder oversight on every account. ROI or nothing.</span>
+    <span class="domain">supernovasearch.co.nz</span>
+</div>
+
+</body>
+</html>
