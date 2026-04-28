@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Volume Trap Diagnostic — Is Your Networking Broken? — NOW Group</title>
+<meta name="description" content=" An audit infographic by Chris White.">
+<meta property="og:title" content="The Volume Trap Diagnostic — Is Your Networking Broken?">
+<meta property="og:description" content="">
+
+<style>
+:root {
+    --primary:    #1F2937;
+    --secondary:  #374151;
+    --accent:     #E8840A;
+    --accent-soft: #FFD9A8;
+    --cta:        #E8840A;
+    --cta-accent: #C46A05;
+    --ink:        #0F172A;
+    --body:       #374151;
+    --cream:      #FAFAF9;
+    --rule:       #E5E7EB;
+    --red-flag:   #DC2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+@page { size: A4 portrait; margin: 4mm 8mm; }
+html { font-size: 9.5pt; -webkit-font-smoothing: antialiased; }
+body {
+    font-family: 'Roboto', -apple-system, sans-serif;
+    color: var(--body);
+    background: var(--cream);
+    line-height: 1.4;
+    max-width: 190mm;
+    margin: 0 auto;
+    padding: 6mm 8mm 4mm;
+}
+@media screen {
+    body { background: var(--cream); box-shadow: 0 0 24px rgba(0,0,0,.08); margin: 24px auto; min-height: 277mm; }
+    html { background: #EAEAEA; padding: 1px 0; }
+}
+
+h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; color: var(--secondary); font-weight: 700; }
+
+.micro-line { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 4mm; }
+
+.header { border-bottom: 2px solid var(--accent); padding-bottom: 4mm; margin-bottom: 5mm; display: flex; justify-content: space-between; align-items: flex-start; gap: 8mm; }
+.header-text { flex: 1; }
+.header h1 { font-size: 22pt; line-height: 1.1; color: var(--primary); margin-bottom: 2mm; }
+.header .subtitle { font-size: 11pt; color: var(--body); font-style: italic; }
+.header-mark { font-family: 'Oswald', sans-serif; font-size: 9pt; font-weight: 800; color: var(--secondary); text-align: right; min-width: 25mm; }
+.header-mark .brand-name { letter-spacing: 0.1em; }
+.header-mark .person { font-size: 7.5pt; font-weight: 500; color: var(--body); margin-top: 1mm; }
+
+.sections-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 6mm; margin-bottom: 5mm; }
+.section { background: white; border: 1px solid var(--rule); border-radius: 3pt; padding: 4mm 5mm; }
+.section-num { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; }
+.section h3 { font-size: 12pt; line-height: 1.2; margin: 1mm 0 3mm; color: var(--primary); }
+.section ul { list-style: none; padding: 0; }
+.section li { display: flex; align-items: flex-start; gap: 2mm; padding: 1.5mm 0; font-size: 9.5pt; line-height: 1.35; border-bottom: 1px dotted var(--rule); }
+.section li:last-child { border-bottom: none; }
+.section li::before { flex-shrink: 0; line-height: 1.35; }
+.section.checklist li::before { content: "☐"; color: var(--secondary); font-size: 11pt; line-height: 1.1; margin-top: -0.5mm; }
+.section.bullet li::before { content: "•"; color: var(--accent); font-size: 14pt; line-height: 0.8; margin-top: 1mm; }
+.section.numbered { counter-reset: item; }
+.section.numbered li { counter-increment: item; }
+.section.numbered li::before { content: counter(item) "."; color: var(--accent); font-weight: 700; min-width: 6mm; }
+
+.red-flag-bar { background: var(--red-flag); color: white; padding: 4mm 6mm; border-radius: 3pt; margin-bottom: 5mm; display: flex; align-items: center; gap: 4mm; }
+.red-flag-label { font-family: 'Oswald', sans-serif; font-weight: 800; font-size: 11pt; letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; }
+.red-flag-text { font-size: 10pt; line-height: 1.3; }
+
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 4mm; }
+.cta { padding: 4mm 5mm; border-radius: 3pt; }
+.cta.soft { background: var(--cream); border: 1px solid var(--rule); }
+.cta.hard { background: var(--cta); color: white; }
+.cta-label { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.8; }
+.cta.soft .cta-label { color: var(--accent); }
+.cta-body { font-size: 10pt; line-height: 1.3; margin-top: 1mm; }
+.cta-body a { color: inherit; text-decoration: underline; font-weight: 600; }
+
+.footer { font-family: 'Oswald', sans-serif; font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); border-top: 1px solid var(--rule); padding-top: 3mm; display: flex; justify-content: space-between; }
+.footer .domain { color: var(--accent); font-weight: 700; }
+</style>
+<style>
+/* Oswald — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_700_normal.woff2') format('woff2');
+}
+/* Roboto — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_400_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_700_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_700_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_800_normal.woff2') format('woff2');
+}
+</style>
+</head>
+<body>
+
+<div class="micro-line">Print · Save · Share with your team</div>
+
+<div class="header">
+    <div class="header-text">
+        <h1>The Volume Trap Diagnostic — Is Your Networking Broken?</h1>
+    </div>
+    <div class="header-mark">
+        <div class="brand-name">NOW GROUP</div>
+        <div class="person">Chris White</div>
+    </div>
+</div>
+
+<div class="sections-grid">
+    <div class="section checklist">
+        <div class="section-num">Section 1</div>
+        <h3>Activity Measurement Red Flags</h3>
+        <ul>
+            <li>Counting events attended over partnerships built</li>
+            <li>Measuring LinkedIn connections over meaningful conversations</li>
+            <li>Tracking business cards over follow-up quality</li>
+            <li>Celebrating busy calendars over revenue outcomes</li>
+            <li>Focusing on quantity over relationship depth</li>
+        </ul>
+    </div>
+    <div class="section checklist">
+        <div class="section-num">Section 2</div>
+        <h3>Spreading Thin Warning Signs</h3>
+        <ul>
+            <li>No clear target partner profiles</li>
+            <li>Attending every networking event available</li>
+            <li>Generic value propositions for all audiences</li>
+            <li>No systematic approach to relationship building</li>
+            <li>Inconsistent follow-up across all connections</li>
+        </ul>
+    </div>
+    <div class="section checklist">
+        <div class="section-num">Section 3</div>
+        <h3>Goodwill Burning Indicators</h3>
+        <ul>
+            <li>Random, sporadic contact with partners</li>
+            <li>Generic &#39;checking in&#39; messages</li>
+            <li>No structured value delivery system</li>
+            <li>Partnerships fade within 3-6 months</li>
+            <li>Referrals become increasingly rare</li>
+        </ul>
+    </div>
+    <div class="section numbered">
+        <div class="section-num">Section 4</div>
+        <h3>This Week&#39;s Action Steps</h3>
+        <ul>
+            <li>Identify your top 3 target partner types</li>
+            <li>Audit last month&#39;s networking activities for outcomes</li>
+            <li>Create systematic follow-up framework</li>
+            <li>Schedule partnership review sessions</li>
+            <li>Design specific value delivery plan</li>
+        </ul>
+    </div>
+</div>
+
+<div class="red-flag-bar">
+    <div class="red-flag-label">Red flag</div>
+    <div class="red-flag-text">RED FLAG: If you can&#39;t name 3 active partnerships generating monthly referrals, you&#39;re in the Volume Trap</div>
+</div>
+
+<div class="cta-grid">
+    <div class="cta soft">
+        <div class="cta-label">Save this</div>
+        <div class="cta-body">Follow for weekly insights on structured networking</div>
+    </div>
+    <div class="cta hard">
+        <div class="cta-label">Book a call</div>
+        <div class="cta-body">
+            Book your NET_SYNC Entry session at www.nowgroup.co.nz
+<br><a href="www.nowgroup.co.nz">www.nowgroup.co.nz</a>        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <span>Chris White</span>
+    <span class="domain">www.nowgroup.co.nz</span>
+</div>
+
+</body>
+</html>
