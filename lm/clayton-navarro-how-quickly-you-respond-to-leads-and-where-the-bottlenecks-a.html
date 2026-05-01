@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lead Response Speed Diagnostic — VA World Outsourcing</title>
+<meta name="description" content="How quickly you respond to leads and where the bottlenecks are A diagnostic by Clayton Navarro, VA World Outsourcing.">
+<meta property="og:title" content="The Lead Response Speed Diagnostic">
+<meta property="og:description" content="How quickly you respond to leads and where the bottlenecks are">
+
+<style>
+:root {
+    --primary:    #EC008C;
+    --secondary:  #491D88;
+    --accent:     #491D88;
+    --accent-soft: #896CB2;
+    --cta:        #491D88;
+    --cta-accent: #3E1974;
+    --ink:        #0F172A;
+    --body:       #374151;
+    --cream:      #FAFAF9;
+    --mozzarella: #F5F5F4;
+    --rule:       #E5E7EB;
+    --red-flag:   #DC2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+@page { size: A4 portrait; margin: 5mm 8mm; }
+html { font-size: 9.5pt; -webkit-font-smoothing: antialiased; }
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--body); background: var(--cream); line-height: 1.45;
+    max-width: 190mm; margin: 0 auto; padding: 6mm 8mm 4mm;
+}
+@media screen { body { background: var(--cream); box-shadow: 0 0 24px rgba(0,0,0,.08); margin: 24px auto; min-height: 277mm; } html { background: #EAEAEA; padding: 1px 0; } }
+h1, h2, h3, h4 { font-family: 'Archivo', sans-serif; color: var(--secondary); font-weight: 700; }
+
+.micro-line { font-family: 'Archivo', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 4mm; }
+
+.cover { padding-bottom: 5mm; margin-bottom: 6mm; border-bottom: 2px solid var(--accent); }
+.eyebrow { font-family: 'Archivo', sans-serif; font-size: 8pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 2mm; }
+h1.title { font-size: 26pt; line-height: 1.05; color: var(--primary); margin-bottom: 3mm; }
+.subtitle { font-size: 12pt; color: var(--body); font-style: italic; line-height: 1.4; max-width: 130mm; }
+.brand-mark { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 4mm; }
+.brand-mark .meta { font-family: 'Archivo', sans-serif; font-size: 7.5pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); }
+.brand-mark .name { font-family: 'Archivo', sans-serif; font-size: 9pt; font-weight: 800; color: var(--secondary); text-align: right; }
+.brand-mark .name .person { font-size: 7.5pt; font-weight: 500; color: var(--body); margin-top: 1mm; }
+
+.hero-img-wrap { margin: 0 0 5mm 0; border-radius: 4pt; overflow: hidden; }
+.hero-img { display: block; width: 100%; height: 55mm; object-fit: cover; }
+
+.article { font-size: 10.5pt; line-height: 1.55; color: var(--ink); margin-bottom: 6mm; }
+.article p { margin-bottom: 3.5mm; }
+.article p:first-child::first-letter { font-family: 'Archivo', sans-serif; font-size: 32pt; font-weight: 800; line-height: 0.9; float: left; padding-right: 2mm; padding-top: 1mm; color: var(--accent); }
+
+.framework-callout { background: white; border: 1px solid var(--rule); border-left: 4px solid var(--accent); padding: 4mm 5mm; margin-bottom: 5mm; border-radius: 3pt; }
+.framework-callout .label { font-family: 'Archivo', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1mm; }
+.framework-callout .name { font-size: 13pt; font-weight: 700; color: var(--primary); font-family: 'Archivo', sans-serif; }
+
+.pullquote { font-family: 'Archivo', sans-serif; font-size: 13pt; line-height: 1.35; color: var(--primary); padding: 5mm 6mm; background: var(--mozzarella); border-radius: 3pt; margin: 5mm 0; font-style: italic; }
+.pullquote::before { content: "\201C"; font-size: 24pt; line-height: 0; vertical-align: -8pt; color: var(--accent); margin-right: 2mm; }
+.pullquote::after { content: "\201D"; font-size: 24pt; line-height: 0; vertical-align: -8pt; color: var(--accent); margin-left: 2mm; }
+.pullquote .author { display: block; font-size: 8pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--body); font-style: normal; margin-top: 3mm; }
+
+.spine { background: var(--cream); border: 1px dashed var(--accent); border-radius: 3pt; padding: 4mm 5mm; margin-bottom: 5mm; }
+.spine-label { font-family: 'Archivo', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 2mm; }
+.spine ul { list-style: none; padding: 0; margin: 0; }
+.spine li { padding: 1mm 0 1mm 5mm; font-size: 9.5pt; line-height: 1.4; color: var(--ink); position: relative; }
+.spine li::before { content: "■"; color: var(--accent); position: absolute; left: 0; font-size: 7pt; top: 1.5mm; }
+
+.shift-section { margin-bottom: 5mm; }
+.shift-section h3 { font-size: 12pt; line-height: 1.2; color: var(--primary); margin-bottom: 3mm; padding-bottom: 1.5mm; border-bottom: 1px solid var(--rule); }
+.shift-list { list-style: none; padding: 0; counter-reset: shift; }
+.shift-list li { counter-increment: shift; padding: 2.5mm 0 2.5mm 11mm; font-size: 10pt; line-height: 1.45; color: var(--body); position: relative; border-bottom: 1px dotted var(--rule); }
+.shift-list li:last-child { border-bottom: none; }
+.shift-list li::before { content: counter(shift, decimal-leading-zero); font-family: 'Archivo', sans-serif; font-size: 13pt; font-weight: 800; color: var(--accent); position: absolute; left: 0; top: 1.5mm; }
+
+.red-flag-bar { background: var(--red-flag); color: white; padding: 4mm 6mm; border-radius: 3pt; margin-bottom: 5mm; display: flex; align-items: center; gap: 4mm; }
+.red-flag-label { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 11pt; letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; }
+.red-flag-text { font-size: 10pt; line-height: 1.3; }
+
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 4mm; }
+.cta { padding: 4mm 5mm; border-radius: 3pt; }
+.cta.soft { background: var(--cream); border: 1px solid var(--rule); }
+.cta.hard { background: var(--cta); color: white; }
+.cta-label { font-family: 'Archivo', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.8; }
+.cta.soft .cta-label { color: var(--accent); }
+.cta-title { font-family: 'Archivo', sans-serif; font-size: 11pt; font-weight: 700; margin-top: 1mm; }
+.cta-body { font-size: 9.5pt; line-height: 1.35; margin-top: 1.5mm; }
+.cta-body a { color: inherit; text-decoration: underline; font-weight: 600; }
+
+.footer { font-family: 'Archivo', sans-serif; font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); border-top: 1px solid var(--rule); padding-top: 3mm; display: flex; justify-content: space-between; }
+.footer .domain { color: var(--accent); font-weight: 700; }
+</style>
+<style>
+/* Archivo — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Archivo';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_400_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_700_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_700_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/archivo/archivo_800_normal.woff2') format('woff2');
+}
+/* Inter — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_400_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_700_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_700_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/inter/inter_800_normal.woff2') format('woff2');
+}
+</style>
+</head>
+<body>
+
+<div class="micro-line">Print · Save · Share with your team</div>
+
+<div class="hero-img-wrap">
+    <img src="file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/lm_builder/images/_cached/unsplash_efff5071bdbb5d9e.jpg" alt="waiting mobile phone" class="hero-img">
+</div>
+
+<div class="cover">
+    <h1 class="title">The Lead Response Speed Diagnostic</h1>
+<div class="subtitle">How quickly you respond to leads and where the bottlenecks are</div>    <div class="brand-mark">
+        <div class="meta">Free Resource · VA World Outsourcing</div>
+        <div class="name">
+            VA WORLD OUTSOURCING
+            <div class="person">Clayton Navarro · Director</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="pullquote">
+    You&#39;re doing some things right, but there are gaps. You&#39;re probably converting 20-30% of leads when you could be hitting 40-50% with faster response.
+<span class="author">— Clayton Navarro</span></div>
+
+
+<div class="shift-section">
+    <h3>The Shift — frameworks that reposition the problem</h3>
+    <ul class="shift-list">
+<li>{&#39;num&#39;: 1, &#39;title&#39;: &#39;Question 1&#39;, &#39;desc&#39;: &#39;Do you call new leads within 2 hours of receiving them?&#39;}</li><li>{&#39;num&#39;: 2, &#39;title&#39;: &#39;Question 2&#39;, &#39;desc&#39;: &#34;Do you have a system for tracking which leads haven&#39;t been contacted?&#34;}</li><li>{&#39;num&#39;: 3, &#39;title&#39;: &#39;Question 3&#39;, &#39;desc&#39;: &#39;Can someone else in your business book appointments on your behalf?&#39;}</li><li>{&#39;num&#39;: 4, &#39;title&#39;: &#39;Question 4&#39;, &#39;desc&#39;: &#34;Do you follow up with leads who don&#39;t answer the first call?&#34;}</li><li>{&#39;num&#39;: 5, &#39;title&#39;: &#39;Question 5&#39;, &#39;desc&#39;: &#39;Are you available to take calls during business hours most days?&#39;}</li><li>{&#39;num&#39;: 6, &#39;title&#39;: &#39;Question 6&#39;, &#39;desc&#39;: &#39;Do you have templates ready for quick email/SMS follow-ups?&#39;}</li><li>{&#39;num&#39;: 7, &#39;title&#39;: &#39;Question 7&#39;, &#39;desc&#39;: &#39;Can you see all your leads in one place without checking multiple systems?&#39;}</li><li>{&#39;num&#39;: 8, &#39;title&#39;: &#39;Question 8&#39;, &#39;desc&#39;: &#39;Do you know your current lead-to-appointment conversion rate?&#39;}</li><li>{&#39;num&#39;: 9, &#39;title&#39;: &#39;Question 9&#39;, &#39;desc&#39;: &#39;Are you comfortable having staff make sales calls for your business?&#39;}</li><li>{&#39;num&#39;: 10, &#39;title&#39;: &#39;Question 10&#39;, &#39;desc&#39;: &#39;Do you currently turn off marketing when you get too busy?&#39;}</li>    </ul>
+</div>
+
+
+<div class="cta-grid">
+    <div class="cta soft">
+        <div class="cta-label">Save &amp; Share</div>
+        <div class="cta-title">Save This Diagnostic</div>
+        <div class="cta-body">Hit reply — what&#39;s your biggest VA concern?</div>
+    </div>
+    <div class="cta hard">
+        <div class="cta-label">Book a Call</div>
+        <div class="cta-title">Strategy Call</div>
+        <div class="cta-body">
+            Book a quick call at vaworldoutsourcing.com
+<br><a href="www.vaworldoutsourcing.com">www.vaworldoutsourcing.com</a>        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <span>Clayton Navarro · VA World — skilled Philippines-based VAs for service businesses. Full service: recruitment, training, onboarding, and ongoing support. Local AU point of contact throughout. Long-term partnership model.</span>
+    <span class="domain">vaworldoutsourcing.com</span>
+</div>
+
+</body>
+</html>
