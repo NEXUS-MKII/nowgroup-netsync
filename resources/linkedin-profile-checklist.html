@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Profile Checklist — NOW Group</title>
+<meta name="description" content="The 8 foundations every LinkedIn profile needs. A NOW Group external resource for operators serious about being found and remembered.">
+
+<!-- Open Graph / sharing -->
+<meta property="og:title" content="LinkedIn Profile Checklist — NOW Group">
+<meta property="og:description" content="The 8 foundations every LinkedIn profile needs. A NOW Group external resource.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="NOW Group">
+
+<style>
+/* Notion-style CSS variables resolved to NOW-friendly defaults */
+:root {
+  --color-background-primary:   #FFFFFF;
+  --color-background-secondary: #FAFAF9;
+  --color-text-primary:         #0F172A;
+  --color-text-secondary:       #374151;
+  --color-text-tertiary:        #6B7280;
+  --color-border-tertiary:      #E5E7EB;
+  --border-radius-lg:           8px;
+  --now-accent:                 #E8840A;
+  --now-ink:                    #0F172A;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  padding: 0;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* NOW Group header */
+.now-header {
+  background: var(--now-ink);
+  color: white;
+  padding: 1.5rem 0 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.now-header .super {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--now-accent);
+  margin-bottom: 0.5rem;
+}
+.now-header h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.15;
+  color: white;
+  font-weight: 600;
+}
+.now-header .lede {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 560px;
+}
+
+/* === Original Notion fragment styles (preserved verbatim) === */
+.wrap{padding:1rem 0;display:flex;flex-direction:column;gap:1.5rem}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden}
+.card-header{padding:1rem 1.25rem 0.875rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+.header-top{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.badge{font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px}
+.badge-orange{background:#FAECE7;color:#993C1D}
+.badge-teal{background:#E1F5EE;color:#0F6E56}
+.card-title{font-size:17px;font-weight:500;color:var(--color-text-primary);line-height:1.3}
+.card-sub{font-size:13px;color:var(--color-text-secondary);margin-top:2px}
+.items{padding:0.75rem 0}
+.item{display:grid;grid-template-columns:36px 1fr;gap:0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.item:last-child{border-bottom:none}
+.item-num{display:flex;align-items:flex-start;justify-content:center;padding:0.875rem 0 0.875rem 1.25rem}
+.num-circle{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0}
+.nc-orange{background:#FAECE7;color:#993C1D}
+.nc-teal{background:#E1F5EE;color:#0F6E56}
+.item-body{padding:0.875rem 1.25rem 0.875rem 0.75rem}
+.item-title{font-size:14px;font-weight:500;color:var(--color-text-primary);line-height:1.4;margin-bottom:4px}
+.item-desc{font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.stat{display:inline-block;font-size:12px;font-weight:500;padding:2px 8px;border-radius:4px;margin-top:5px}
+.stat-orange{background:#FFF3EE;color:#993C1D;border:0.5px solid #F5C4B3}
+.stat-teal{background:#E1F5EE;color:#0F6E56;border:0.5px solid #9FE1CB}
+.tip{font-size:12px;color:var(--color-text-tertiary);margin-top:4px;padding-top:4px;border-top:0.5px solid var(--color-border-tertiary);line-height:1.5}
+.card-footer{padding:0.875rem 1.25rem;background:var(--color-background-secondary);border-top:0.5px solid var(--color-border-tertiary);display:flex;align-items:center;gap:8px}
+.footer-text{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
+.footer-icon{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px}
+.fi-orange{background:#FAECE7}
+.fi-teal{background:#E1F5EE}
+.progress-bar{height:4px;background:var(--color-background-secondary);border-radius:2px;margin:0.75rem 1.25rem 0}
+.progress-fill{height:100%;border-radius:2px}
+.pf-orange{background:#D85A30}
+.pf-teal{background:#1D9E75}
+.progress-label{font-size:11px;color:var(--color-text-tertiary);padding:3px 1.25rem 0.5rem;text-align:right}
+
+/* NOW Group footer / CTA */
+.now-footer {
+  margin-top: 2rem;
+  padding: 2rem 0 3rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border-tertiary);
+}
+.now-footer .cta {
+  display: inline-block;
+  background: var(--now-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.now-footer .cta:hover { opacity: 0.92; }
+.now-footer .meta {
+  font-size: 0.8rem;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.now-footer .meta a {
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-text-tertiary);
+}
+</style>
+</head>
+<body>
+
+<header class="now-header">
+  <div class="container">
+    <div class="super">NOW Group · External Resource</div>
+    <h1>LinkedIn Profile Checklist</h1>
+    <p class="lede">The 8 foundations every LinkedIn profile needs before anyone sees it. Two halves — turn off notifications, work the foundations, then write the story.</p>
+  </div>
+</header>
+
+<main class="container">
+
+<div class="wrap">
+
+  <div class="card">
+    <div class="card-header">
+      <div class="header-top">
+        <span class="badge badge-orange">Part 1 of 2</span>
+        <span style="font-size:12px;color:var(--color-text-tertiary)">Items 1–4</span>
+      </div>
+      <div class="card-title">LinkedIn profile checklist — foundations</div>
+      <div class="card-sub">Complete these before anyone sees your profile</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill pf-orange" style="width:50%"></div></div>
+    <div class="progress-label">4 of 8 fundamentals</div>
+
+    <div class="items">
+
+      <div class="item">
+        <div class="item-num"><div class="num-circle nc-orange">1</div></div>
+        <div class="item-body">
+          <div class="item-title">Turn off profile update notifications</div>
+          <div class="item-desc">Before making any changes, stop your network being alerted to every edit.</div>
+          <div class="tip">Settings &amp; Privacy → Sharing Profile Edits → toggle to No</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-num"><div class="num-circle nc-orange">2</div></div>
+        <div class="item-body">
+          <div class="item-title">Profile photo</div>
+          <div class="item-desc">High-resolution professional headshot. Friendly and approachable.</div>
+          <span class="stat stat-orange">14x more likely to be viewed with a photo</span>
+          <div class="tip">400 × 400px recommended</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-num"><div class="num-circle nc-orange">3</div></div>
+        <div class="item-body">
+          <div class="item-title">Personal cover photo</div>
+          <div class="item-desc">A professional image that reflects your brand — not a generic or personal photo.</div>
+          <div class="tip">1584 × 396px · JPG, PNG or GIF · under 8MB</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-num"><div class="num-circle nc-orange">4</div></div>
+        <div class="item-body">
+          <div class="item-title">Compelling headline</div>
+          <div class="item-desc">Describes your expertise and value — not just your job title. Appears in every search result.</div>
+          <div class="tip">Up to 120 characters · lead with keywords · what you do for whom</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-footer">
+      <div class="footer-icon fi-orange">→</div>
+      <div class="footer-text">Complete part 2 before turning notifications back on. Both checklists work as a pair.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="header-top">
+        <span class="badge badge-teal">Part 2 of 2</span>
+        <span style="font-size:12px;color:var(--color-text-tertiary)">Items 5–8</span>
+      </div>
+      <div class="card-title">LinkedIn profile checklist — your story</div>
+      <div class="card-sub">What people read once your foundation brings them to your profile</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill pf-teal" style="width:100%"></div></div>
+    <div class="progress-label">8 of 8 fundamentals</div>
+
+    <div class="items">
+
+      <div class="item">
+        <div class="item-num"><div class="num-circle nc-teal">5</div></div>
+        <div class="item-body">
+          <div class="item-title">Custom public profile URL</div>
+          <div class="item-desc">Cleaner, shareable, and looks professional in email signatures and bios.</div>
+          <div class="tip">linkedin.com/in/yourname · add middle initial if your name is common</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-num"><div class="num-circle nc-teal">6</div></div>
+        <div class="item-body">
+          <div class="item-title">Contact information</div>
+          <div class="item-desc">Email, phone, and any relevant links. Make it easy for the right people to reach you.</div>
+          <div class="tip">Check it's current — stale contact info loses warm connections</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-num"><div class="num-circle nc-teal">7</div></div>
+        <div class="item-body">
+          <div class="item-title">About section (summary)</div>
+          <div class="item-desc">Conversational, keyword-rich, and organised into short paragraphs. First or third person — pick one and stick to it.</div>
+          <span class="stat stat-teal">Under 2,000 characters</span>
+          <div class="tip">Short paragraphs only · no formal titles · include keywords for SEO</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-num"><div class="num-circle nc-teal">8</div></div>
+        <div class="item-body">
+          <div class="item-title">Media and featured content</div>
+          <div class="item-desc">A few relevant documents, links, videos or presentations. Makes your profile tangible — not just text.</div>
+          <span class="stat stat-teal">Quality over quantity</span>
+          <div class="tip">Don't overload · pin your best work to Featured</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-footer">
+      <div class="footer-icon fi-teal">✓</div>
+      <div class="footer-text">All 8 done? Watch the video walkthrough for a guided optimisation of each section — link in the email above.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="now-footer">
+  <a class="cta" href="https://scheduler.zoom.us/chris--now-group/dna-walkthrough">Book a 30-min DNA-X walkthrough</a>
+  <div class="meta">Built by <a href="https://www.nowgroup.co.nz">NOW Group</a> · nowgroup.co.nz</div>
+</footer>
+
+</main>
+
+</body>
+</html>
