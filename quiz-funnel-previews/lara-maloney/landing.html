@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiwi Wealth Readiness Assessment — MyFuture</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary:   #018ab5;
+    --secondary: #004357;
+    --accent:    #ff914d;
+    --muted:     #788c96;
+    --primary-20: #018ab533;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #004357 0%, #018ab5 100%);
+    color: #fff;
+    padding: 96px 24px 80px;
+    text-align: center;
+  }
+  .hero__inner { max-width: 760px; margin: 0 auto; }
+  .hero__kicker {
+    font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7); margin-bottom: 24px; font-weight: 600;
+  }
+  .hero__title {
+    font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.1;
+    margin-bottom: 20px; letter-spacing: -0.01em;
+  }
+  .hero__subtitle {
+    font-size: clamp(16px, 2.2vw, 20px); font-weight: 400;
+    color: rgba(255,255,255,0.88); margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto;
+  }
+  .cta {
+    display: inline-block; background: #ff914d; color: #fff;
+    padding: 18px 44px; border-radius: 8px; text-decoration: none;
+    font-weight: 700; font-size: 18px; letter-spacing: 0.01em;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.24); }
+  .cta__sub {
+    display: block; margin-top: 16px;
+    font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 400;
+  }
+
+  /* PROMISE BAND */
+  .promise {
+    background: #fff; padding: 64px 24px; border-bottom: 1px solid #eef0f4;
+  }
+  .promise__inner { max-width: 760px; margin: 0 auto; text-align: center; }
+  .promise h2 {
+    font-size: 28px; font-weight: 700; color: #004357; margin-bottom: 16px;
+  }
+  .promise p { font-size: 17px; color: #3a3a3a; }
+
+  /* STRUCTURE STRIP */
+  .structure {
+    background: #018ab533; padding: 56px 24px;
+  }
+  .structure__inner {
+    max-width: 960px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .structure__card {
+    background: #fff; padding: 28px 24px; border-radius: 12px;
+    border: 1px solid #018ab522; text-align: left;
+  }
+  .structure__num {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #018ab5; font-weight: 700; margin-bottom: 12px;
+  }
+  .structure__title { font-size: 18px; font-weight: 700; color: #004357; margin-bottom: 8px; }
+  .structure__desc { font-size: 14px; color: #788c96; }
+
+  /* BANDS PREVIEW */
+  .bands {
+    padding: 64px 24px; background: #fff; text-align: center;
+  }
+  .bands h3 {
+    font-size: 20px; color: #004357; font-weight: 600; margin-bottom: 24px;
+  }
+  .bands__row {
+    display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+  }
+
+  /* FOOTER CTA */
+  .footer-cta {
+    background: #004357; color: #fff;
+    padding: 64px 24px; text-align: center;
+  }
+  .footer-cta h2 {
+    font-size: 28px; font-weight: 700; margin-bottom: 12px;
+  }
+  .footer-cta p {
+    color: rgba(255,255,255,0.78); margin-bottom: 28px;
+  }
+
+  .meta {
+    text-align: center; padding: 20px; color: #788c96; font-size: 11px;
+    border-top: 1px solid #eef0f4;
+  }
+
+  @media (max-width: 720px) {
+    .structure__inner { grid-template-columns: 1fr; }
+    .hero { padding: 64px 20px 56px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__kicker">MyFuture · Quiz</div>
+    <h1 class="hero__title">Kiwi Wealth Readiness Assessment</h1>
+    <p class="hero__subtitle">How prepared are you to turn your strong income into long-term wealth?</p>
+    <a class="cta" href="#start">Start the quiz</a>
+    <span class="cta__sub">< 3 minutes · 19 questions · no spam, no sales call without your say-so</span>
+  </div>
+</section>
+
+<section class="promise">
+  <div class="promise__inner">
+    <h2>What you'll get</h2>
+    <p>Get your personalised wealth-building score and discover the 3 biggest gaps between your current financial setup and early retirement readiness.</p>
+  </div>
+</section>
+
+<section class="structure">
+  <div class="structure__inner">
+    <div class="structure__card">
+      <div class="structure__num">Part 1</div>
+      <div class="structure__title">A couple of quick details</div>
+      <div class="structure__desc">4 questions so we can send your results — name, email, region. Phone is optional.</div>
+    </div>
+    <div class="structure__card">
+      <div class="structure__num">Part 2</div>
+      <div class="structure__title">Where you're at right now</div>
+      <div class="structure__desc">10 yes/no questions scoring your wealth-building practices against what works.</div>
+    </div>
+    <div class="structure__card">
+      <div class="structure__num">Part 3</div>
+      <div class="structure__title">Where you want to go</div>
+      <div class="structure__desc">5 multi-choice questions so we can match your result to where you actually are in the journey.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bands">
+  <h3>Your result places you in one of three bands</h3>
+  <div class="bands__row">
+    <div style="background:#018ab533; border:1px solid #018ab533; color:#004357; padding:8px 16px; border-radius:999px; font-size:13px; font-weight:600; white-space:nowrap;">Foundation Builder</div><div style="background:#018ab533; border:1px solid #018ab533; color:#004357; padding:8px 16px; border-radius:999px; font-size:13px; font-weight:600; white-space:nowrap;">Wealth Accelerator</div><div style="background:#018ab533; border:1px solid #018ab533; color:#004357; padding:8px 16px; border-radius:999px; font-size:13px; font-weight:600; white-space:nowrap;">Freedom Architect</div>
+  </div>
+</section>
+
+<section class="footer-cta" id="start">
+  <h2>Ready when you are.</h2>
+  <p>Takes < 3 minutes. Your score is yours — no obligation, no pressure.</p>
+  <a class="cta" href="#">Start the quiz</a>
+</section>
+
+<div class="meta">
+  Phase 1 preview · brand palette + typography client-confirmed · final embed (Google Form / ScoreApp) wired in Phase 3
+</div>
+
+</body>
+</html>
