@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUBIT-TMT · Operating Cockpit · Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tmt-orange: #F53D08;
+    --tmt-orange-dim: #C53108;
+    --tmt-orange-soft: #FFE8E0;
+    --tmt-navy: #1A1A2E;
+    --tmt-navy-light: #2A2A3E;
+    --tmt-navy-deeper: #0F0F1F;
+    --cream: #FAF7F2;
+    --cream-warm: #F5F0E8;
+    --ink: #14141F;
+    --ink-soft: #4A4A55;
+    --ink-muted: #7A7A85;
+    --line: #E5E0D8;
+    --line-soft: #EFEBE3;
+    --good: #1F7A3E;
+    --warn: #C97A0A;
+    --crit: #C42820;
+    --shadow-sm: 0 1px 2px rgba(20,20,31,.04), 0 1px 1px rgba(20,20,31,.02);
+    --shadow-md: 0 4px 12px rgba(20,20,31,.06), 0 2px 4px rgba(20,20,31,.04);
+    --shadow-lg: 0 12px 32px rgba(20,20,31,.08), 0 4px 8px rgba(20,20,31,.04);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Manrope', -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  .app {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 56px 1fr;
+    grid-template-areas: "sidebar topbar" "sidebar main";
+    height: 100vh;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background: var(--tmt-navy);
+    color: var(--cream);
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--tmt-navy-deeper);
+  }
+
+  .brand {
+    padding: 4px 24px 28px;
+    border-bottom: 1px solid var(--tmt-navy-light);
+    margin-bottom: 16px;
+  }
+
+  .brand-mark {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--tmt-orange);
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .brand-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: rgba(250, 247, 242, 0.45);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  .nav-section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: rgba(250, 247, 242, 0.35);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 12px 24px 8px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 24px;
+    color: rgba(250, 247, 242, 0.7);
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    transition: all 0.15s ease;
+    font-size: 14px;
+    font-weight: 500;
+    user-select: none;
+  }
+
+  .nav-item:hover {
+    background: var(--tmt-navy-light);
+    color: var(--cream);
+  }
+
+  .nav-item.active {
+    background: var(--tmt-navy-light);
+    color: var(--tmt-orange);
+    border-left-color: var(--tmt-orange);
+  }
+
+  .nav-item .nav-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+  }
+
+  .nav-item .badge {
+    margin-left: auto;
+    background: var(--tmt-orange);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .sidebar-foot {
+    margin-top: auto;
+    padding: 16px 24px;
+    border-top: 1px solid var(--tmt-navy-light);
+  }
+
+  .user-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--tmt-orange), var(--tmt-orange-dim));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .user-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+
+  .user-role {
+    font-size: 10px;
+    color: rgba(250, 247, 242, 0.5);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .topbar {
+    grid-area: topbar;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .topbar-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .topbar-title h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .topbar-title .crumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .system-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: rgba(31, 122, 62, 0.08);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--good);
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.04em;
+  }
+
+  .pulse {
+    width: 6px;
+    height: 6px;
+    background: var(--good);
+    border-radius: 50%;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+  }
+
+  .clock {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+
+  .main {
+    grid-area: main;
+    overflow-y: auto;
+    background: var(--cream);
+  }
+
+  .main::-webkit-scrollbar { width: 8px; }
+  .main::-webkit-scrollbar-track { background: transparent; }
+  .main::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+
+  .workspace {
+    display: none;
+    padding: 32px 36px 80px;
+    max-width: 1400px;
+  }
+
+  .workspace.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .workspace-header { margin-bottom: 28px; }
+
+  .workspace-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--tmt-orange);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .workspace-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+
+  .workspace-sub {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-top: 6px;
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .kpi {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 18px 20px;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .kpi:hover { border-color: var(--tmt-orange); box-shadow: var(--shadow-md); }
+
+  .kpi-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .kpi-value {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  .kpi-value .small {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink-muted);
+    margin-left: 2px;
+  }
+
+  .kpi-delta {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .kpi-delta.up { color: var(--good); }
+  .kpi-delta.down { color: var(--crit); }
+  .kpi-delta.flat { color: var(--ink-muted); }
+
+  .kpi-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--tmt-orange-soft);
+    border-radius: 0 8px 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tmt-orange);
+  }
+
+  .panel {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .panel-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .panel-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .panel-actions { display: flex; gap: 6px; }
+
+  .btn {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.15s;
+    letter-spacing: -0.01em;
+  }
+
+  .btn:hover { border-color: var(--tmt-orange); color: var(--tmt-orange); }
+  .btn.primary { background: var(--tmt-orange); color: white; border-color: var(--tmt-orange); }
+  .btn.primary:hover { background: var(--tmt-orange-dim); border-color: var(--tmt-orange-dim); color: white; }
+  .btn.ghost { border-color: transparent; background: transparent; color: var(--ink-muted); }
+  .btn.ghost:hover { background: var(--cream-warm); color: var(--ink); border-color: transparent; }
+
+  .panel-body { padding: 22px; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+  }
+
+  .grid-2-eq {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .pipeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .pipe-col {
+    background: var(--cream-warm);
+    border-radius: 10px;
+    padding: 14px;
+    min-height: 400px;
+  }
+
+  .pipe-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .pipe-label {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .pipe-label.hot { color: var(--tmt-orange); }
+  .pipe-label.warm { color: var(--warn); }
+  .pipe-label.cool { color: var(--ink-soft); }
+  .pipe-label.cold { color: var(--ink-muted); }
+
+  .pipe-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ink);
+  }
+
+  .lead-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .lead-card:hover { border-color: var(--tmt-orange); transform: translateX(2px); }
+
+  .lead-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .lead-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-muted);
+  }
+
+  .lead-tag {
+    display: inline-block;
+    padding: 1px 6px;
+    background: var(--cream-warm);
+    border-radius: 3px;
+    margin-right: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .activity { display: flex; flex-direction: column; gap: 2px; }
+
+  .activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .activity-item:last-child { border-bottom: none; }
+
+  .activity-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+    flex-shrink: 0;
+    width: 52px;
+    padding-top: 1px;
+  }
+
+  .activity-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    background: var(--tmt-orange-soft);
+    color: var(--tmt-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .activity-icon.policy { background: var(--tmt-orange-soft); color: var(--tmt-orange); }
+  .activity-icon.lead { background: #E8F1FD; color: #1E5BC4; }
+  .activity-icon.email { background: #EAF7EE; color: var(--good); }
+  .activity-icon.quiz { background: #F3EAF8; color: #6B4A8C; }
+
+  .activity-text { font-size: 13px; color: var(--ink); line-height: 1.4; }
+  .activity-text strong { font-weight: 600; }
+  .activity-text .muted { color: var(--ink-muted); font-size: 12px; }
+
+  .policy-queue { display: flex; flex-direction: column; gap: 10px; }
+
+  .policy-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: all 0.15s;
+  }
+
+  .policy-item:hover { border-color: var(--tmt-orange); box-shadow: var(--shadow-sm); }
+
+  .policy-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+
+  .policy-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-top: 4px;
+  }
+
+  .status-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .status-pill.pending { background: var(--cream-warm); color: var(--ink-soft); }
+  .status-pill.gen { background: rgba(245,61,8,.1); color: var(--tmt-orange); }
+  .status-pill.review { background: rgba(201,122,10,.12); color: var(--warn); }
+  .status-pill.shipped { background: rgba(31,122,62,.1); color: var(--good); }
+
+  .quiz-stats { display: flex; flex-direction: column; gap: 14px; }
+
+  .quiz-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 18px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+
+  .quiz-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+
+  .quiz-icon {
+    width: 4px;
+    height: 36px;
+    border-radius: 2px;
+    background: var(--tmt-orange);
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .quiz-stat { text-align: center; min-width: 70px; }
+
+  .quiz-stat-num {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .quiz-stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+
+  .meter {
+    background: var(--cream-warm);
+    border-radius: 8px;
+    height: 28px;
+    overflow: hidden;
+    position: relative;
+    margin: 12px 0 6px;
+  }
+
+  .meter-fill {
+    background: linear-gradient(90deg, var(--tmt-orange), var(--tmt-orange-dim));
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.6s ease;
+  }
+
+  .meter-text {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    mix-blend-mode: difference;
+  }
+
+  .meter-cap {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+
+  .time-burn-row {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr auto auto;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 18px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.15s;
+  }
+
+  .time-burn-row:hover { border-color: var(--tmt-orange); }
+
+  .project-info { display: flex; align-items: center; gap: 12px; }
+
+  .project-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .project-bullet.green { background: var(--good); }
+  .project-bullet.amber { background: var(--warn); }
+  .project-bullet.red { background: var(--crit); }
+
+  .project-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+
+  .project-team {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-muted);
+    margin-top: 3px;
+  }
+
+  .burn-bar {
+    background: var(--cream-warm);
+    border-radius: 6px;
+    height: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .burn-fill {
+    height: 100%;
+    border-radius: 6px;
+    position: relative;
+  }
+
+  .burn-fill.green { background: linear-gradient(90deg, #1F7A3E, #2C9450); }
+  .burn-fill.amber { background: linear-gradient(90deg, #C97A0A, #E89D2D); }
+  .burn-fill.red { background: linear-gradient(90deg, #C42820, #E83C30); }
+
+  .burn-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    z-index: 1;
+  }
+
+  .burn-target {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    z-index: 1;
+  }
+
+  .burn-percent {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--ink);
+    text-align: right;
+    min-width: 60px;
+  }
+
+  .burn-percent.amber { color: var(--warn); }
+  .burn-percent.red { color: var(--crit); }
+
+  .burn-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .burn-status.green { background: rgba(31,122,62,.1); color: var(--good); }
+  .burn-status.amber { background: rgba(201,122,10,.12); color: var(--warn); }
+  .burn-status.red { background: rgba(196,40,32,.1); color: var(--crit); }
+
+  .console {
+    background: var(--tmt-navy-deeper);
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--tmt-navy);
+  }
+
+  .console-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: var(--tmt-navy);
+    border-bottom: 1px solid var(--tmt-navy-deeper);
+  }
+
+  .console-dots { display: flex; gap: 6px; }
+
+  .console-dot { width: 11px; height: 11px; border-radius: 50%; background: rgba(250,247,242,.18); }
+  .console-dot:nth-child(1) { background: #FF5F57; }
+  .console-dot:nth-child(2) { background: #FEBC2E; }
+  .console-dot:nth-child(3) { background: #28C840; }
+
+  .console-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(250,247,242,.6);
+    letter-spacing: 0.08em;
+  }
+
+  .console-body {
+    padding: 20px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #F0E8D8;
+    min-height: 380px;
+  }
+
+  .console-prompt { color: var(--tmt-orange); font-weight: 600; }
+  .console-comment { color: rgba(240,232,216,.45); }
+  .console-success { color: #4ADE80; }
+  .console-warn { color: #FBBF24; }
+  .console-user { color: #93C5FD; }
+  .console-output { color: rgba(240,232,216,.85); padding-left: 14px; }
+  .console-bar { color: var(--tmt-orange); }
+  .console-divider { color: rgba(240,232,216,.2); }
+
+  .console-input-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    background: var(--tmt-navy);
+    border-top: 1px solid var(--tmt-navy-deeper);
+  }
+
+  .console-input-prompt {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--tmt-orange);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .console-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--cream);
+    font-size: 13px;
+  }
+
+  .console-input::placeholder { color: rgba(250,247,242,.35); }
+
+  .console-cursor {
+    width: 8px;
+    height: 16px;
+    background: var(--tmt-orange);
+    animation: blink 1.1s step-end infinite;
+  }
+
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .suggestions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .suggestion-chip {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    padding: 7px 14px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .suggestion-chip:hover {
+    border-color: var(--tmt-orange);
+    color: var(--tmt-orange);
+    background: var(--tmt-orange-soft);
+  }
+
+  .flag-card {
+    display: flex;
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: white;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+
+  .flag-card.amber { border-color: rgba(201,122,10,.4); background: linear-gradient(135deg, #FFFAF0 0%, white 60%); }
+  .flag-card.red { border-color: rgba(196,40,32,.4); background: linear-gradient(135deg, #FFF5F4 0%, white 60%); }
+  .flag-card.info { border-color: rgba(30,91,196,.3); background: linear-gradient(135deg, #F4F9FF 0%, white 60%); }
+
+  .flag-marker {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+  }
+
+  .flag-marker.amber { background: rgba(201,122,10,.15); color: var(--warn); }
+  .flag-marker.red { background: rgba(196,40,32,.12); color: var(--crit); }
+  .flag-marker.info { background: rgba(30,91,196,.12); color: #1E5BC4; }
+
+  .flag-body { flex: 1; }
+  .flag-title { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .flag-desc { font-size: 12px; color: var(--ink-soft); line-height: 1.4; }
+  .flag-action { font-size: 12px; color: var(--tmt-orange); font-weight: 600; cursor: pointer; margin-top: 8px; display: inline-block; }
+  .flag-action:hover { text-decoration: underline; }
+
+  .mockup-ribbon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--tmt-orange);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+    z-index: 100;
+    opacity: 0.85;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">AUBIT</div>
+      <div class="brand-sub">TMT · OPERATING COCKPIT</div>
+    </div>
+    <div class="nav-section-label">Daily</div>
+    <div class="nav-item active" data-workspace="today"><span class="nav-icon">●</span><span>Today</span></div>
+    <div class="nav-item" data-workspace="pipeline"><span class="nav-icon">◧</span><span>Lead Pipeline</span><span class="badge">247</span></div>
+    <div class="nav-item" data-workspace="policy"><span class="nav-icon">◇</span><span>Policy Builder</span><span class="badge">2</span></div>
+    <div class="nav-item" data-workspace="quizzes"><span class="nav-icon">◈</span><span>Quiz Activity</span></div>
+    <div class="nav-item" data-workspace="warming"><span class="nav-icon">→</span><span>Warming Engine</span></div>
+    <div class="nav-section-label">Phase 2 Preview</div>
+    <div class="nav-item" data-workspace="timeburn"><span class="nav-icon">⊟</span><span>Project Time Burn</span></div>
+    <div class="nav-section-label">Commands</div>
+    <div class="nav-item" data-workspace="console"><span class="nav-icon">▸</span><span>Console</span></div>
+    <div class="sidebar-foot">
+      <div class="user-chip">
+        <div class="user-avatar">AK</div>
+        <div>
+          <div class="user-name">Aaron Kemp</div>
+          <div class="user-role">FOUNDING OPERATOR</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-title">
+      <h1 id="topbar-title">Today</h1>
+      <span class="crumb" id="topbar-crumb">/ overview</span>
+    </div>
+    <div class="topbar-right">
+      <div class="system-status"><div class="pulse"></div><span>SYSTEMS NOMINAL</span></div>
+      <div class="clock" id="clock">— : —</div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="workspace active" id="ws-today">
+      <div class="workspace-header">
+        <div class="workspace-eyebrow">Monday · 20 May 2026</div>
+        <h2 class="workspace-title">Good morning, Aaron.</h2>
+        <p class="workspace-sub">Here's what AUBIT did overnight and what needs you today.</p>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-label">Active Leads</div><div class="kpi-value">247</div><div class="kpi-delta up">▲ +12 this week</div></div>
+        <div class="kpi"><div class="kpi-label">HOT Pipeline</div><div class="kpi-value">8</div><div class="kpi-delta up">▲ +3 since Friday</div></div>
+        <div class="kpi"><div class="kpi-label">Policy Gens · MTD</div><div class="kpi-value">12</div><div class="kpi-delta up">▲ saved 234 hrs</div></div>
+        <div class="kpi"><div class="kpi-label">Quiz Completions</div><div class="kpi-value">28<span class="small"> /wk</span></div><div class="kpi-delta flat">— steady</div></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <div class="panel-head"><div><div class="panel-eyebrow">FLAGGED FOR YOUR ATTENTION</div><div class="panel-title">3 things need a decision today</div></div></div>
+          <div class="panel-body">
+            <div class="flag-card amber"><div class="flag-marker amber">!</div><div class="flag-body"><div class="flag-title">5 leads ready for opener review</div><div class="flag-desc">Qualifier ran overnight. 5 openers drafted in your voice and waiting. ETA 4 minutes of your time.</div><span class="flag-action">→ Review queue</span></div></div>
+            <div class="flag-card red"><div class="flag-marker red">!!</div><div class="flag-body"><div class="flag-title">Smith Plumbing — policy generation flagged</div><div class="flag-desc">Compliance Filter detected a WHS state-reg drift in the generated pack. NSW asbestos register requirement updated 15 May. Regenerate or accept manual override?</div><span class="flag-action">→ Open in Policy Builder</span></div></div>
+            <div class="flag-card info"><div class="flag-marker info">i</div><div class="flag-body"><div class="flag-title">Jones Electrical responded to T2 email</div><div class="flag-desc">Inbound reply 6:42am. Warmth-tagged HOT by qualifier — moved to direct-buy pipeline. Auto-paused warming sequence.</div><span class="flag-action">→ View thread</span></div></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><div><div class="panel-eyebrow">LAST 12 HOURS</div><div class="panel-title">Activity log</div></div></div>
+          <div class="panel-body">
+            <div class="activity">
+              <div class="activity-item"><div class="activity-time">06:42</div><div class="activity-icon lead">↑</div><div class="activity-text"><strong>Jones Electrical</strong> replied to T2 email<br><span class="muted">Tagged HOT · moved to direct-buy</span></div></div>
+              <div class="activity-item"><div class="activity-time">06:00</div><div class="activity-icon email">→</div><div class="activity-text"><strong>5 warming emails</strong> sent (T1: 2 · T3: 1 · T4: 2)<br><span class="muted">Daily cap: 5/5 used</span></div></div>
+              <div class="activity-item"><div class="activity-time">05:15</div><div class="activity-icon">⟲</div><div class="activity-text"><strong>Compliance Filter refresh</strong> · WHS NSW<br><span class="muted">Asbestos register reg updated · 1 active gen flagged</span></div></div>
+              <div class="activity-item"><div class="activity-time">02:00</div><div class="activity-icon">⌗</div><div class="activity-text"><strong>Backup snapshot complete</strong><br><span class="muted">aubit_master.json + policy state · 30-day retention</span></div></div>
+              <div class="activity-item"><div class="activity-time">Sun</div><div class="activity-icon quiz">?</div><div class="activity-text"><strong>3 quiz completions</strong> over weekend<br><span class="muted">Tradie Profitability ×2 · Tradies' Wives ×1</span></div></div>
+              <div class="activity-item"><div class="activity-time">Sun</div><div class="activity-icon policy">◇</div><div class="activity-text"><strong>Policy pack generated</strong> · Acme Roofing<br><span class="muted">14 docs · 4m 22s · audit-clean</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="ws-pipeline">
+      <div class="workspace-header">
+        <div class="workspace-eyebrow">Lead Pipeline</div>
+        <h2 class="workspace-title">247 leads across 4 stages</h2>
+        <p class="workspace-sub">HOT leads need a touch within 24 hours · WARM advance with content · COOL drip warming sequence</p>
+      </div>
+      <div class="pipeline">
+        <div class="pipe-col">
+          <div class="pipe-head"><div class="pipe-label hot">HOT</div><div class="pipe-count">8</div></div>
+          <div class="lead-card"><div class="lead-name">Jones Electrical · Mark Jones</div><div class="lead-meta"><span><span class="lead-tag">Tradie</span> NSW</span><span>0.91</span></div></div>
+          <div class="lead-card"><div class="lead-name">Pearce Plumbing · Sam Pearce</div><div class="lead-meta"><span><span class="lead-tag">Tradie</span> QLD</span><span>0.87</span></div></div>
+          <div class="lead-card"><div class="lead-name">North Coast Builders · Lisa K.</div><div class="lead-meta"><span><span class="lead-tag">Wife</span> NSW</span><span>0.84</span></div></div>
+          <div class="lead-card"><div class="lead-name">McKenzie & Co · Greg McK.</div><div class="lead-meta"><span><span class="lead-tag">Partner</span> VIC</span><span>0.82</span></div></div>
+        </div>
+        <div class="pipe-col">
+          <div class="pipe-head"><div class="pipe-label warm">WARM</div><div class="pipe-count">34</div></div>
+          <div class="lead-card"><div class="lead-name">Tilebrook Builders</div><div class="lead-meta"><span><span class="lead-tag">Tradie</span> SA</span><span>0.71</span></div></div>
+          <div class="lead-card"><div class="lead-name">Verity Hare · TW intro</div><div class="lead-meta"><span><span class="lead-tag">Wife</span> NSW</span><span>0.68</span></div></div>
+          <div class="lead-card"><div class="lead-name">Caulfield Carpentry</div><div class="lead-meta"><span><span class="lead-tag">Tradie</span> VIC</span><span>0.66</span></div></div>
+          <div class="lead-card"><div class="lead-name">Brookwell Electrical</div><div class="lead-meta"><span><span class="lead-tag">Tradie</span> WA</span><span>0.62</span></div></div>
+        </div>
+        <div class="pipe-col">
+          <div class="pipe-head"><div class="pipe-label cool">COOL</div><div class="pipe-count">112</div></div>
+          <div class="lead-card"><div class="lead-name">Holm Group</div><div class="lead-meta"><span><span class="lead-tag">Tradie</span> NSW</span><span>0.48</span></div></div>
+          <div class="lead-card"><div class="lead-name">Riley Building Co.</div><div class="lead-meta"><span><span class="lead-tag">Tradie</span> QLD</span><span>0.44</span></div></div>
+          <div class="lead-card"><div class="lead-name">Dawson Construction</div><div class="lead-meta"><span><span class="lead-tag">Tradie</span> NSW</span><span>0.41</span></div></div>
+        </div>
+        <div class="pipe-col">
+          <div class="pipe-head"><div class="pipe-label cold">COLD</div><div class="pipe-count">93</div></div>
+          <div class="lead-card"><div class="lead-name">Various · long-tail</div><div class="lead-meta"><span>Aged 60+ days</span><span>—</span></div></div>
+          <div class="lead-card"><div class="lead-name">Trade Show 2025 batch</div><div class="lead-meta"><span>87 contacts</span><span>—</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="ws-policy">
+      <div class="workspace-header">
+        <div class="workspace-eyebrow">Policy Builder</div>
+        <h2 class="workspace-title">12 generations this month · 234 hours reclaimed</h2>
+        <p class="workspace-sub">Source: GHL course content + OneDrive template library · Compliance Filter active</p>
+      </div>
+      <div class="panel" style="margin-bottom: 18px;">
+        <div class="panel-head"><div><div class="panel-eyebrow">QUEUE</div><div class="panel-title">Active generations</div></div><div class="panel-actions"><button class="btn primary">+ New generation</button></div></div>
+        <div class="panel-body">
+          <div class="policy-queue">
+            <div class="policy-item"><div><div class="policy-name">Smith Plumbing — HR + WHS policy pack</div><div class="policy-meta">NSW · 4 staff · sole trader · trade: plumbing · 14 docs · started 06:18</div></div><div class="status-pill review">REVIEW</div><button class="btn">Open</button></div>
+            <div class="policy-item"><div><div class="policy-name">Jones Electrical — Full compliance pack</div><div class="policy-meta">NSW · 7 staff · Pty Ltd · trade: electrical · 18 docs · started 07:42</div></div><div class="status-pill gen">GENERATING</div><button class="btn">Watch</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-2-eq">
+        <div class="panel">
+          <div class="panel-head"><div><div class="panel-eyebrow">SHIPPED · THIS WEEK</div><div class="panel-title">Completed generations</div></div></div>
+          <div class="panel-body">
+            <div class="policy-queue">
+              <div class="policy-item"><div><div class="policy-name">Acme Roofing</div><div class="policy-meta">14 docs · 4m 22s · audit-clean</div></div><div class="status-pill shipped">SHIPPED</div></div>
+              <div class="policy-item"><div><div class="policy-name">Beaufort Group</div><div class="policy-meta">21 docs · 6m 11s · audit-clean</div></div><div class="status-pill shipped">SHIPPED</div></div>
+              <div class="policy-item"><div><div class="policy-name">Tradewinds Mechanical</div><div class="policy-meta">16 docs · 4m 53s · audit-clean</div></div><div class="status-pill shipped">SHIPPED</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div><div class="panel-eyebrow">COMPLIANCE LIBRARY</div><div class="panel-title">Anchor refresh status</div></div><div class="panel-actions"><button class="btn ghost">Refresh now</button></div></div>
+          <div class="panel-body">
+            <div class="activity">
+              <div class="activity-item"><div class="activity-time">15 May</div><div class="activity-icon">✓</div><div class="activity-text"><strong>Fair Work modern award</strong> · v2026.05<br><span class="muted">Next auto-refresh: 14 Aug</span></div></div>
+              <div class="activity-item"><div class="activity-time">15 May</div><div class="activity-icon">✓</div><div class="activity-text"><strong>WHS NSW</strong> · asbestos register reg updated<br><span class="muted">Flagged 1 active generation for review</span></div></div>
+              <div class="activity-item"><div class="activity-time">12 May</div><div class="activity-icon">✓</div><div class="activity-text"><strong>ATO guidance</strong> · v2026.05<br><span class="muted">No changes affecting current templates</span></div></div>
+              <div class="activity-item"><div class="activity-time">10 May</div><div class="activity-icon">✓</div><div class="activity-text"><strong>Privacy Act</strong> · v2024 (current)<br><span class="muted">No update due</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="ws-quizzes">
+      <div class="workspace-header">
+        <div class="workspace-eyebrow">Quiz Activity</div>
+        <h2 class="workspace-title">28 completions this week across 3 magnets</h2>
+        <p class="workspace-sub">Voice-encoded, Gamma-rendered, on-brand · post-magnet routing live</p>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><div class="panel-eyebrow">7-DAY ROLLING</div><div class="panel-title">Quiz performance</div></div></div>
+        <div class="panel-body">
+          <div class="quiz-stats">
+            <div class="quiz-row"><div><span class="quiz-icon"></span><span class="quiz-name">Tradie Profitability</span><div class="policy-meta" style="margin-left: 12px; display: inline-block;">2–5 staff · &lt;$500K turnover</div></div><div class="quiz-stat"><div class="quiz-stat-num">18</div><div class="quiz-stat-label">Completed</div></div><div class="quiz-stat"><div class="quiz-stat-num">5</div><div class="quiz-stat-label">→ Warming</div></div><div class="quiz-stat"><div class="quiz-stat-num">2</div><div class="quiz-stat-label">→ HOT</div></div></div>
+            <div class="quiz-row"><div><span class="quiz-icon"></span><span class="quiz-name">Tradies' Wives Operations</span><div class="policy-meta" style="margin-left: 12px; display: inline-block;">Ops-partner channel · Verity referral</div></div><div class="quiz-stat"><div class="quiz-stat-num">7</div><div class="quiz-stat-label">Completed</div></div><div class="quiz-stat"><div class="quiz-stat-num">3</div><div class="quiz-stat-label">→ Warming</div></div><div class="quiz-stat"><div class="quiz-stat-num">1</div><div class="quiz-stat-label">→ HOT</div></div></div>
+            <div class="quiz-row"><div><span class="quiz-icon"></span><span class="quiz-name">Accountant-Partner Referral</span><div class="policy-meta" style="margin-left: 12px; display: inline-block;">Tilebrook + 2 referral partners</div></div><div class="quiz-stat"><div class="quiz-stat-num">3</div><div class="quiz-stat-label">Completed</div></div><div class="quiz-stat"><div class="quiz-stat-num">2</div><div class="quiz-stat-label">→ Warming</div></div><div class="quiz-stat"><div class="quiz-stat-num">1</div><div class="quiz-stat-label">→ HOT</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="ws-warming">
+      <div class="workspace-header">
+        <div class="workspace-eyebrow">Warming Engine</div>
+        <h2 class="workspace-title">5 of 5 emails sent today</h2>
+        <p class="workspace-sub">Hard caps active · weekday-only gate · CAN-SPAM + Spam Act 2003 compliant</p>
+      </div>
+      <div class="grid-2-eq">
+        <div class="panel">
+          <div class="panel-head"><div><div class="panel-eyebrow">DAILY SEND CAP</div><div class="panel-title">Today's volume</div></div><div class="panel-actions"><button class="btn ghost">View log</button></div></div>
+          <div class="panel-body">
+            <div class="kpi-label">SENT TODAY</div>
+            <div class="meter"><div class="meter-fill" style="width: 100%"></div><div class="meter-text">5 / 5</div><div class="meter-cap">Cap reached</div></div>
+            <div style="font-size: 12px; color: var(--ink-muted); margin-bottom: 18px;">Next sends release at 06:00 NZT tomorrow (weekday)</div>
+            <div class="kpi-label">WEEKLY VOLUME</div>
+            <div class="meter"><div class="meter-fill" style="width: 68%"></div><div class="meter-text">17 / 25</div><div class="meter-cap">68%</div></div>
+            <div style="font-size: 12px; color: var(--ink-muted); margin-bottom: 18px;">Mon–Fri · 5/day floor cap</div>
+            <div class="kpi-label">UNSUBSCRIBE RATE · 30D</div>
+            <div class="meter"><div class="meter-fill" style="width: 4%; background: linear-gradient(90deg, var(--good), #2C9450);"></div><div class="meter-text" style="color: var(--good); mix-blend-mode: normal;">0.4%</div><div class="meter-cap">healthy</div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div><div class="panel-eyebrow">UPCOMING · NEXT 7 DAYS</div><div class="panel-title">Scheduled emails</div></div></div>
+          <div class="panel-body">
+            <div class="activity">
+              <div class="activity-item"><div class="activity-time">Tue</div><div class="activity-icon email">→</div><div class="activity-text"><strong>5 emails · T1–T4 mix</strong><br><span class="muted">Cool→Warm sequence advancing</span></div></div>
+              <div class="activity-item"><div class="activity-time">Wed</div><div class="activity-icon email">→</div><div class="activity-text"><strong>5 emails · T2 + T3 batch</strong><br><span class="muted">Holm Group, Riley Building + 3</span></div></div>
+              <div class="activity-item"><div class="activity-time">Thu</div><div class="activity-icon email">→</div><div class="activity-text"><strong>3 emails · T5 final touch</strong><br><span class="muted">Last warming before WARM promote</span></div></div>
+              <div class="activity-item"><div class="activity-time">Fri</div><div class="activity-icon email">→</div><div class="activity-text"><strong>2 emails · T6 + opener</strong><br><span class="muted">Pre-weekend close-out</span></div></div>
+              <div class="activity-item"><div class="activity-time">Sat</div><div class="activity-icon">⊘</div><div class="activity-text"><strong>No sends</strong> · weekday-only gate<br><span class="muted">EARLIEST_SEND_DATE freeze active</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="ws-timeburn">
+      <div class="workspace-header">
+        <div class="workspace-eyebrow">PHASE 2 PREVIEW · NOTION INTEGRATION</div>
+        <h2 class="workspace-title">Project time burn · Week of 20 May</h2>
+        <p class="workspace-sub">Hours-used vs budget across active TMT engagements · pulled from Notion · 3 projects flagged</p>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-label">Projects · Active</div><div class="kpi-value">14</div><div class="kpi-delta flat">— 2 closed this week</div></div>
+        <div class="kpi"><div class="kpi-label">Team Hours · This Week</div><div class="kpi-value">68<span class="small">.5h</span></div><div class="kpi-delta up">▲ Aaron 24h · VA 44.5h</div></div>
+        <div class="kpi"><div class="kpi-label">At Risk</div><div class="kpi-value" style="color: var(--warn);">3</div><div class="kpi-delta down">▲ +2 since last week</div></div>
+        <div class="kpi"><div class="kpi-label">Avg Burn Rate</div><div class="kpi-value">68<span class="small">%</span></div><div class="kpi-delta flat">— target ≤80%</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><div class="panel-eyebrow">14 ACTIVE PROJECTS · SORTED BY BURN</div><div class="panel-title">Hours-vs-budget</div></div><div class="panel-actions"><button class="btn ghost">Sort</button><button class="btn ghost">Filter</button><button class="btn">Export</button></div></div>
+        <div class="panel-body">
+          <div class="time-burn-row"><div class="project-info"><div class="project-bullet red"></div><div><div class="project-name">Smith Plumbing</div><div class="project-team">Started 12 Mar · VA primary · 4 wks remaining</div></div></div><div class="burn-bar"><div class="burn-fill red" style="width: 95%"></div><div class="burn-label">114h used</div><div class="burn-target">120h budget</div></div><div class="burn-percent red">95%</div><div class="burn-status red">CRITICAL</div></div>
+          <div class="time-burn-row"><div class="project-info"><div class="project-bullet amber"></div><div><div class="project-name">Jones Electrical</div><div class="project-team">Started 28 Mar · Aaron lead · 6 wks remaining</div></div></div><div class="burn-bar"><div class="burn-fill amber" style="width: 78%"></div><div class="burn-label">94h used</div><div class="burn-target">120h budget</div></div><div class="burn-percent amber">78%</div><div class="burn-status amber">AT RISK</div></div>
+          <div class="time-burn-row"><div class="project-info"><div class="project-bullet amber"></div><div><div class="project-name">Beaufort Group</div><div class="project-team">Started 5 Apr · VA primary · 8 wks remaining</div></div></div><div class="burn-bar"><div class="burn-fill amber" style="width: 72%"></div><div class="burn-label">86h used</div><div class="burn-target">120h budget</div></div><div class="burn-percent amber">72%</div><div class="burn-status amber">AT RISK</div></div>
+          <div class="time-burn-row"><div class="project-info"><div class="project-bullet green"></div><div><div class="project-name">Acme Roofing</div><div class="project-team">Started 18 Apr · Aaron lead · 10 wks remaining</div></div></div><div class="burn-bar"><div class="burn-fill green" style="width: 42%"></div><div class="burn-label">50h used</div><div class="burn-target">120h budget</div></div><div class="burn-percent">42%</div><div class="burn-status green">ON TRACK</div></div>
+          <div class="time-burn-row"><div class="project-info"><div class="project-bullet green"></div><div><div class="project-name">Tradewinds Mechanical</div><div class="project-team">Started 28 Apr · VA primary · 11 wks remaining</div></div></div><div class="burn-bar"><div class="burn-fill green" style="width: 28%"></div><div class="burn-label">34h used</div><div class="burn-target">120h budget</div></div><div class="burn-percent">28%</div><div class="burn-status green">ON TRACK</div></div>
+          <div class="time-burn-row"><div class="project-info"><div class="project-bullet green"></div><div><div class="project-name">Holm Group</div><div class="project-team">Started 5 May · Aaron lead · 12 wks remaining</div></div></div><div class="burn-bar"><div class="burn-fill green" style="width: 18%"></div><div class="burn-label">22h used</div><div class="burn-target">120h budget</div></div><div class="burn-percent">18%</div><div class="burn-status green">ON TRACK</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="ws-console">
+      <div class="workspace-header">
+        <div class="workspace-eyebrow">Command Console</div>
+        <h2 class="workspace-title">Talk to AUBIT in plain English</h2>
+        <p class="workspace-sub">Backed by Claude Code · understands your data · runs the scripts</p>
+      </div>
+      <div class="console">
+        <div class="console-head">
+          <div class="console-dots"><span class="console-dot"></span><span class="console-dot"></span><span class="console-dot"></span></div>
+          <div class="console-title">aubit · ~/AUBIT-TMT · zsh</div>
+          <div style="width: 36px;"></div>
+        </div>
+        <div class="console-body" id="console-output">
+<span class="console-comment"># AUBIT-TMT Cockpit · Session started 08:14:22 NZT</span>
+<span class="console-comment"># Logged in as: aaron_kemp · founding_operator</span>
+
+<span class="console-bar">▸</span> <span class="console-user">aaron:</span> show me what needs my attention this morning
+
+<span class="console-output">Reading aubit_master.json...
+Cross-referencing qualifier output (last 24h)...
+Checking compliance filter events...
+
+Found <span class="console-warn">3 items</span> needing decision:</span>
+
+<span class="console-output">  <span class="console-success">[1]</span> 5 leads have draft openers ready for review (4 min)
+  <span class="console-warn">[2]</span> Smith Plumbing policy gen flagged — WHS NSW reg drift
+  <span class="console-success">[3]</span> Jones Electrical replied — auto-tagged HOT, warming paused</span>
+
+<span class="console-divider">────────────────────────────────────────────────</span>
+
+<span class="console-bar">▸</span> <span class="console-user">aaron:</span> let's tackle the smith plumbing flag
+
+<span class="console-output">Opening Smith Plumbing generation event...
+  Generated:    19 May 22:41 NZT
+  Trade:        Plumbing
+  State:        NSW
+  Staff:        4
+  Structure:    Sole trader
+  Docs:         14
+
+<span class="console-warn">Compliance Filter found 1 drift event:</span>
+  • <span class="console-warn">WHS NSW · asbestos register reg updated 15 May 2026</span>
+    Affected doc: <span class="console-success">WHS_Manual_Asbestos_Register_v3.docx</span>
+    Recommendation: <span class="console-success">regenerate that doc only</span>
+                    (full pack regen not required)
+
+What would you like to do?
+  → regenerate the affected doc
+  → accept manual override (logs reason)
+  → review the change diff first</span>
+
+<span class="console-bar">▸</span> <span class="console-user">aaron:</span> regenerate the affected doc
+
+<span class="console-output">Generating WHS_Manual_Asbestos_Register_v4.docx...
+  Loading template: GHL course → smith_plumbing → policies → whs_manual
+  Applying compliance anchor: WHS_NSW_2026_05_15
+  Voice block: aaron_kemp_v1.parameter_block ✓
+  Running compliance filter on output...
+
+<span class="console-success">✓ Generated</span> in 47s · <span class="console-success">audit-clean</span> · signed
+<span class="console-success">✓ Updated</span> Smith Plumbing policy pack · v3 → v4
+<span class="console-success">✓ Logged</span> regeneration event in audit trail
+<span class="console-success">✓ Notified</span> client via GHL workflow trigger</span>
+
+<span class="console-bar">▸</span> <span class="console-user">aaron:</span> _<span class="console-cursor"></span>
+        </div>
+        <div class="console-input-line">
+          <span class="console-input-prompt">▸</span>
+          <input class="console-input" placeholder="Type a command in plain English… e.g. 'show me HOT leads from this week'">
+        </div>
+      </div>
+      <div class="suggestions">
+        <div class="suggestion-chip">show me HOT leads from this week</div>
+        <div class="suggestion-chip">generate policy pack for new client</div>
+        <div class="suggestion-chip">how many hours saved this month?</div>
+        <div class="suggestion-chip">pause warming for Jones Electrical</div>
+        <div class="suggestion-chip">run compliance refresh now</div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="mockup-ribbon">MOCKUP · DEMO DATA · v0.1</div>
+
+<script>
+  const items = document.querySelectorAll('.nav-item');
+  const workspaces = document.querySelectorAll('.workspace');
+  const titleEl = document.getElementById('topbar-title');
+  const crumbEl = document.getElementById('topbar-crumb');
+
+  const TITLES = {
+    today: ['Today', '/ overview'],
+    pipeline: ['Lead Pipeline', '/ 247 active'],
+    policy: ['Policy Builder', '/ 12 mtd'],
+    quizzes: ['Quiz Activity', '/ 3 magnets'],
+    warming: ['Warming Engine', '/ 5 of 5 today'],
+    timeburn: ['Project Time Burn', '/ phase 2 preview'],
+    console: ['Command Console', '/ claude code']
+  };
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const ws = item.dataset.workspace;
+      if (!ws) return;
+      items.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      workspaces.forEach(w => w.classList.remove('active'));
+      document.getElementById('ws-' + ws).classList.add('active');
+      const [title, crumb] = TITLES[ws] || ['', ''];
+      titleEl.textContent = title;
+      crumbEl.textContent = crumb;
+      document.querySelector('.main').scrollTop = 0;
+    });
+  });
+
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
+    document.getElementById('clock').textContent = `${h}:${m} NZT`;
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
+
+  document.querySelectorAll('.suggestion-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const input = document.querySelector('.console-input');
+      input.value = chip.textContent;
+      input.focus();
+    });
+  });
+
+  document.querySelectorAll('.lead-card, .policy-item, .time-burn-row').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.tagName === 'BUTTON') return;
+      card.style.transform = 'scale(0.98)';
+      setTimeout(() => card.style.transform = '', 120);
+    });
+  });
+</script>
+</body>
+</html>
