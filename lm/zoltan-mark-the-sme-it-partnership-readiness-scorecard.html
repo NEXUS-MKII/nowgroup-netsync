@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE SME IT PARTNERSHIP READINESS SCORECARD — Marksmen IT</title>
+<meta name="description" content="Diagnose IT referral gaps and partner readiness in your SME client base A diagnostic by Zoltan Mark, Marksmen IT.">
+<meta property="og:title" content="THE SME IT PARTNERSHIP READINESS SCORECARD">
+<meta property="og:description" content="Diagnose IT referral gaps and partner readiness in your SME client base">
+
+<style>
+:root {
+    --primary:    #1F2937;
+    --secondary:  #374151;
+    --accent:     #E8840A;
+    --accent-soft: #FFD9A8;
+    --cta:        #E8840A;
+    --cta-accent: #C46A05;
+    --ink:        #0F172A;
+    --body:       #374151;
+    --cream:      #FAFAF9;
+    --mozzarella: #F5F5F4;
+    --rule:       #E5E7EB;
+    --red-flag:   #DC2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+@page { size: A4 portrait; margin: 5mm 8mm; }
+html { font-size: 9.5pt; -webkit-font-smoothing: antialiased; }
+body {
+    font-family: 'Roboto', -apple-system, sans-serif;
+    color: var(--body); background: var(--cream); line-height: 1.45;
+    max-width: 190mm; margin: 0 auto; padding: 6mm 8mm 4mm;
+}
+@media screen { body { background: var(--cream); box-shadow: 0 0 24px rgba(0,0,0,.08); margin: 24px auto; min-height: 277mm; } html { background: #EAEAEA; padding: 1px 0; } }
+h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; color: var(--secondary); font-weight: 700; }
+
+.micro-line { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 4mm; }
+
+.cover { padding-bottom: 5mm; margin-bottom: 6mm; border-bottom: 2px solid var(--accent); }
+.eyebrow { font-family: 'Oswald', sans-serif; font-size: 8pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 2mm; }
+h1.title { font-size: 26pt; line-height: 1.05; color: var(--primary); margin-bottom: 3mm; }
+.subtitle { font-size: 12pt; color: var(--body); font-style: italic; line-height: 1.4; max-width: 130mm; }
+.brand-mark { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 4mm; }
+.brand-mark .meta { font-family: 'Oswald', sans-serif; font-size: 7.5pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); }
+.brand-mark .name { font-family: 'Oswald', sans-serif; font-size: 9pt; font-weight: 800; color: var(--secondary); text-align: right; }
+.brand-mark .name .person { font-size: 7.5pt; font-weight: 500; color: var(--body); margin-top: 1mm; }
+
+/* Hero image removed — these printable LM PDFs are image-free by design.
+   Gamma carries the visually-rich web/social variants; this is the clean
+   handout that prints clean on any office printer. */
+
+.article { font-size: 10.5pt; line-height: 1.55; color: var(--ink); margin-bottom: 6mm; }
+.article p { margin-bottom: 3.5mm; }
+.article p:first-child::first-letter { font-family: 'Oswald', sans-serif; font-size: 32pt; font-weight: 800; line-height: 0.9; float: left; padding-right: 2mm; padding-top: 1mm; color: var(--accent); }
+
+.framework-callout { background: white; border: 1px solid var(--rule); border-left: 4px solid var(--accent); padding: 4mm 5mm; margin-bottom: 5mm; border-radius: 3pt; }
+.framework-callout .label { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1mm; }
+.framework-callout .name { font-size: 13pt; font-weight: 700; color: var(--primary); font-family: 'Oswald', sans-serif; }
+
+.pullquote { font-family: 'Oswald', sans-serif; font-size: 13pt; line-height: 1.35; color: var(--primary); padding: 5mm 6mm; background: var(--mozzarella); border-radius: 3pt; margin: 5mm 0; font-style: italic; }
+.pullquote::before { content: "\201C"; font-size: 24pt; line-height: 0; vertical-align: -8pt; color: var(--accent); margin-right: 2mm; }
+.pullquote::after { content: "\201D"; font-size: 24pt; line-height: 0; vertical-align: -8pt; color: var(--accent); margin-left: 2mm; }
+.pullquote .author { display: block; font-size: 8pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--body); font-style: normal; margin-top: 3mm; }
+
+.spine { background: var(--cream); border: 1px dashed var(--accent); border-radius: 3pt; padding: 4mm 5mm; margin-bottom: 5mm; }
+.spine-label { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 2mm; }
+.spine ul { list-style: none; padding: 0; margin: 0; }
+.spine li { padding: 1mm 0 1mm 5mm; font-size: 9.5pt; line-height: 1.4; color: var(--ink); position: relative; }
+.spine li::before { content: "■"; color: var(--accent); position: absolute; left: 0; font-size: 7pt; top: 1.5mm; }
+
+.shift-section { margin-bottom: 5mm; }
+.shift-section h3 { font-size: 12pt; line-height: 1.2; color: var(--primary); margin-bottom: 3mm; padding-bottom: 1.5mm; border-bottom: 1px solid var(--rule); }
+.shift-list { list-style: none; padding: 0; counter-reset: shift; }
+.shift-list li { counter-increment: shift; padding: 2.5mm 0 2.5mm 11mm; font-size: 10pt; line-height: 1.45; color: var(--body); position: relative; border-bottom: 1px dotted var(--rule); }
+.shift-list li:last-child { border-bottom: none; }
+.shift-list li::before { content: counter(shift, decimal-leading-zero); font-family: 'Oswald', sans-serif; font-size: 13pt; font-weight: 800; color: var(--accent); position: absolute; left: 0; top: 1.5mm; }
+
+.red-flag-bar { background: var(--red-flag); color: white; padding: 4mm 6mm; border-radius: 3pt; margin-bottom: 5mm; display: flex; align-items: center; gap: 4mm; }
+.red-flag-label { font-family: 'Oswald', sans-serif; font-weight: 800; font-size: 11pt; letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; }
+.red-flag-text { font-size: 10pt; line-height: 1.3; }
+
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 4mm; }
+.cta { padding: 4mm 5mm; border-radius: 3pt; }
+.cta.soft { background: var(--cream); border: 1px solid var(--rule); }
+.cta.hard { background: var(--cta); color: white; }
+.cta-label { font-family: 'Oswald', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.8; }
+.cta.soft .cta-label { color: var(--accent); }
+.cta-title { font-family: 'Oswald', sans-serif; font-size: 11pt; font-weight: 700; margin-top: 1mm; }
+.cta-body { font-size: 9.5pt; line-height: 1.35; margin-top: 1.5mm; }
+.cta-body a { color: inherit; text-decoration: underline; font-weight: 600; }
+
+.footer { font-family: 'Oswald', sans-serif; font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); border-top: 1px solid var(--rule); padding-top: 3mm; display: flex; justify-content: space-between; }
+.footer .domain { color: var(--accent); font-weight: 700; }
+
+/* ── Pagination — natural-flow with safety rails.
+   Article body length varies (300–800w typical), so we don't force a hard
+   page break — instead we keep every structural unit whole (no mid-block
+   splits) and prevent 1–2 line orphan/widow drops in the article paragraphs.
+   Result: page 1 carries cover + framework-callout + article + pullquote;
+   page 2 carries spine + shift + CTAs + footer (300w-ish each side). When
+   article exceeds ~600w the asset becomes 3 pages by necessity — that's a
+   content-length signal, not a template defect. */
+.cover, .brand-mark,
+.framework-callout,
+.pullquote,
+.spine, .shift-section,
+.cta, .red-flag-bar,
+.footer                { page-break-inside: avoid; break-inside: avoid; }
+.shift-list li         { page-break-inside: avoid; break-inside: avoid; }
+.article p             { orphans: 3; widows: 3; }
+.spine                 { page-break-before: avoid; break-before: avoid; }
+</style>
+<style>
+/* Oswald — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/oswald/oswald_700_normal.woff2') format('woff2');
+}
+/* Roboto — google-fonts · SIL-OFL-1.1 */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_400_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_700_italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_400_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_500_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_600_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_700_normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('file:///Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/fonts/roboto/roboto_800_normal.woff2') format('woff2');
+}
+</style>
+</head>
+<body>
+
+<div class="micro-line">Print · Save · Share with your team</div>
+
+
+<div class="cover">
+    <h1 class="title">THE SME IT PARTNERSHIP READINESS SCORECARD</h1>
+<div class="subtitle">Diagnose IT referral gaps and partner readiness in your SME client base</div>    <div class="brand-mark">
+        <div class="meta">Free Resource</div>
+        <div class="name">
+            MARKSMEN IT
+            <div class="person">Zoltan Mark · Owner / Director — Marksmen IT</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="pullquote">
+    &#39;The average SME loses $8,000 per hour during unplanned IT downtime, but most business advisers don&#39;t know when to recommend managed services over reactive support.&#39; — IT Industry Report 2024
+<span class="author">— Zoltan Mark</span></div>
+
+<div class="spine">
+    <div class="spine-label">The Spine — what holds this together</div>
+    <ul>
+        <li>SECTION 1 OF 4 — PARTNER READINESS ASSESSMENT</li>
+        <li>☐ You regularly discuss IT challenges with SME clients (5-25 staff)</li>
+        <li>☐ Your clients ask you about reliable IT support options</li>
+        <li>☐ You&#39;ve seen clients struggle with unexpected IT costs or downtime</li>
+        <li>☐ You understand the difference between reactive and managed IT services</li>
+        <li>☐ Your clients trust your recommendations on business service providers</li>
+    </ul>
+</div>
+
+<div class="shift-section">
+    <h3>The Shift — frameworks that reposition the problem</h3>
+    <ul class="shift-list">
+        <li>SECTION 2 OF 4 — CLIENT IT PAIN DIAGNOSTIC FLOW</li>
+        <li>REACTIVE IT TRAP → Client calls IT contractor only when things break</li>
+        <li>COST SPIRAL → Bills spike every quarter with no predictable budget</li>
+        <li>SECURITY BLIND SPOTS → No proactive monitoring or threat management</li>
+        <li>CAPABILITY GAP → Internal IT person can&#39;t cover every domain</li>
+    </ul>
+</div>
+
+<div class="red-flag-bar">
+    <div class="red-flag-label">Red flag</div>
+    <div class="red-flag-text">🚩 RED FLAG: If you&#39;re referring SME clients to IT contractors for ongoing support instead of managed service providers, you&#39;re missing the partnership opportunity that delivers predictable outcomes for growing businesses.</div>
+</div>
+
+<div class="cta-grid">
+    <div class="cta soft">
+        <div class="cta-label">Save &amp; Share</div>
+        <div class="cta-title">Save This Diagnostic</div>
+        <div class="cta-body">Download the SME IT Partnership Readiness Scorecard</div>
+    </div>
+    <div class="cta hard">
+        <div class="cta-label">Book a Call</div>
+        <div class="cta-title">Strategy Call</div>
+        <div class="cta-body">
+Book a 20-minute partner strategy chat at marksmenit.nz/partners
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <span>Zoltan Mark · MarksmenPRO_3.6.5 — All-inclusive managed IT plan</span>
+    <span class="domain">www.marksmenit.nz</span>
+</div>
+
+</body>
+</html>
