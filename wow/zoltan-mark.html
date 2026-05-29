@@ -455,55 +455,78 @@ section { padding: 88px 0; }
     background: var(--cream-warm);
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 72px;
-    align-items: start;
+.about-bio {
+    max-width: 880px;
 }
 
 .about-bio h3 {
     font-family: var(--font-display);
-    font-size: 28px;
+    font-size: clamp(28px, 3.5vw, 38px);
     font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 24px;
+    line-height: 1.15;
+    margin-bottom: 28px;
     color: var(--ink);
+    max-width: 22ch;
 }
 
 .about-bio p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.7;
     color: var(--ink-soft);
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    max-width: 68ch;
 }
 
-.differentiators {
+/* Attention strip — differentiators rendered as a 4-up callout row across
+   the top of the About section. Strong left-accent stripe + label-led layout
+   so each tile reads like an "attention" prompt for the partner. */
+.attention-strip {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 64px;
 }
 
-.diff-card {
+.attention-tile {
     background: white;
-    padding: 28px 24px;
+    padding: 22px 22px 22px 26px;
     border-radius: 2px;
     border: 1px solid var(--cream-deep);
+    border-left: 4px solid var(--accent);
+    position: relative;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.diff-card h4 {
+.attention-tile:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+.attention-tile .attention-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.attention-tile h4 {
     font-family: var(--font-display);
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     color: var(--ink);
     line-height: 1.3;
 }
 
-.diff-card p {
+.attention-tile p {
     font-size: 14px;
     line-height: 1.55;
     color: var(--ink-soft);
+    margin: 0;
 }
 
 /* ─── Pull quote ─── */
@@ -791,8 +814,8 @@ footer a {
 @media (max-width: 768px) {
     section { padding: 64px 0; }
     .hero { padding: 56px 0 80px; }
-    .about-grid { grid-template-columns: 1fr; gap: 40px; }
-    .differentiators { grid-template-columns: 1fr; }
+    .attention-strip { grid-template-columns: 1fr; gap: 12px; }
+    .about-bio h3 { font-size: 26px; }
     .hero-subtitle { font-size: 18px; }
     .practice-signature { flex-direction: column; align-items: flex-start; }
 }
@@ -952,12 +975,11 @@ Great partnerships mean your clients get IT that just works — and you get refe
 <!-- ═══════════ ABOUT [PARTNER] ═══════════ -->
 <section class="about">
     <div class="container">
-        <div class="about-grid">
-            <div class="about-bio">
-                <span class="eyebrow">About Zoltan</span>
-                <h3 style="margin-top: 16px;">Who you're referring your clients to.</h3>
-                <p>
-                    I'm Zoltan Mark, Owner/Director of Marksmen IT, Auckland's 100% Kiwi-owned managed IT provider for SMEs with 5-25 users.
+        <div class="attention-strip"><div class="attention-tile"><span class="attention-label">ATTENTION 01</span><h4>Why partners refer</h4><p>Flat-fee managed IT eliminates surprise bills for your clients</p></div><div class="attention-tile"><span class="attention-label">ATTENTION 02</span><h4>What we deliver</h4><p>24/7 monitoring prevents downtime that kills productivity</p></div><div class="attention-tile"><span class="attention-label">ATTENTION 03</span><h4>How we work</h4><p>Security and compliance handled without owner stress</p></div><div class="attention-tile"><span class="attention-label">ATTENTION 04</span><h4>Where we focus</h4><p>Fast response times keep your reputation intact</p></div></div>
+        <div class="about-bio">
+            <span class="eyebrow">About Zoltan</span>
+            <h3 style="margin-top: 16px;">Who you're referring your clients to.</h3>
+            <p>I'm Zoltan Mark, Owner/Director of Marksmen IT, Auckland's 100% Kiwi-owned managed IT provider for SMEs with 5-25 users.
 
 Our MarksmenPRO_3.6.5 all-inclusive plan eliminates IT surprises for business owners who need enterprise-grade support without enterprise complexity. We handle security, backup, monitoring, and support with flat-fee pricing that lets owners budget properly.
 
@@ -965,34 +987,7 @@ Most of our best clients come from accountants and business advisers who underst
 
 I believe great partnerships are built on clear communication and mutual success. My referral partners get fast response times, regular updates, and clients who appreciate being connected with someone who actually delivers what they promise.
 
-If you work with SME owners who deserve IT that just works, let's talk: marksmenit.nz/partners
-                </p>
-                <p>
-                    Great partnerships are built on trust and clear communication. I believe in keeping referral partners informed at every step and delivering exactly what I promise. When your clients succeed with reliable IT, we both win.
-                </p>
-                <p>
-                    
-                </p>
-            </div>
-
-            <div class="differentiators">
-                <div class="diff-card">
-                    <h4>Why partners refer</h4>
-                    <p>Flat-fee managed IT eliminates surprise bills for your clients</p>
-                </div>
-                <div class="diff-card">
-                    <h4>What we deliver</h4>
-                    <p>24/7 monitoring prevents downtime that kills productivity</p>
-                </div>
-                <div class="diff-card">
-                    <h4>How we work</h4>
-                    <p>Security and compliance handled without owner stress</p>
-                </div>
-                <div class="diff-card">
-                    <h4>Where we focus</h4>
-                    <p>Fast response times keep your reputation intact</p>
-                </div>
-            </div>
+If you work with SME owners who deserve IT that just works, let's talk: marksmenit.nz/partners</p><p>Great partnerships are built on trust and clear communication. I believe in keeping referral partners informed at every step and delivering exactly what I promise. When your clients succeed with reliable IT, we both win.</p>
         </div>
     </div>
 </section>
@@ -1017,26 +1012,7 @@ If you work with SME owners who deserve IT that just works, let's talk: marksmen
         </div>
 
         <div class="commitments-grid">
-            <div class="commitment">
-                <span class="commitment-num">— 01</span>
-                <h3 class="commitment-title">Response</h3>
-                <p class="commitment-body">I'll contact your referral within 24 hours for a no-obligation IT health check and send you a follow-up within 48 hours</p>
-            </div>
-            <div class="commitment">
-                <span class="commitment-num">— 02</span>
-                <h3 class="commitment-title">Updates</h3>
-                <p class="commitment-body">I send you a brief update after every client meeting plus a quarterly summary of how the relationship is tracking</p>
-            </div>
-            <div class="commitment">
-                <span class="commitment-num">— 03</span>
-                <h3 class="commitment-title"></h3>
-                <p class="commitment-body"></p>
-            </div>
-            <div class="commitment">
-                <span class="commitment-num">— 04</span>
-                <h3 class="commitment-title"></h3>
-                <p class="commitment-body"></p>
-            </div>
+            <div class="commitment"><span class="commitment-num">— 01</span><h3 class="commitment-title">Response</h3><p class="commitment-body">I'll contact your referral within 24 hours for a no-obligation IT health check and send you a follow-up within 48 hours</p></div><div class="commitment"><span class="commitment-num">— 02</span><h3 class="commitment-title">Updates</h3><p class="commitment-body">I send you a brief update after every client meeting plus a quarterly summary of how the relationship is tracking</p></div>
         </div>
     </div>
 </section>
@@ -1071,22 +1047,7 @@ If you work with SME owners who deserve IT that just works, let's talk: marksmen
         </div>
 
         <div class="practice-grid">
-            <div class="practice-col">
-                <h4>The Practice</h4>
-                <p></p>
-            </div>
-            <div class="practice-col">
-                <h4>The Adviser</h4>
-                <p></p>
-            </div>
-            <div class="practice-col">
-                <h4>The Model</h4>
-                <p></p>
-            </div>
-            <div class="practice-col">
-                <h4>The Website</h4>
-                <p>Learn more at <a href="https://www.marksmenit.nz">www.marksmenit.nz</a>.</p>
-            </div>
+            <div class="practice-col"><h4>The Website</h4><p>Learn more at <a href="https://www.marksmenit.nz">www.marksmenit.nz</a>.</p></div>
         </div>
 
         <div class="practice-signature">
@@ -1121,7 +1082,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('section > .container > *, .trigger-card, .diff-card, .commitment, .reciprocal-item').forEach((el, i) => {
+document.querySelectorAll('section > .container > *, .trigger-card, .attention-tile, .commitment, .reciprocal-item').forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = `${Math.min(i * 30, 300)}ms`;
     observer.observe(el);
