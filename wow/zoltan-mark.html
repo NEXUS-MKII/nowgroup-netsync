@@ -203,7 +203,30 @@ section { padding: 88px 0; }
     font-weight: 400;
 }
 
-.hero-audience {
+/* Audience block — multi-archetype pills + ICP shape, replaces single pill */
+.audience-block {
+    margin-top: 8px;
+}
+
+.audience-block .audience-eyebrow {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+}
+
+.archetype-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.archetype-pill {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -213,13 +236,49 @@ section { padding: 88px 0; }
     border-radius: 999px;
     font-size: 14px;
     font-weight: 500;
-    color: var(--ink-soft);
+    color: var(--ink);
 }
 
-.hero-audience .dot {
+.archetype-pill .dot {
     width: 6px; height: 6px;
     background: var(--accent);
     border-radius: 50%;
+}
+
+.audience-fallback {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin: 0 0 28px 4px;
+    font-style: italic;
+}
+
+.icp-block {
+    display: inline-block;
+    padding: 18px 24px;
+    background: white;
+    border: 1px solid var(--cream-deep);
+    border-left: 3px solid var(--accent);
+    border-radius: 2px;
+    max-width: 720px;
+}
+
+.icp-block .icp-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.icp-block .icp-shape {
+    font-size: 15.5px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+    font-weight: 500;
 }
 
 /* ─── Three-steps strip ─── */
@@ -456,7 +515,7 @@ section { padding: 88px 0; }
 }
 
 .about-bio {
-    max-width: 880px;
+    width: 100%;
 }
 
 .about-bio h3 {
@@ -466,7 +525,6 @@ section { padding: 88px 0; }
     line-height: 1.15;
     margin-bottom: 28px;
     color: var(--ink);
-    max-width: 22ch;
 }
 
 .about-bio p {
@@ -474,7 +532,6 @@ section { padding: 88px 0; }
     line-height: 1.7;
     color: var(--ink-soft);
     margin-bottom: 18px;
-    max-width: 68ch;
 }
 
 /* Attention strip — differentiators rendered as a 4-up callout row across
@@ -564,6 +621,86 @@ blockquote {
     color: var(--ink-soft);
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+/* ─── Partner Key Assets (Quiz / PCD / Lead Magnet) ─── */
+
+.key-assets {
+    background: var(--cream-warm);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+}
+
+.key-assets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.key-asset {
+    background: white;
+    padding: 32px 28px;
+    border-radius: 2px;
+    border: 1px solid var(--cream-deep);
+    border-top: 3px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.key-asset .asset-num {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.key-asset h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--ink);
+}
+
+.key-asset p {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0;
+}
+
+.key-asset .asset-link {
+    margin-top: auto;
+    padding-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-deep);
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.key-asset .asset-link::after {
+    content: ' →';
+    transition: transform .2s ease;
+    display: inline-block;
+}
+
+.key-asset .asset-link:hover::after {
+    transform: translateX(4px);
+}
+
+.key-asset .asset-status {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 16px;
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
 }
 
 /* ─── Commitments / Process ─── */
@@ -863,9 +1000,14 @@ footer a {
 Deliver bulletproof IT partnerships that protect your client relationships
             </p>
 
-            <div class="hero-audience">
-                <span class="dot"></span>
-                Accountants and business advisers
+            <div class="audience-block">
+                <span class="audience-eyebrow">Who we partner with</span>
+                <div class="archetype-pills"><span class="archetype-pill"><span class="dot"></span>Business Consultants</span><span class="archetype-pill"><span class="dot"></span>Cyber Security Specialists</span><span class="archetype-pill"><span class="dot"></span>Fractional COOs</span><span class="archetype-pill"><span class="dot"></span>Accountants & CFOs</span><span class="archetype-pill"><span class="dot"></span>Finance Companies (NZ)</span><span class="archetype-pill"><span class="dot"></span>Process Improvement Consultants</span></div>
+                <p class="audience-fallback">Or any pro-active networker with the right contacts in our ICP.</p>
+                <div class="icp-block">
+                    <span class="icp-label">Our ICP — who Marksmen serves</span>
+                    <p class="icp-shape">NZ SMEs with 10-40 staff who are tired of reactive IT firefighting and want predictable, flat-fee managed support.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -1013,6 +1155,20 @@ Partner with Marksmen IT: marksmenit.nz/partners</p><p>Great partnerships happen
 
         <div class="commitments-grid">
             <div class="commitment"><span class="commitment-num">— 01</span><h3 class="commitment-title">Response</h3><p class="commitment-body">I'll call your client within 24 hours and provide a no-obligation IT health check within the week</p></div><div class="commitment"><span class="commitment-num">— 02</span><h3 class="commitment-title">Updates</h3><p class="commitment-body">I send you a brief outcome report within 48 hours of meeting your client, regardless of whether they engage</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ THREE PARTNER KEY ASSETS ═══════════ -->
+<section class="key-assets">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Three partner-ready assets</span>
+            <h2 class="display">Everything a partner needs — <em>ready to share.</em></h2>
+            <p>These are the three tools that turn a warm intro into a real referral conversation. Use them in any order. Share with any client whose situation fits.</p>
+        </div>
+        <div class="key-assets-grid">
+            <div class="key-asset"><span class="asset-num">Asset 01</span><h3>Partnership Alignment Quiz</h3><p>Eight minutes. Tells Zoltan and the partner whether the fit is real — before either of you invests in a longer conversation.</p><span class="asset-status">Quiz link pending</span></div><div class="key-asset"><span class="asset-num">Asset 02</span><h3>Partner Comms Document</h3><p>A pre-written brief covering who Zoltan is, what Marksmen IT delivers, the referral triggers that matter, and what the next 90 days look like. Print, share, or quote it.</p><a class="asset-link" href="/Users/christopherwhite/Applications/Claude Projects/NEXUS MKII/WOW Factor/Zoltan_Mark/WOW_Factor_OptionC_Zoltan_Mark_v1.docx">Open the document</a></div><div class="key-asset"><span class="asset-num">Asset 03</span><h3>THE SME IT PARTNERSHIP READINESS SCORECARD</h3><p>Help your SME clients identify when they need professional IT support — and position yourself as the adviser who knows where to send them</p><span class="asset-status">Lead magnet build queued</span></div>
         </div>
     </div>
 </section>
