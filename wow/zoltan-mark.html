@@ -4,29 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Partner with Zoltan Mark — Marksmen IT</title>
-<meta name="description" content="">
+<meta name="description" content="I help 5-25 user Kiwi SMEs to eliminate IT surprises and security blind spots through our MarksmenPRO_3.6.5 all-inclusive managed IT plan">
 
 <!-- Open Graph for link previews -->
 <meta property="og:title" content="Partner with Zoltan Mark — Marksmen IT">
-<meta property="og:description" content="">
+<meta property="og:description" content="I help 5-25 user Kiwi SMEs to eliminate IT surprises and security blind spots through our MarksmenPRO_3.6.5 all-inclusive managed IT plan">
 <meta property="og:type" content="website">
 
-<!-- Fonts: Fraunces (display, warm serif) + Plus Jakarta Sans (body) -->
+<!-- Buyer brand fonts (resolved from profile.brand.fonts) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --ink:          #1F1A13;
-    --ink-soft:     #3D362A;
-    --cream:        #FAF7F2;
-    --cream-warm:   #F5EAD5;
-    --cream-deep:   #EFE2C8;
-    --accent:       #E8840A;          /* NOW orange */
-    --accent-deep:  #C66E00;
-    --rule:         #E8DFD0;
-    --muted:        #8B8070;
+    --ink:          #535353;
+    --ink-soft:     #2D2D2D;
+    --cream:        #FFFFFF;
+    --cream-warm:   #EFF7FB;
+    --cream-deep:   #E0EFF7;
+    --accent:       #007ABF;
+    --accent-deep:  #005F94;
+    --rule:         #E5E5E5;
+    --muted:        #A0A0A0;
+    --font-display: 'Inter', Georgia, serif;
+    --font-body:    'Inter', -apple-system, sans-serif;
     --shadow-soft:  0 1px 2px rgba(31,26,19,.04), 0 4px 14px rgba(31,26,19,.06);
     --shadow-card:  0 1px 3px rgba(31,26,19,.06), 0 12px 32px rgba(31,26,19,.08);
 }
@@ -35,7 +37,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    font-family: var(--font-body);
     font-size: 17px;
     line-height: 1.6;
     color: var(--ink);
@@ -47,7 +49,7 @@ body {
 /* ─── Typographic rhythm ─── */
 
 .display {
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: var(--font-display);
     font-variation-settings: 'opsz' 120;
     letter-spacing: -0.02em;
     line-height: 1.05;
@@ -55,7 +57,7 @@ body {
 }
 
 .display-italic {
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-variation-settings: 'opsz' 140;
     font-weight: 400;
@@ -64,7 +66,7 @@ body {
 }
 
 .eyebrow {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-body);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.18em;
@@ -124,13 +126,13 @@ section { padding: 88px 0; }
     width: 6px; height: 6px;
     background: var(--accent);
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(232,132,10,.2);
+    box-shadow: 0 0 0 4px rgba(0,122,191,.2);
     animation: pulse 2.4s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 4px rgba(232,132,10,.2); }
-    50%      { box-shadow: 0 0 0 6px rgba(232,132,10,.05); }
+    0%, 100% { box-shadow: 0 0 0 4px rgba(0,122,191,.2); }
+    50%      { box-shadow: 0 0 0 6px rgba(0,122,191,.05); }
 }
 
 .top-strip a {
@@ -154,8 +156,8 @@ section { padding: 88px 0; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 15% 20%, rgba(232,132,10,.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 85% 80%, rgba(232,132,10,.04) 0%, transparent 50%);
+        radial-gradient(ellipse at 15% 20%, rgba(0,122,191,.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 80%, rgba(0,122,191,.04) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -249,7 +251,7 @@ section { padding: 88px 0; }
 }
 
 .step-number {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-size: 56px;
     font-weight: 700;
     color: var(--accent);
@@ -346,7 +348,7 @@ section { padding: 88px 0; }
 }
 
 .trigger-title {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-size: 22px;
     font-weight: 600;
     line-height: 1.25;
@@ -395,23 +397,23 @@ section { padding: 88px 0; }
 }
 
 .reciprocal .section-head p {
-    color: rgba(250,247,242,.75);
+    color: rgba(255,255,255,.75);
 }
 
 .reciprocal .eyebrow-muted {
-    color: rgba(250,247,242,.5);
+    color: rgba(255,255,255,.5);
 }
 
 .reciprocal-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 4px;
-    border: 1px solid rgba(250,247,242,.1);
+    border: 1px solid rgba(255,255,255,.1);
 }
 
 .reciprocal-item {
     padding: 28px 24px;
-    background: rgba(250,247,242,.03);
+    background: rgba(255,255,255,.03);
     display: flex;
     align-items: center;
     gap: 16px;
@@ -419,11 +421,11 @@ section { padding: 88px 0; }
 }
 
 .reciprocal-item:hover {
-    background: rgba(250,247,242,.06);
+    background: rgba(255,255,255,.06);
 }
 
 .reciprocal-item .marker {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 18px;
     color: var(--accent);
@@ -439,11 +441,11 @@ section { padding: 88px 0; }
 
 .reciprocal-note {
     margin-top: 40px;
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 22px;
     line-height: 1.4;
-    color: rgba(250,247,242,.8);
+    color: rgba(255,255,255,.8);
     max-width: 40ch;
 }
 
@@ -461,7 +463,7 @@ section { padding: 88px 0; }
 }
 
 .about-bio h3 {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-size: 28px;
     font-weight: 600;
     line-height: 1.2;
@@ -490,7 +492,7 @@ section { padding: 88px 0; }
 }
 
 .diff-card h4 {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-size: 19px;
     font-weight: 600;
     margin-bottom: 12px;
@@ -513,7 +515,7 @@ section { padding: 88px 0; }
 }
 
 .quote-mark {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-size: 80px;
     line-height: 0.5;
     color: var(--accent);
@@ -522,7 +524,7 @@ section { padding: 88px 0; }
 }
 
 blockquote {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-size: clamp(24px, 3.5vw, 36px);
     line-height: 1.3;
@@ -566,7 +568,7 @@ blockquote {
 }
 
 .commitment-num {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-size: 14px;
     font-weight: 700;
     color: var(--accent);
@@ -574,7 +576,7 @@ blockquote {
 }
 
 .commitment-title {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.25;
@@ -617,7 +619,7 @@ blockquote {
 }
 
 .cta-block h2 {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-size: clamp(36px, 5vw, 56px);
     font-weight: 500;
     line-height: 1.1;
@@ -708,7 +710,7 @@ blockquote {
 }
 
 .practice-col h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-body);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.18em;
@@ -749,7 +751,7 @@ blockquote {
 }
 
 .signature-close {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 24px;
     color: var(--ink);
@@ -766,7 +768,7 @@ blockquote {
 footer {
     padding: 40px 0;
     background: var(--ink);
-    color: rgba(250,247,242,.6);
+    color: rgba(255,255,255,.6);
     font-size: 13px;
 }
 
@@ -830,16 +832,17 @@ footer a {
             </div>
 
             <h1 class="display">
-                 <em></em>
+                 <em>Partner with Auckland's Most Reliable SME IT Provider</em>
             </h1>
 
             <p class="hero-subtitle">
-                
+                We deliver enterprise-grade managed IT to 5-25 user businesses across Auckland.
+Great partnerships mean your clients get IT that just works — and you get referrals back.
             </p>
 
             <div class="hero-audience">
                 <span class="dot"></span>
-                
+                Accountants and business advisers
             </div>
         </div>
     </div>
@@ -889,10 +892,10 @@ footer a {
 
         <div class="trigger-grid">
             <div class="trigger-card">
-                <div class="trigger-icon"></div>
-                <h3 class="trigger-title"></h3>
+                <div class="trigger-icon">→</div>
+                <h3 class="trigger-title">First referral trigger</h3>
                 <p class="trigger-desc">
-                    
+                    When a client mentions their IT costs keep spiralling or their systems went down again
                 </p>
                 <div class="trigger-prompt">
                     <strong>The conversation</strong>
@@ -901,10 +904,10 @@ footer a {
             </div>
 
             <div class="trigger-card">
-                <div class="trigger-icon"></div>
-                <h3 class="trigger-title"></h3>
+                <div class="trigger-icon">→</div>
+                <h3 class="trigger-title">Second referral trigger</h3>
                 <p class="trigger-desc">
-                    
+                    When you're working with a 5-25 person business and they're stressed about cyber security or compliance
                 </p>
                 <div class="trigger-prompt">
                     <strong>The conversation</strong>
@@ -913,10 +916,10 @@ footer a {
             </div>
 
             <div class="trigger-card">
-                <div class="trigger-icon"></div>
-                <h3 class="trigger-title"></h3>
+                <div class="trigger-icon">→</div>
+                <h3 class="trigger-title">Third referral trigger</h3>
                 <p class="trigger-desc">
-                    
+                    When someone asks you about reliable IT support that won't break the bank
                 </p>
                 <div class="trigger-prompt">
                     <strong>The conversation</strong>
@@ -954,10 +957,18 @@ footer a {
                 <span class="eyebrow">About Zoltan</span>
                 <h3 style="margin-top: 16px;">Who you're referring your clients to.</h3>
                 <p>
-                    IT professional with 20+ years spanning enterprise infrastructure, security consulting, and managed services across Europe and New Zealand. Founder of Marksmen IT (NZ SME managed IT) and QNAPSource (NAS/storage).
+                    I'm Zoltan Mark, Owner/Director of Marksmen IT, Auckland's 100% Kiwi-owned managed IT provider for SMEs with 5-25 users.
+
+Our MarksmenPRO_3.6.5 all-inclusive plan eliminates IT surprises for business owners who need enterprise-grade support without enterprise complexity. We handle security, backup, monitoring, and support with flat-fee pricing that lets owners budget properly.
+
+Most of our best clients come from accountants and business advisers who understand that reliable IT isn't optional anymore. When your clients mention server crashes, security worries, or spiralling IT costs, that's when they need managed services, not just ad hoc support.
+
+I believe great partnerships are built on clear communication and mutual success. My referral partners get fast response times, regular updates, and clients who appreciate being connected with someone who actually delivers what they promise.
+
+If you work with SME owners who deserve IT that just works, let's talk: marksmenit.nz/partners
                 </p>
                 <p>
-                    
+                    Great partnerships are built on trust and clear communication. I believe in keeping referral partners informed at every step and delivering exactly what I promise. When your clients succeed with reliable IT, we both win.
                 </p>
                 <p>
                     
@@ -966,20 +977,20 @@ footer a {
 
             <div class="differentiators">
                 <div class="diff-card">
-                    <h4></h4>
-                    <p></p>
+                    <h4>Why partners refer</h4>
+                    <p>Flat-fee managed IT eliminates surprise bills for your clients</p>
                 </div>
                 <div class="diff-card">
-                    <h4></h4>
-                    <p></p>
+                    <h4>What we deliver</h4>
+                    <p>24/7 monitoring prevents downtime that kills productivity</p>
                 </div>
                 <div class="diff-card">
-                    <h4></h4>
-                    <p></p>
+                    <h4>How we work</h4>
+                    <p>Security and compliance handled without owner stress</p>
                 </div>
                 <div class="diff-card">
-                    <h4></h4>
-                    <p></p>
+                    <h4>Where we focus</h4>
+                    <p>Fast response times keep your reputation intact</p>
                 </div>
             </div>
         </div>
@@ -991,7 +1002,7 @@ footer a {
     <div class="container-narrow">
         <div class="quote-mark">"</div>
         <blockquote class="display-italic">
-             <em></em> 
+             <em>Your clients get genuine IT peace of mind with flat-fee managed services that eliminate surprise bills and security gaps. You get a reliable referral partner who responds fast and keeps you in the loop on every client interaction.</em> 
         </blockquote>
         <div class="quote-attribution">— Zoltan Mark · Marksmen IT</div>
     </div>
@@ -1008,13 +1019,13 @@ footer a {
         <div class="commitments-grid">
             <div class="commitment">
                 <span class="commitment-num">— 01</span>
-                <h3 class="commitment-title"></h3>
-                <p class="commitment-body"></p>
+                <h3 class="commitment-title">Response</h3>
+                <p class="commitment-body">I'll contact your referral within 24 hours for a no-obligation IT health check and send you a follow-up within 48 hours</p>
             </div>
             <div class="commitment">
                 <span class="commitment-num">— 02</span>
-                <h3 class="commitment-title"></h3>
-                <p class="commitment-body"></p>
+                <h3 class="commitment-title">Updates</h3>
+                <p class="commitment-body">I send you a brief update after every client meeting plus a quarterly summary of how the relationship is tracking</p>
             </div>
             <div class="commitment">
                 <span class="commitment-num">— 03</span>
